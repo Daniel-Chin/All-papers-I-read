@@ -5,3 +5,5 @@ def hierarchical: pass
 def generation: pass
 def structure: pass
 def relation: pass
+def psychology: pass
+def education: pass

@@ -43,4 +43,69 @@ measure ID order anomoly?
 
 did you try making the relation model attend to melody of first 8? 
     they are thinking about that. 
+
+my notes
+    Again! we see reducing a relation graph to binary relations. 
+'''
+
+class KLI:
+    apa = 'Koedinger, K. R., Corbett, A. T., & Perfetti, C. (2012). The Knowledge‐Learning‐Instruction framework: Bridging the science‐practice chasm to enhance robust student learning. Cognitive science, 36(5), 757-798.'
+    bib = '''@article{koedinger2012knowledge,
+  title={The Knowledge-Learning-Instruction framework: Bridging the science-practice chasm to enhance robust student learning},
+  author={Koedinger, Kenneth R and Corbett, Albert T and Perfetti, Charles},
+  journal={Cognitive science},
+  volume={36},
+  number={5},
+  pages={757--798},
+  year={2012},
+  publisher={Wiley Online Library}
+}'''
+    tags = [psychology, education]
+    my_notes = '''
+Fig.1 (P5)
+    - explain fig. 
+    - learning events as a subset of instructional events. 
+    - adaptive moments. 
+    - Ziyu, when testing CYP, said "at that moment, i was deeply surprised, and learned something." (12/13 notes)
+    
+    IE is more observable than LE. 
+    IE is temporal (1D). LE and KC are structural (hierachical). (This is my interpretation of the paper)
+    
+    typical experiments are end-to-end: vary IE, compare AE. 
+"Many efforts at instructional ‘‘theory’’ are really frameworks (e.g., Bloom, 1956; Gagne,1985; van Merrie¨nboer & Sweller, 2005; Sweller & Chandler, 1994) because they do not lead directly to precise predictions." (P4)
+    金三角非理论，框架也。
+Table 2
+    paper 支持 KC 作为单元。可能不确切，但可以让教育更加量化，可以设计实验。
+        music 如何 提取、提出 KC? 
+    table 2 是各种 KC 的一个 principal dimensions. 
+        music KC with contant/variable io? 
+table 3 (page 11)
+    go over the table. 
+    KC can be verbal or nonverbal. 
+"Verbal instruction is intrinsically bound to learning verbal KCs."
+    traditional music instruction is *verbal*. 
+        打开！
+        手指自信地下落但是力度要轻！
+    but music production is hardly a verbal process. 
+        unlike math, history, science, music is a less verbal area. 
+    to be fair, verbal articulation usually helps learning. e.g. self-explanation boosts the learning effect. If our system is an expansion of instructional modalities, we should not drop verbal? 
+Human overfit. 
+    "students may acquire incorrectly generalized conditions" (P17)
+    AE must detect that. 
+    We can test this in user study - an interesting learning outcome. 
+Intruction mode is KC-specific, not domain-specific (P18)
+Fig.3 (P20)
+    先看三个定义。 (P19)
+    再看表。
+    U&S: 模进是什么
+    I&R: 不同 mode 的模进都是模进。听模进和写模进。
+    M&F: proficiency
+    related to system 1 system 2. 
+    学者，藏焉，修焉，息焉，游焉
+    Can a learner arrive at verbal conclusions just from multi-modal training? 
+        we can test verbal knowledge of the subjects. e.g. is the green note E4? 
+        unsupervised pre-training
+table 5 (P25)
+    过一遍。可能相关性不高
+    例题, 习题 - force, adaptive
 '''
