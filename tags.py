@@ -7,3 +7,4 @@ def structure(): pass
 def relation(): pass
 def psychology(): pass
 def education(): pass
+def vq_vae(): pass

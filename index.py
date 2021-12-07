@@ -109,3 +109,17 @@ table 5 (P25)
     过一遍。可能相关性不高
     例题, 习题 - force, adaptive
 '''
+
+class Jukebox:
+    apa = 'Dhariwal, P., Jun, H., Payne, C., Kim, J. W., Radford, A., & Sutskever, I. (2020). Jukebox: A generative model for music. arXiv preprint arXiv:2005.00341.'
+    bib = '''@article{dhariwal2020jukebox,
+  title={Jukebox: A generative model for music},
+  author={Dhariwal, Prafulla and Jun, Heewoo and Payne, Christine and Kim, Jong Wook and Radford, Alec and Sutskever, Ilya},
+  journal={arXiv preprint arXiv:2005.00341},
+  year={2020}
+}
+'''
+    tags = [generation, vq_vae]
+    my_notes = '''
+Transformer over VQ-VAE. Supervised with lyrics as condition. 
+'''
