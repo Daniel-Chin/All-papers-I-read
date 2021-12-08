@@ -8,3 +8,6 @@ def relation(): pass
 def psychology(): pass
 def education(): pass
 def vq_vae(): pass
+def self_supervise(): pass
+def f0(): pass
+def pitch_shift_invariance(): pass
