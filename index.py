@@ -1,6 +1,6 @@
 from .tags import *
 
-class ThemeTransformer:
+class theme_transformer:
     apa = 'Shih, Y. J., Wu, S. L., Zalkow, F., Müller, M., & Yang, Y. H. (2021). Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer. arXiv preprint arXiv:2111.04093.'
     bib = '''@article{shih2021theme,
   title={Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer},
@@ -13,7 +13,7 @@ class ThemeTransformer:
     tags = [transformer, music_knowledge, contrastive]
     my_notes = None
 
-class MelonFormThenContent:
+class Melon_form_then_content:
     apa = 'Zou, Y., Zou, P., Zhao, Y., Zhang, K., Zhang, R., & Wang, X. (2021). MELONS: generating melody with long-term structure using transformers and structure graph. arXiv preprint arXiv:2110.05020.'
     bib = '''@article{zou2021melons,
   title={MELONS: generating melody with long-term structure using transformers and structure graph},
@@ -125,7 +125,7 @@ class Jukebox:
 Transformer over VQ-VAE. Supervised with lyrics as condition. 
 '''
 
-class Spice:
+class SPICE:
     apa = 'Gfeller, B., Frank, C., Roblek, D., Sharifi, M., Tagliasacchi, M., & Velimirović, M. (2020). SPICE: Self-supervised pitch estimation. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, 1118-1128.'
     bib = '''@article{gfeller2020spice,
   title={SPICE: Self-supervised pitch estimation},
@@ -143,7 +143,7 @@ class Spice:
 This works??? What the heck
 '''
 
-class ImprovingMusicPerformanceAssessmentwithContrastiveLearning:
+class improving_music_performance_assessment_with_contrastive_learning:
     apa = 'Seshadri, P., & Lerch, A. (2021). Improving Music Performance Assessment with Contrastive Learning. arXiv preprint arXiv:2108.01711.'
     bib = '''@article{seshadri2021improving,
   title={Improving Music Performance Assessment with Contrastive Learning},
@@ -176,7 +176,7 @@ Summary: user testing shows passive vibration input helps retain a song after le
 Q: During active learning, was there a score? During testing, was there a score? 
 '''
 
-class DevelopingAHapticGloveForBasicPianoEducation:
+class developing_a_haptic_glove_for_basic_piano_education:
     apa = 'Pala, F. K. (2019). Developing a haptic glove for basic piano education. World Journal on Educational Technology: Current Issues, 11(1), 38-47.'
     bib = '''@article{pala2019developing,
   title={Developing a haptic glove for basic piano education},
