@@ -1,4 +1,4 @@
-from tags import *
+from .tags import *
 
 class ThemeTransformer:
     apa = 'Shih, Y. J., Wu, S. L., Zalkow, F., Müller, M., & Yang, Y. H. (2021). Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer. arXiv preprint arXiv:2111.04093.'
