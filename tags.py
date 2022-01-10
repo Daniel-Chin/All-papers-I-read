@@ -11,3 +11,6 @@ def vq_vae(): pass
 def self_supervise(): pass
 def f0(): pass
 def pitch_shift_invariance(): pass
+def haptic(): pass
+def vibration(): pass
+def passive_learning(): pass

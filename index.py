@@ -142,3 +142,50 @@ class Spice:
     my_notes = '''
 This works??? What the heck
 '''
+
+class ImprovingMusicPerformanceAssessmentwithContrastiveLearning:
+    apa = 'Seshadri, P., & Lerch, A. (2021). Improving Music Performance Assessment with Contrastive Learning. arXiv preprint arXiv:2108.01711.'
+    bib = '''@article{seshadri2021improving,
+  title={Improving Music Performance Assessment with Contrastive Learning},
+  author={Seshadri, Pavan and Lerch, Alexander},
+  journal={arXiv preprint arXiv:2108.01711},
+  year={2021}
+}
+'''
+    abstract = '''Several automatic approaches for objective music performance assessment (MPA) have been proposed in the past, however, existing systems are not yet capable of reliably predicting ratings with the same accuracy as professional judges. This study investigates contrastive learning as a potential method to improve existing MPA systems. Contrastive learning is a widely used technique in representation learning to learn a structured latent space capable of separately clustering multiple classes. It has been shown to produce state of the art results for image-based classification problems. We introduce a weighted contrastive loss suitable for regression tasks applied to a convolutional neural network and show that contrastive loss results in performance gains in regression tasks for MPA. Our results show that contrastive-based methods are able to match and exceed SoTA performance for MPA regression tasks by creating better class clusters within the latent space of the neural networks.
+'''
+    tags = [contrastive]
+    my_notes = ''
+
+class PianoTouch:
+    apa = 'Huang, K., Do, E. Y. L., & Starner, T. (2008, September). PianoTouch: A wearable haptic piano instruction system for passive learning of piano skills. In 2008 12th IEEE international symposium on wearable computers (pp. 41-44). IEEE.'
+    bib = '''@inproceedings{huang2008pianotouch,
+  title={PianoTouch: A wearable haptic piano instruction system for passive learning of piano skills},
+  author={Huang, Kevin and Do, Ellen Yi-Luen and Starner, Thad},
+  booktitle={2008 12th IEEE international symposium on wearable computers},
+  pages={41--44},
+  year={2008},
+  organization={IEEE}
+}
+'''
+    abstract = '''We present PianoTouch, a wearable, wireless haptic piano instruction system, composed of (1) five small vibration motors, one for each finger, fitted inside a glove, (2) a Bluetooth module mounted on the glove, and (3) piano music output from a laptop. Users hear the piano music and feel the vibrations indicating which finger is used to play the note. We investigate the system's potential for passive learning, i.e. learning piano playing automatically while engaged in everyday activities. In a preliminary study, four subjects learned two songs initially and then wore the PianoTouch glove for 30 minutes while listening to the songs repeated. One of the songs included tactile sensations and the other did not. The study found that after 30 minutes, the PianoTouch subjects were able to play the song accompanied by tactile sensations better than the non-tactile song. These results suggest the value of a more detailed study.
+'''
+    tags = [haptic, vibration, passive_learning]
+    my_notes = '''
+Summary: user testing shows passive vibration input helps retain a song after learning it first. 
+Q: During active learning, was there a score? During testing, was there a score? 
+'''
+
+class DevelopingAHapticGloveForBasicPianoEducation:
+    apa = 'Pala, F. K. (2019). Developing a haptic glove for basic piano education. World Journal on Educational Technology: Current Issues, 11(1), 38-47.'
+    bib = '''@article{pala2019developing,
+  title={Developing a haptic glove for basic piano education},
+  author={Pala, Ferhat Kadir and others},
+  journal={World Journal on Educational Technology: Current Issues},
+  volume={11},
+  number={1},
+  pages={38--47},
+  year={2019}
+}
+'''
+    my_notes = 'Hardly a good paper.'
