@@ -14,3 +14,8 @@ def pitch_shift_invariance(): pass
 def haptic(): pass
 def vibration(): pass
 def passive_learning(): pass
+def multimodal(): pass
+def adaptive_curriculum(): pass
+def visual(): pass
+def audio(): pass
+def music_edu(): pass

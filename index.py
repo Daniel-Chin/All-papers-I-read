@@ -170,7 +170,7 @@ class PianoTouch:
 '''
     abstract = '''We present PianoTouch, a wearable, wireless haptic piano instruction system, composed of (1) five small vibration motors, one for each finger, fitted inside a glove, (2) a Bluetooth module mounted on the glove, and (3) piano music output from a laptop. Users hear the piano music and feel the vibrations indicating which finger is used to play the note. We investigate the system's potential for passive learning, i.e. learning piano playing automatically while engaged in everyday activities. In a preliminary study, four subjects learned two songs initially and then wore the PianoTouch glove for 30 minutes while listening to the songs repeated. One of the songs included tactile sensations and the other did not. The study found that after 30 minutes, the PianoTouch subjects were able to play the song accompanied by tactile sensations better than the non-tactile song. These results suggest the value of a more detailed study.
 '''
-    tags = [haptic, vibration, passive_learning]
+    tags = [haptic, vibration, passive_learning, music_edu]
     my_notes = '''
 Summary: user testing shows passive vibration input helps retain a song after learning it first. 
 Q: During active learning, was there a score? During testing, was there a score? 
@@ -188,4 +188,79 @@ class developing_a_haptic_glove_for_basic_piano_education:
   year={2019}
 }
 '''
+    tags = [haptic, music_edu]
     my_notes = 'Hardly a good paper.'
+
+class visiohaptic_trace_shape_longterm:
+    apa = 'Yang, X. D., Bischof, W. F., & Boulanger, P. (2008, March). Validating the performance of haptic motor skill training. In 2008 Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems (pp. 129-135). IEEE.'
+    bib = '''@inproceedings{yang2008validating,
+  title={Validating the performance of haptic motor skill training},
+  author={Yang, Xing-Dong and Bischof, Walter F and Boulanger, Pierre},
+  booktitle={2008 Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems},
+  pages={129--135},
+  year={2008},
+  organization={IEEE}
+}
+'''
+    abstract = '''The effect of haptic interfaces on motor skill training has been widely studied. However, relatively little is known about whether haptic training can promote long-term motor skill acquisition. In this paper, we report two experimental studies that investigated the effectiveness of visuohaptic (visual + haptic) interfaces in helping people develop short-term and long-term motor skills. Our first study compared training outcomes of visuohaptic training, visual training, and no-assistance training. We found that the training outcomes for the tested methods were similar when helping participants develop short-term motor skills. Our second experiment assessed the potential of visual training and visuohaptic training in promoting the development of long-term motor skills. Participants were trained during a four-day-long period. The results showed that the participants gained long-term skills through both training methods, and that the training outcomes for both methods were similar. The results also showed that visuohaptic training is a promising method, but that it needs to be further developed to be useful.'''
+    tags = [haptic, visual, multimodal, adaptive_curriculum]
+    my_notes = '''
+Maybe: 
+    making a mistake and being corrected does not backprop.
+    only actively correcting one's mistake backprops. 
+paper: 
+    passive learning -> less effort -> learn less
+    "dynamically modify guidance ... accordin to the learner's skill level."
+- Their visual is CYP overlaid onto ground truth. 
+'''
+
+class drum_haptic_audio:
+    apa = 'Grindlay, G. (2008, March). Haptic guidance benefits musical motor learning. In 2008 Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems (pp. 397-404). IEEE.'
+    bib = '''@inproceedings{grindlay2008haptic,
+  title={Haptic guidance benefits musical motor learning},
+  author={Grindlay, Graham},
+  booktitle={2008 Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems},
+  pages={397--404},
+  year={2008},
+  organization={IEEE}
+}
+'''
+    abstract = '''This paper presents the results of a pilot experiment looking at the effect of haptic guidance on musical training. A percussion performance task was used where subjects learned to play short rhythmic sequences on a device capable of recording drumstick movements with a high degree of spatiotemporal accuracy. Subjects learned to perform the sequences under three primary training paradigms: listening to the rhythm (audio), being guided through the motions involved in the rhythm's performance (haptic), and being guided through the required motions while listening to the resulting sound (audio+haptic). Performance was assessed in terms of both timing and loudness (velocity) accuracy using several different metrics. Results indicate that haptic guidance can significantly benefit recall of both note timing and velocity. When subject performance was compared in terms of note velocity recall, the addition of haptic guidance to audio-based training produced a 17% reduction in final error when compared to audio training alone. When performance was evaluated in terms of liming recall, the combination of audio and haptic guidance led to an 18% reduction in early-stage error.'''
+    tags = [haptic, audio, multimodal, music_edu]
+    my_notes = '''Nice engineering and stats.'''
+
+class three_d_trajectory_haptic:
+    apa = 'Feygin, D., Keehner, M., & Tendick, R. (2002, March). Haptic guidance: Experimental evaluation of a haptic training method for a perceptual motor skill. In Proceedings 10th Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems. HAPTICS 2002 (pp. 40-47). IEEE.'
+    bib = '''@inproceedings{feygin2002haptic,
+  title={Haptic guidance: Experimental evaluation of a haptic training method for a perceptual motor skill},
+  author={Feygin, David and Keehner, Madeleine and Tendick, R},
+  booktitle={Proceedings 10th Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems. HAPTICS 2002},
+  pages={40--47},
+  year={2002},
+  organization={IEEE}
+}
+'''
+    abstract = '''In this paper we investigate a use of haptics for skills training which we call haptic guidance. In the haptic guidance paradigm, the subject is physically guided through the ideal motion by the haptic interface, thus giving the subject a kinesthetic understanding of what is required. Subjects learned a complex 3D motion under three training conditions (haptic, visual, haptic and visual) and were required to manually reproduce the movement under two recall conditions (with vision, without vision). Performance was measured in terms of position, shape, timing, and drift. Findings from this study indicate that haptic guidance is effective in training. While visual training was better for teaching the trajectory shape, temporal aspects of the task were more effectively learned from haptic guidance. This supports a possible role for haptics in the training of perceptual motor skills in virtual environments.'''
+    tags = [haptic, visual, multimodal]
+    my_notes = '''
+Cite: 
+    haptic guidance: "the subject is physically guided through the ideal motion by the haptic interface, thus giving the subject a kinesthetic understanding of what is required."
+- abstract highlight: H is better for rhythm and V for trajectory. 
+- Their visual is only ground truth, no interactivity. 
+- 学 H (眼睛遮住) 测 H+V (眼睛睁开) 的分数比 测 H (眼睛遮住) 分数低。"This suggests that vision may somehow interfere with the haptic representation of the task."
+Q: 为什么 V training phase 只是观察 ground truth, 没有同时动手？这才导致了 V vs H 与 observation vs practice 耦合了？
+'''
+
+class MoveMe_haptic_guide_theremin:
+    apa = 'Fujii, K., Russo, S. S., Maes, P., & Rekimoto, J. (2015, November). MoveMe: 3D haptic support for a musical instrument. In Proceedings of the 12th International Conference on Advances in Computer Entertainment Technology (pp. 1-8).'
+    bib = '''@inproceedings{fujii2015moveme,
+  title={MoveMe: 3D haptic support for a musical instrument},
+  author={Fujii, Katsuya and Russo, Sophia S and Maes, Pattie and Rekimoto, Jun},
+  booktitle={Proceedings of the 12th International Conference on Advances in Computer Entertainment Technology},
+  pages={1--8},
+  year={2015}
+}
+'''
+    abstract = '''Fine motor skills like finger/hand manipulations are essential for playing musical instruments and these skills require a great amount of time and effort to acquire. Researchers have been introducing haptic feedback systems in order to facilitate the process of learning motor skills but little research has expanded the possibility of applying to the field of musical instruments. Hence, we developed a system called "MoveMe" that provides three-dimensional haptic support for playing a musical instrument. The system guides a user's hands as if someone else was holding their hands to help a beginner play a musical instrument. With the system, an expert can pre-record his/her movements so that a beginner can play it back later as necessary. Alternatively, the system connects an expert and a beginner via two haptic robots and the expert can, in real time, guide and correct the beginner's movement. In addition to those functionalities, we introduce a new proficiency metric provided by force feedback. A master can evaluate how much a beginner has improved using both audio feedback as well as this new force-based metric. Through the experiments that we conducted, we found that our system is effective in terms of playing a song at a correct speed and rhythm.
+'''
+    tags = [haptic, music_edu]
