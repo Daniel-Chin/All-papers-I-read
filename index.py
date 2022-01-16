@@ -203,7 +203,7 @@ class visiohaptic_trace_shape_longterm:
 }
 '''
     abstract = '''The effect of haptic interfaces on motor skill training has been widely studied. However, relatively little is known about whether haptic training can promote long-term motor skill acquisition. In this paper, we report two experimental studies that investigated the effectiveness of visuohaptic (visual + haptic) interfaces in helping people develop short-term and long-term motor skills. Our first study compared training outcomes of visuohaptic training, visual training, and no-assistance training. We found that the training outcomes for the tested methods were similar when helping participants develop short-term motor skills. Our second experiment assessed the potential of visual training and visuohaptic training in promoting the development of long-term motor skills. Participants were trained during a four-day-long period. The results showed that the participants gained long-term skills through both training methods, and that the training outcomes for both methods were similar. The results also showed that visuohaptic training is a promising method, but that it needs to be further developed to be useful.'''
-    tags = [haptic, visual, multimodal, adaptive_curriculum]
+    tags = [haptic, visual, multimodal, adaptive_curriculum_scaffolding]
     my_notes = '''
 Maybe: 
     making a mistake and being corrected does not backprop.
@@ -264,3 +264,53 @@ class MoveMe_haptic_guide_theremin:
     abstract = '''Fine motor skills like finger/hand manipulations are essential for playing musical instruments and these skills require a great amount of time and effort to acquire. Researchers have been introducing haptic feedback systems in order to facilitate the process of learning motor skills but little research has expanded the possibility of applying to the field of musical instruments. Hence, we developed a system called "MoveMe" that provides three-dimensional haptic support for playing a musical instrument. The system guides a user's hands as if someone else was holding their hands to help a beginner play a musical instrument. With the system, an expert can pre-record his/her movements so that a beginner can play it back later as necessary. Alternatively, the system connects an expert and a beginner via two haptic robots and the expert can, in real time, guide and correct the beginner's movement. In addition to those functionalities, we introduce a new proficiency metric provided by force feedback. A master can evaluate how much a beginner has improved using both audio feedback as well as this new force-based metric. Through the experiments that we conducted, we found that our system is effective in terms of playing a song at a correct speed and rhythm.
 '''
     tags = [haptic, music_edu]
+
+class vibro_tactile_drum:
+    apa = 'Tom, A., Singh, A., Daigle, M., Marandola, F., & Wanderley, M. (2020). Haptic Tutor-A haptics-based music education tool for beginners. In International Workshop on Haptic and Audio Interaction Design.'
+    bib = '''@inproceedings{tom2020haptic,
+  title={Haptic Tutor-A haptics-based music education tool for beginners},
+  author={Tom, Ajin and Singh, Ankita and Daigle, Martin and Marandola, Fabrice and Wanderley, Marcelo},
+  booktitle={International Workshop on Haptic and Audio Interaction Design},
+  year={2020}
+}
+'''
+    abstract = '''In this paper we introduce Haptic Tutor, a wearable haptic system for triggering vibrations on limbs of a student drummer aimed to help develop multi-limb independence. The system uses portable, wireless vibrotactile devices to display haptic information on drummers' limbs. To asses the usefulness of the system, we analyse response time differences between stimuli and motor action (drum stroke). Our hypotheses are that the use of haptic stimuli will improve the temporal characteristics of performances, but also that the type of haptic stimuli will have an influence on performance results. To validate these hypotheses we conducted two experiments. The first one with participants randomly distributed in three groups, each group performing simple drumming lessons involving both hands under a given condition (no haptics, haptic pulse and haptic ramp). Results show clear improvement in strike accuracy for both haptic conditions, most clearly in the haptic ramp condition. Using these results, a second experiment was carried out in which 6 other participants were randomly divided into two groups (no haptics and haptic ramp conditions) and asked to perform a more complex lesson, this time involving three limbs (two arms and right foot). Results of both experiments show clear improvement on strike accuracy (reduced asynchrony), but a less important difference on strike precision (inter-onset-interval deviation) for the haptic condition. We finally report on participants subjective comments , discussing the limitations of the current prototype.'''
+    tags = [haptic, music_edu, vibration]
+
+class scaffolding:
+    apa = 'Wood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in problem solving. Journal of child psychology and psychiatry, 17(2), 89-100.'
+    bib = '''@article{wood1976role,
+  title={The role of tutoring in problem solving},
+  author={Wood, David and Bruner, Jerome S and Ross, Gail},
+  journal={Journal of child psychology and psychiatry},
+  volume={17},
+  number={2},
+  pages={89--100},
+  year={1976},
+  publisher={Wiley Online Library}
+}
+'''
+    abstract = None
+    tags = [adaptive_curriculum_scaffolding]
+    my_notes = '''
+This paper proposed "scaffolding". 
+scaffolding: focus on what little you can learn at the moment and leave the unlearnable to the tutor's assistance. 
+I think: learn one thing at a time. 
+'''
+
+class fading_scaffold:
+    apa = "McNeill, K. L., Lizotte, D. J., Krajcik, J., & Marx, R. W. (2006). Supporting students' construction of scientific explanations by fading scaffolds in instructional materials. The Journal of the Learning Sciences, 15(2), 153-191."
+    bib = '''@article{mcneill2006supporting,
+  title={Supporting students' construction of scientific explanations by fading scaffolds in instructional materials},
+  author={McNeill, Katherine L and Lizotte, David J and Krajcik, Joseph and Marx, Ronald W},
+  journal={The Journal of the Learning Sciences},
+  volume={15},
+  number={2},
+  pages={153--191},
+  year={2006},
+  publisher={Taylor \& Francis}
+}
+'''
+    abstract = '''The purpose of this study was to determine whether providing students with continuous written instructional support or fading written instructional support (scaffolds) better prepares students to construct scientific explanations when they are no longer provided with support. This article investigated the influence of scaffolding on 331 seventh-grade students' writing of scientific explanations during an 8-week, project-based chemistry unit in which the construction of scientific explanations is a key learning goal. The unit makes an instructional model for explanation explicit to students through a focal lesson and reinforces that model through subsequent written support for each investigation. Students received 1 of 2 treatments in terms of the type of written support: continuous, involving detailed support for every investigation, or faded, involving less support over time. The analyses showed significant learning gains for students for all components of scientific explanation (i.e., claim, evidence, and reasoning). However, on posttest items lacking scaffolds, the faded group gave stronger explanations in terms of their reasoning compared to the continuous group. Fading written scaffolds better equipped students to write explanations when they were not provided with support.'''
+    tags = [adaptive_curriculum_scaffolding]
+    my_notes = '''fading scaffold'''
