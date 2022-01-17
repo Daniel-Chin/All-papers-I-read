@@ -210,7 +210,7 @@ Maybe:
     only actively correcting one's mistake backprops. 
 paper: 
     passive learning -> less effort -> learn less
-    "dynamically modify guidance ... accordin to the learner's skill level."
+    "dynamically modify guidance ... according to the learner's skill level."
 - Their visual is CYP overlaid onto ground truth. 
 '''
 
