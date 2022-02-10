@@ -19,3 +19,4 @@ def adaptive_curriculum_scaffolding(): pass
 def visual(): pass
 def audio(): pass
 def music_edu(): pass
+def network(): pass
