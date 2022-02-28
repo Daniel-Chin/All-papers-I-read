@@ -20,3 +20,5 @@ def visual(): pass
 def audio(): pass
 def music_edu(): pass
 def network(): pass
+def transfer_learning(): pass
+def time_hierarchy(): pass

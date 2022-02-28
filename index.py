@@ -332,3 +332,22 @@ The router knows both the spare bandwidth and the queue.
     THe routers mark the packets. 
 Uses control theory to ensure stablity. 
 '''
+
+class deep_emb_helps_segmentation:
+    apa = 'Salamon, J., Nieto, O., & Bryan, N. J. (2017). Deep Embeddings and Section Fusion Improve Music Segmentation. IEEE Signal Processing Letters, 24(3), 279-283.'
+    bib = '''@article{salamon2017deep,
+  title={Deep Embeddings and Section Fusion Improve Music Segmentation},
+  author={Salamon, Justin and Nieto, Oriol and Bryan, Nicholas J},
+  journal={IEEE Signal Processing Letters},
+  volume={24},
+  number={3},
+  pages={279--283},
+  year={2017}
+}
+'''
+    abstract = '''Music segmentation algorithms identify the structure of a music recording by automatically dividing it into sections and determining which sections repeat and when. Since the desired granularity of the sections may vary by application, multi-level segmentation produces several levels of segmentation ordered by granularity from one section (the whole song) up to N unique sections, and has proven to be a challenging MIR task. In this work we propose a multi-level segmentation method that leverages deep audio embeddings learned via other tasks. Our approach builds on an existing multi-level segmentation algorithm, replacing manually engineered features with deep embeddings learned through audio classification problems where data are abundant. Additionally, we propose a novel section fusion algorithm that leverages the multi-level segmentation to consolidate short segments at each level in a way that is consistent with the segmentations at lower levels. Through a series of experiments we show that replacing handcrafted features with deep embeddings can lead to significant improvements in multilevel music segmentation performance, and that section fusion further improves the results by cleaning up spurious short sections. We compare our approach to two strong baselines and show that it yields state-of-the-art results.'''
+    tags = [hierarchical, time_hierarchy]
+    my_notes = '''See slides at https://docs.google.com/presentation/d/143vXGAh7HiYN-WrxxkjLaHpi0NWK_2Md/edit?usp=sharing&ouid=111628173406875267677&rtpof=true&sd=true
+Using deep emb to segmentate audio. 
+No finetuning. Using existing clustering algo on deep emb. 
+'''
