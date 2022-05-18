@@ -353,6 +353,17 @@ No finetuning. Using existing clustering algo on deep emb.
 '''
 
 class implementing_a_generative_theory_of_tonal_music:
+    apa = 'Hamanaka, M., Hirata, K., & Tojo, S. (2006). Implementing “A generative theory of tonal music”. Journal of New Music Research, 35(4), 249-277.'
+    bib = '''@article{hamanaka2006implementing,
+  title={Implementing “A generative theory of tonal music”},
+  author={Hamanaka, Masatoshi and Hirata, Keiji and Tojo, Satoshi},
+  journal={Journal of New Music Research},
+  volume={35},
+  number={4},
+  pages={249--277},
+  year={2006},
+  publisher={Taylor \& Francis}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 Mechanize GTTM into exGTTM.  
@@ -370,6 +381,15 @@ staff.aist.go.jp/m.hamanaka/atta/
 '''
 
 class deepGTTM_I_II_local_boundary_and_metrical_structure_analyzer_based_on_deep_learning:
+    apa = 'Hamanaka, M., Hirata, K., & Tojo, S. (2016, July). deepGTTM-I&II: Local boundary and metrical structure analyzer based on deep learning technique. In International Symposium on Computer Music Multidisciplinary Research (pp. 3-21). Springer, Cham.'
+    bib = '''@inproceedings{hamanaka2016deepgttm,
+  title={deepGTTM-I\&II: Local boundary and metrical structure analyzer based on deep learning technique},
+  author={Hamanaka, Masatoshi and Hirata, Keiji and Tojo, Satoshi},
+  booktitle={International Symposium on Computer Music Multidisciplinary Research},
+  pages={3--21},
+  year={2016},
+  organization={Springer}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 8-bar monophonic.  
@@ -382,12 +402,24 @@ Misc.
 '''
 
 class music_structural_analysis_database_based_on_GTTM:
+    apa = 'Hamanaka, M., Hirata, K., & Tojo, S. (2014). Musical structural analysis database based on GTTM.'
+    bib = '''@article{hamanaka2014musical,
+  title={Musical structural analysis database based on GTTM},
+  author={Hamanaka, Masatoshi and Hirata, Keiji and Tojo, Satoshi},
+  year={2014},
+  publisher={ISMIR 2014}
+}'''
     tags = [lit_review_for_junyan_ismir_2022, dataset]
     my_notes = '''
 A dataset of GTTM-annotated monophonic pieces, each ~ 8 bars.  
 '''
 
 class deepGTTM_III_simultaneous_learning_of_grouping_and_metrical_structures:
+    apa = 'Hirata, M. H. K., & Tojo, S. deepGTTM-III: Simultaneous Learning of Grouping and Metrical Structures.'
+    bib = '''@article{hiratadeepgttm,
+  title={deepGTTM-III: Simultaneous Learning of Grouping and Metrical Structures},
+  author={Hirata, Masatoshi Hamanaka1 Keiji and Tojo, Satoshi}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 Include feedback between metrical and grouping structures.  
@@ -395,7 +427,16 @@ In practice, it's just multi-task learning using shared
 backbones.  
 '''
 
-class searching_for_metric_structure_of_musical_files_automatic_rhythm_retrieval_from_musical_files:
+class searching_for_metric_structure_of_musical_files:
+    apa = 'Kostek, B., Wojcik, J., & Szczuko, P. (2007, June). Searching for Metric Structure of Musical Files. In International Conference on Rough Sets and Intelligent Systems Paradigms (pp. 774-783). Springer, Berlin, Heidelberg.'
+    bib = '''@inproceedings{kostek2007searching,
+  title={Searching for Metric Structure of Musical Files},
+  author={Kostek, Bozena and Wojcik, Jaroslaw and Szczuko, Piotr},
+  booktitle={International Conference on Rough Sets and Intelligent Systems Paradigms},
+  pages={774--783},
+  year={2007},
+  organization={Springer}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 Symbolic polyphonic -> ANN -> note accented or not.  
@@ -403,6 +444,13 @@ Only one level of metrical struct.
 '''
 
 class machine_rhythm_computer_emulation_of_human_rhythm_perception:
+    apa = 'Rosenthal, D. F. (1992). Machine rhythm--computer emulation of human rhythm perception (Doctoral dissertation, Massachusetts Institute of Technology).'
+    bib = '''@phdthesis{rosenthal1992machine,
+  title={Machine rhythm--computer emulation of human rhythm perception},
+  author={Rosenthal, David Felix},
+  year={1992},
+  school={Massachusetts Institute of Technology}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 Symbolic polyphonic -> "Machine Rhythm" 
@@ -411,6 +459,17 @@ A 1977 PhD thesis. So probably you can't get their code.
 '''
 
 class modeling_meter_and_harmony_a_preference_rule_approach:
+    apa = 'Temperley, D., & Sleator, D. (1999). Modeling meter and harmony: A preference-rule approach. Computer Music Journal, 23(1), 10-27.'
+    bib = '''@article{temperley1999modeling,
+  title={Modeling meter and harmony: A preference-rule approach},
+  author={Temperley, David and Sleator, Daniel},
+  journal={Computer Music Journal},
+  volume={23},
+  number={1},
+  pages={10--27},
+  year={1999},
+  publisher={JSTOR}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 Recommended reading.  
@@ -428,24 +487,62 @@ Open source at http://www.link.cs.cmu.edu/music-analysis
 '''
 
 class inferring_metrical_structure_in_music_using_particle_filters:
+    apa = 'Krebs, F., Holzapfel, A., Cemgil, A. T., & Widmer, G. (2015). Inferring metrical structure in music using particle filters. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 23(5), 817-827.'
+    bib = '''@article{krebs2015inferring,
+  title={Inferring metrical structure in music using particle filters},
+  author={Krebs, Florian and Holzapfel, Andre and Cemgil, Ali Taylan and Widmer, Gerhard},
+  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+  volume={23},
+  number={5},
+  pages={817--827},
+  year={2015},
+  publisher={IEEE}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 non symbolic -> 2-level metrical struct
 '''
 
 class gtsim_a_computer_simulation_of_music_perception:
+    apa = 'Jones, J., Scarborough, D., & Miller, B. (1993). Gtsim a computer simulation of music perception. Computers and the Humanities, 27(1), 19-23.'
+    bib = '''@article{jones1993gtsim,
+  title={Gtsim a computer simulation of music perception},
+  author={Jones, Jacqueline and Scarborough, Don and Miller, Benjamin},
+  journal={Computers and the Humanities},
+  volume={27},
+  number={1},
+  pages={19--23},
+  year={1993},
+  publisher={Springer}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 Work in progress from 1993...  
 '''
 
 class on_hierarchical_clustering_of_spectrogram:
+    apa = 'Sawada, S., Takegawa, Y., & Hirata, K. (2017, September). On Hierarchical Clustering of Spectrogram. In International Symposium on Computer Music Multidisciplinary Research (pp. 226-237). Springer, Cham.'
+    bib = '''@inproceedings{sawada2017hierarchical,
+  title={On Hierarchical Clustering of Spectrogram},
+  author={Sawada, Shun and Takegawa, Yoshinari and Hirata, Keiji},
+  booktitle={International Symposium on Computer Music Multidisciplinary Research},
+  pages={226--237},
+  year={2017},
+  organization={Springer}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 spectrogram -> grouping struct  
 '''
 
 class a_constraint_based_approach_to_grouping_in_language_and_music:
+    apa = 'van der Werf, S., & Hendriks, P. (2004). A constraint-based approach to grouping in language and music. In Proceedings: First Conference on Interdisciplinary Musicology CIM04, Graz, Austria.'
+    bib = '''@inproceedings{van2004constraint,
+  title={A constraint-based approach to grouping in language and music},
+  author={van der Werf, Sybrand and Hendriks, Petra},
+  booktitle={Proceedings: First Conference on Interdisciplinary Musicology CIM04, Graz, Austria},
+  year={2004}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 GTTM -> OT (optimality theory).  
@@ -455,6 +552,17 @@ Parser is based on the magic of Prolog.
 '''
 
 class a_rule_based_expert_system_for_music_perception:
+    apa = 'Jones, J. A., Miller, B. O., & Scarborough, D. L. (1988). A rule-based expert system for music perception. Behavior Research Methods, Instruments, & Computers, 20(2), 255-262.'
+    bib = '''@article{jones1988rule,
+  title={A rule-based expert system for music perception},
+  author={Jones, Jacqueline A and Miller, Benjamin O and Scarborough, Don L},
+  journal={Behavior Research Methods, Instruments, \& Computers},
+  volume={20},
+  number={2},
+  pages={255--262},
+  year={1988},
+  publisher={Springer}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 monophonic symbolic -> 6-level metrical struct  
@@ -500,6 +608,17 @@ Proposes an algo too.
 '''
 
 class a_review_of_automatic_rhythm_description_systems:
+    apa = 'Gouyon, F., & Dixon, S. (2005). A review of automatic rhythm description systems. Computer music journal, 29(1), 34-54.'
+    bib = '''@article{gouyon2005review,
+  title={A review of automatic rhythm description systems},
+  author={Gouyon, Fabien and Dixon, Simon},
+  journal={Computer music journal},
+  volume={29},
+  number={1},
+  pages={34--54},
+  year={2005},
+  publisher={JSTOR}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 A lit review of many rhythm trackers.  
@@ -510,6 +629,17 @@ Section "Time Signature Determination" is useful.
 '''
 
 class a_hybrid_graphical_model_for_rhythmic_parsing:
+    apa = 'Raphael, C. (2002). A hybrid graphical model for rhythmic parsing. Artificial Intelligence, 137(1-2), 217-238.'
+    bib = '''@article{raphael2002hybrid,
+  title={A hybrid graphical model for rhythmic parsing},
+  author={Raphael, Christopher},
+  journal={Artificial Intelligence},
+  volume={137},
+  number={1-2},
+  pages={217--238},
+  year={2002},
+  publisher={Elsevier}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 symbolic -> rhythm parse  
@@ -517,9 +647,29 @@ method: ???
 '''
 
 class robust_downbeat_tracking_using_an_ensemble_of_convolutional_networks:
+    apa = 'Durand, S., Bello, J. P., David, B., & Richard, G. (2016). Robust downbeat tracking using an ensemble of convolutional networks. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 25(1), 76-89.'
+    bib = '''@article{durand2016robust,
+  title={Robust downbeat tracking using an ensemble of convolutional networks},
+  author={Durand, Simon and Bello, Juan Pablo and David, Bertrand and Richard, Ga{\"e}l},
+  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+  volume={25},
+  number={1},
+  pages={76--89},
+  year={2016},
+  publisher={IEEE}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
 
 class a_generalized_bayesian_model_for_tracking_long_metrical_cycles_in_acoustic_music_signals:
+    apa = 'Srinivasamurthy, A., Holzapfel, A., Cemgil, A. T., & Serra, X. (2016, March). A generalized bayesian model for tracking long metrical cycles in acoustic music signals. In 2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 76-80). IEEE.'
+    bib = '''@inproceedings{srinivasamurthy2016generalized,
+  title={A generalized bayesian model for tracking long metrical cycles in acoustic music signals},
+  author={Srinivasamurthy, Ajay and Holzapfel, Andre and Cemgil, Ali Taylan and Serra, Xavier},
+  booktitle={2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={76--80},
+  year={2016},
+  organization={IEEE}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 Meter tracking improved for non-western music where each bar 
@@ -527,12 +677,32 @@ is very long.
 '''
 
 class automatic_salience_based_hypermetric_rhythm_retrieval:
+    apa = 'Kostek, B., & Wojcik, J. (2007, April). Automatic salience-based hypermetric rhythm retrieval. In 2007 International Conference on Multimedia and Ubiquitous Engineering (MUE'07) (pp. 1220-1226). IEEE.'
+    bib = '''@inproceedings{kostek2007automatic,
+  title={Automatic salience-based hypermetric rhythm retrieval},
+  author={Kostek, Bozena and Wojcik, Jaroslaw},
+  booktitle={2007 International Conference on Multimedia and Ubiquitous Engineering (MUE'07)},
+  pages={1220--1226},
+  year={2007},
+  organization={IEEE}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 整篇一直在说 hypermetric rhythm, 但整篇没看到。  
 '''
 
 class a_unified_probabilistic_model_for_polyphonic_music_analysis:
+    apa = 'Temperley, D. (2009). A unified probabilistic model for polyphonic music analysis. Journal of New Music Research, 38(1), 3-18.'
+    bib = '''@article{temperley2009unified,
+  title={A unified probabilistic model for polyphonic music analysis},
+  author={Temperley, David},
+  journal={Journal of New Music Research},
+  volume={38},
+  number={1},
+  pages={3--18},
+  year={2009},
+  publisher={Taylor \& Francis}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 polyphonic symbolic -> metrical + harmonic + stream struct  
@@ -543,6 +713,17 @@ very regular parses.
 '''
 
 class determination_of_the_meter_of_musical_scores_by_autocorrelation:
+    apa = 'Brown, J. C. (1993). Determination of the meter of musical scores by autocorrelation. The Journal of the Acoustical Society of America, 94(4), 1953-1957.'
+    bib = '''@article{brown1993determination,
+  title={Determination of the meter of musical scores by autocorrelation},
+  author={Brown, Judith C},
+  journal={The Journal of the Acoustical Society of America},
+  volume={94},
+  number={4},
+  pages={1953--1957},
+  year={1993},
+  publisher={Acoustical Society of America}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 Assumes more notes are at downbeats than at upbeats.  
@@ -551,6 +732,14 @@ No pitch, only onsets.
 '''
 
 class automatic_meter_extraction_from_midi_files:
+    apa = 'Meudic, B. (2002, June). Automatic meter extraction from MIDI files. In Journées d'informatique musicale (pp. 1-1).'
+    bib = '''@inproceedings{meudic2002automatic,
+  title={Automatic meter extraction from MIDI files},
+  author={Meudic, Benoit},
+  booktitle={Journ{\'e}es d'informatique musicale},
+  pages={1--1},
+  year={2002}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 symbolic polyphonic -> 4-level metrical struct  
@@ -560,12 +749,37 @@ Method is auto-correlation.
 '''
 
 class finding_meter_in_music_using_an_autocorrelation_phase_matrix_and_shannon_entropy:
+    apa = 'Eck, D., & Casagrande, N. (2005). Finding meter in music using an autocorrelation phase matrix and shannon entropy. Target, 300(350), 400.'
+    bib = '''@article{eck2005finding,
+  title={Finding meter in music using an autocorrelation phase matrix and shannon entropy},
+  author={Eck, Douglas and Casagrande, Norman},
+  journal={Target},
+  volume={300},
+  number={350},
+  pages={400},
+  year={2005}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
 
 class meter_detection_in_symbolic_music_using_inner_metric_analysis:
+    apa = 'De Haas, W. B., & Volk, A. (2016, August). Meter detection in symbolic music using inner metric analysis. In International Society for Music Information Retrieval Conference (p. 441).'
+    bib = '''@inproceedings{de2016meter,
+  title={Meter detection in symbolic music using inner metric analysis},
+  author={De Haas, W Bas and Volk, Anja},
+  booktitle={International Society for Music Information Retrieval Conference},
+  pages={441},
+  year={2016}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
 
 class automatic_generation_of_grouping_structure_based_on_the_gttm:
+    apa = 'Hamanaka, M., Hirata, K., & Tojo, S. (2004, November). Automatic Generation of Grouping Structure based on the GTTM. In ICMC.'
+    bib = '''@inproceedings{hamanaka2004automatic,
+  title={Automatic Generation of Grouping Structure based on the GTTM},
+  author={Hamanaka, Masatoshi and Hirata, Keiji and Tojo, Satoshi},
+  booktitle={ICMC},
+  year={2004}
+}'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 '''
