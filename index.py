@@ -444,3 +444,128 @@ class on_hierarchical_clustering_of_spectrogram:
     my_notes = '''
 spectrogram -> grouping struct  
 '''
+
+class a_constraint_based_approach_to_grouping_in_language_and_music:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+GTTM -> OT (optimality theory).  
+Gives a parser for symbolic monophonic short pieces.  
+Compares with human annotations.  
+Parser is based on the magic of Prolog.  
+'''
+
+class a_rule_based_expert_system_for_music_perception:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+monophonic symbolic -> 6-level metrical struct  
+1988 的在读 PhD 搞的， 估计要不来 source code.  
+Rule-based. Does not *seem* to consider PR, only WFR.  
+'''
+
+class a_theoretical_framework_for_rhythm_perception:
+    apa = 'Povel, D. J. (1984). A theoretical framework for rhythm perception. Psychological research, 45(4), 315-337.'
+    bib = '''@article{povel1984theoretical,
+  title={A theoretical framework for rhythm perception},
+  author={Povel, Dirk-Jan},
+  journal={Psychological research},
+  volume={45},
+  number={4},
+  pages={315--337},
+  year={1984},
+  publisher={Springer}
+}'''
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Proposes grid theory.  
+"Pre-GTTM" simple theory to parse simple rhythm.  
+'''
+
+class perception_of_temporal_patterns:
+    apa = 'Povel, D. J., & Essens, P. (1985). Perception of temporal patterns. Music perception, 2(4), 411-440.'
+    bib = '''@article{povel1985perception,
+  title={Perception of temporal patterns},
+  author={Povel, Dirk-Jan and Essens, Peter},
+  journal={Music perception},
+  volume={2},
+  number={4},
+  pages={411--440},
+  year={1985},
+  publisher={University of California Press}
+}'''
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Another non-GTTM rhythm perception theory.  
+It's more or less a 2-level struct.  
+Proposes an algo too.  
+'''
+
+class a_review_of_automatic_rhythm_description_systems:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+A lit review of many rhythm trackers.  
+Notes the commonality of their methods.  
+However, seems to emphasize only levels 0:3.  
+Also input is non-symbolic audio.  
+Section "Time Signature Determination" is useful.  
+'''
+
+class a_hybrid_graphical_model_for_rhythmic_parsing:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+symbolic -> rhythm parse  
+method: ???  
+'''
+
+class robust_downbeat_tracking_using_an_ensemble_of_convolutional_networks:
+    tags = [lit_review_for_junyan_ismir_2022]
+
+class a_generalized_bayesian_model_for_tracking_long_metrical_cycles_in_acoustic_music_signals:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Meter tracking improved for non-western music where each bar 
+is very long.  
+'''
+
+class automatic_salience_based_hypermetric_rhythm_retrieval:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+整篇一直在说 hypermetric rhythm, 但整篇没看到。  
+'''
+
+class a_unified_probabilistic_model_for_polyphonic_music_analysis:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+polyphonic symbolic -> metrical + harmonic + stream struct  
+Open source at http://www.theory.esm.rochester/  
+Generative -- Bayesian -> analytical  
+The metrical rules are more strict than GTTM, only giving 
+very regular parses.  
+'''
+
+class determination_of_the_meter_of_musical_scores_by_autocorrelation:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Assumes more notes are at downbeats than at upbeats.  
+Trivially, autocorrelation can expose the meter.  
+No pitch, only onsets.  
+'''
+
+class automatic_meter_extraction_from_midi_files:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+symbolic polyphonic -> 4-level metrical struct  
+No link to source code. Ask authors.  
+The main goal is to infer the meter.  
+Method is auto-correlation.  
+'''
+
+class finding_meter_in_music_using_an_autocorrelation_phase_matrix_and_shannon_entropy:
+    tags = [lit_review_for_junyan_ismir_2022]
+
+class meter_detection_in_symbolic_music_using_inner_metric_analysis:
+    tags = [lit_review_for_junyan_ismir_2022]
+
+class automatic_generation_of_grouping_structure_based_on_the_gttm:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+'''
