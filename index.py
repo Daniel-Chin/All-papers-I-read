@@ -351,3 +351,96 @@ class deep_emb_helps_segmentation:
 Using deep emb to segmentate audio. 
 No finetuning. Using existing clustering algo on deep emb. 
 '''
+
+class implementing_a_generative_theory_of_tonal_music:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Mechanize GTTM into exGTTM.  
+ATTA is a rule-based algo to propose analysis under exGTTM.  
+ATTA = automatic time-span tree anayser.  
+It has 46 human-tuned parameters to specify the strength 
+of different preference rules.  
+It beats a baseline.  
+ATTA is at http://
+staff.aist.go.jp/m.hamanaka/atta/  
+    input is musicXML.  
+    Can be baseline? However, the human-tuned parameters 
+    probably made it overfit. (not fully automatic) Also 
+    it is monophonic.  
+'''
+
+class deepGTTM_I_II_local_boundary_and_metrical_structure_analyzer_based_on_deep_learning:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+8-bar monophonic.  
+The output of the NN is not only the metrical structure, 
+but also the applicability of GTTM rules on each note.  
+The input has manually annotated grouping structure.  
+NN is many FC layers.  
+Misc. 
+    Related work "FATTA" [3] can be baseline, but monophonic.  
+'''
+
+class music_structural_analysis_database_based_on_GTTM:
+    tags = [lit_review_for_junyan_ismir_2022, dataset]
+    my_notes = '''
+A dataset of GTTM-annotated monophonic pieces, each ~ 8 bars.  
+'''
+
+class deepGTTM_III_simultaneous_learning_of_grouping_and_metrical_structures:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Include feedback between metrical and grouping structures.  
+In practice, it's just multi-task learning using shared 
+backbones.  
+'''
+
+class searching_for_metric_structure_of_musical_files_automatic_rhythm_retrieval_from_musical_files:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Symbolic polyphonic -> ANN -> note accented or not.  
+Only one level of metrical struct.  
+'''
+
+class machine_rhythm_computer_emulation_of_human_rhythm_perception:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Symbolic polyphonic -> "Machine Rhythm" 
+-> 3-level rhythmic annotation  
+A 1977 PhD thesis. So probably you can't get their code.  
+'''
+
+class modeling_meter_and_harmony_a_preference_rule_approach:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Recommended reading.  
+Symbolic polyphonic -> (
+    5-level metrical struct + harmonic struct
+)  
+tactus is at level 2 (middle) among levels 0 : 5.  
+Rule based.  
+    pref rules: variations of GTTM.  
+    Search: Dynamic programming.  
+Open source at http://www.link.cs.cmu.edu/music-analysis  
+    also includes their test set.  
+    Probably, the test set is unlabeled and they did 
+    subjective evaluations.  
+'''
+
+class inferring_metrical_structure_in_music_using_particle_filters:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+non symbolic -> 2-level metrical struct
+'''
+
+class gtsim_a_computer_simulation_of_music_perception:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Work in progress from 1993...  
+'''
+
+class on_hierarchical_clustering_of_spectrogram:
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+spectrogram -> grouping struct  
+'''
