@@ -783,3 +783,17 @@ class automatic_generation_of_grouping_structure_based_on_the_gttm:
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 '''
+
+class how_do_novice_hapticians_design:
+    apa = 'Seifi, H., Chun, M., Gallacher, C., Schneider, O. S., & MacLean, K. E. (2020). How do novice hapticians design? A case study in creating haptic learning environments. IEEE Transactions on Haptics, 1-. https://doi.org/10.1109/TOH.2020.2968903'
+    bib = '''@article{seifi2020novice,
+  title={How do novice hapticians design? A case study in creating haptic learning environments},
+  author={Seifi, Hasti and Chun, Matthew and Gallacher, Colin and Schneider, Oliver and MacLean, Karon E},
+  journal={IEEE Transactions on Haptics},
+  volume={13},
+  number={4},
+  pages={791--805},
+  year={2020},
+  publisher={IEEE}
+}'''
+    tags = [haptic]
