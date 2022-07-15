@@ -1,4 +1,4 @@
-from .tags import *
+from tags import *
 
 class theme_transformer:
     apa = 'Shih, Y. J., Wu, S. L., Zalkow, F., Müller, M., & Yang, Y. H. (2021). Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer. arXiv preprint arXiv:2111.04093.'
@@ -368,7 +368,7 @@ class implementing_a_generative_theory_of_tonal_music:
     my_notes = '''
 Mechanize GTTM into exGTTM.  
 ATTA is a rule-based algo to propose analysis under exGTTM.  
-ATTA = automatic time-span tree anayser.  
+ATTA = automatic time-span tree analyser.  
 It has 46 human-tuned parameters to specify the strength 
 of different preference rules.  
 It beats a baseline.  
@@ -396,6 +396,7 @@ class deepGTTM_I_II_local_boundary_and_metrical_structure_analyzer_based_on_deep
 The output of the NN is not only the metrical structure, 
 but also the applicability of GTTM rules on each note.  
 The input has manually annotated grouping structure.  
+    not sure. maybe a part of curriculum.  
 NN is many FC layers.  
 Misc. 
     Related work "FATTA" [3] can be baseline, but monophonic.  
@@ -533,6 +534,8 @@ class on_hierarchical_clustering_of_spectrogram:
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
 spectrogram -> grouping struct  
+Looks like a good paper, but so hard to read.  
+没读完.  
 '''
 
 class a_constraint_based_approach_to_grouping_in_language_and_music:
@@ -677,7 +680,7 @@ is very long.
 '''
 
 class automatic_salience_based_hypermetric_rhythm_retrieval:
-    apa = 'Kostek, B., & Wojcik, J. (2007, April). Automatic salience-based hypermetric rhythm retrieval. In 2007 International Conference on Multimedia and Ubiquitous Engineering (MUE'07) (pp. 1220-1226). IEEE.'
+    apa = "Kostek, B., & Wojcik, J. (2007, April). Automatic salience-based hypermetric rhythm retrieval. In 2007 International Conference on Multimedia and Ubiquitous Engineering (MUE'07) (pp. 1220-1226). IEEE."
     bib = '''@inproceedings{kostek2007automatic,
   title={Automatic salience-based hypermetric rhythm retrieval},
   author={Kostek, Bozena and Wojcik, Jaroslaw},
@@ -732,7 +735,7 @@ No pitch, only onsets.
 '''
 
 class automatic_meter_extraction_from_midi_files:
-    apa = 'Meudic, B. (2002, June). Automatic meter extraction from MIDI files. In Journées d'informatique musicale (pp. 1-1).'
+    apa = "Meudic, B. (2002, June). Automatic meter extraction from MIDI files. In Journées d'informatique musicale (pp. 1-1)."
     bib = '''@inproceedings{meudic2002automatic,
   title={Automatic meter extraction from MIDI files},
   author={Meudic, Benoit},
@@ -782,4 +785,105 @@ class automatic_generation_of_grouping_structure_based_on_the_gttm:
 }'''
     tags = [lit_review_for_junyan_ismir_2022]
     my_notes = '''
+Looks just like ATTA.  
+'''
+
+class beat_and_downbeat_tracking_of_symbolic_music_data_using_deep_recurrent_neural_networks:
+    apa = 'Chuang, Y. C., & Su, L. (2020, December). Beat and downbeat tracking of symbolic music data using deep recurrent neural networks. In 2020 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC) (pp. 346-352). IEEE.'
+    bib = '''@inproceedings{chuang2020beat,
+  title={Beat and downbeat tracking of symbolic music data using deep recurrent neural networks},
+  author={Chuang, Yi-Chin and Su, Li},
+  booktitle={2020 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)},
+  pages={346--352},
+  year={2020},
+  organization={IEEE}
+}'''
+    abstract = '''Musical beat tracking is one of the most investigated tasks in music information retrieval (MIR). Research endeavors on this task have mostly been focused on the modeling of audio data representations. In contrast, beat tracking of symbolic music contents (e.g., MIDI, score sheets) has been relatively overlooked in the past years. In this paper, we revisit the task of symbolic music beat tracking and present to solve this task with modern deep learning approaches. To the extent of our knowledge, it is the first time that utilizing deep learning approaches to track beats and downbeats of symbolic music data. The proposed symbolic beat tracking framework performs joint beat and downbeat tracking in a multi-task learning (MTL) manner, and we investigate various types of networks which are based on the recurrent neural networks (RNN), such as bidirectional long short-term memory (BLSTM) network, hierarchical multi-scale (HM) LSTM, and BLSTM with the attention mechanism. In the experiments, a systematic comparison of these networks and state-of-art audio beat tracking methods are performed on the MusicNet dataset. Experiment results show that the BLSTM model trained specifically on symbolic data outperforms the state-of-the-art beat tracking methods utilized on synthesized audio. Such a comparison of performance also indicates the technical challenges in symbolic music beat tracking.'''
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Double binary classification (beat? downbeat?) for each 
+timestep.  
+'''
+
+class representations_of_music_in_ranking_rhythmic_hypotheses:
+    apa = 'Wojcik, J., & Kostek, B. (2010). Representations of music in ranking rhythmic hypotheses. In Advances in Music Information Retrieval (pp. 39-64). Springer, Berlin, Heidelberg.'
+    bib = '''@incollection{wojcik2010representations,
+  title={Representations of music in ranking rhythmic hypotheses},
+  author={Wojcik, Jaroslaw and Kostek, Bozena},
+  booktitle={Advances in Music Information Retrieval},
+  pages={39--64},
+  year={2010},
+  publisher={Springer}
+}'''
+    abstract = '''The chapter presents first the main issues related to music information retrieval (MIR) domain. Within this domain, there exists a variety of approaches to musical instrument recognition, musical phrase classification, melody classification (e.g. query-by-humming systems), rhythm retrieval, retrieval of high-level-musical features such as looking for emotions in music or differences in expressiveness, music search based on listeners’ preferences, etc. The objective of this study is to propose a method for retrieval of hypermetric rhythm on the basis of melody. A stream of sounds in MIDI format is introduced at the system input. On the basis of a musical content the method retrieves a hypermetric structure of rhythm of a musical piece consisting of rhythmic motives, phrases, and sentences. On the basis of the hypermetric structure retrieved, a system capable of creating automatic drum accompaniment to a given melody supporting the composition is proposed. A method does not use any information about rhythm (time signature), which is often included in MIDI information. Neither rhythmic tracks nor harmonic information are used in this method. The only information analyzed is a melody, which may be monophonic as well as polyphonic. The analysis starts after the entire piece has been played. Recurrence of melodic and rhythmic patterns and the rhythmic salience of sounds are combined to create an algorithm that finds the metric structure of rhythm in a given melody.'''
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Actually hypermeter parsing.  
+"The objective of this study is to propose a method for 
+retrieval of hypermetric rhythm on the basis of melody"  
+Propose parses and rank them using rule-based.  
+'''
+
+class enhanced_hierarchical_music_structure_annotations_via_feature_level_similarity_fusion:
+    apa = 'Tralie, C. J., & McFee, B. (2019, May). Enhanced hierarchical music structure annotations via feature level similarity fusion. In ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 201-205). IEEE.'
+    bib = '''@inproceedings{tralie2019enhanced,
+  title={Enhanced hierarchical music structure annotations via feature level similarity fusion},
+  author={Tralie, Christopher J and McFee, Brian},
+  booktitle={ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={201--205},
+  year={2019},
+  organization={IEEE}
+}'''
+    abstract = '''We describe a novel pipeline to automatically discover hierarchies of repeated sections in musical audio. The proposed method uses similarity network fusion (SNF) to combine different frame-level features into clean affinity matrices, which are then used as input to spectral clustering. While prior spectral clustering approaches to music structure analysis have pre-processed affinity matrices with heuristics specifically designed for this task, we show that the SNF approach directly yields segmentations which agree better with human annotators, as measured by the "L-measure" metric for hierarchical annotations. Furthermore, the SNF approach immediately supports arbitrarily many input features, allowing us to simultaneously discover structure encoded in timbral, harmonic, and rhythmic representations without any changes to the base algorithm.'''
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+SNF (similarity network fusion) can fuse multiple similarity 
+metrics. Then, they use spectral clustering.  
+'''
+
+class unsupervised_music_structure_annotation_by_time_series_structure_features_and_segment_similarity:
+    apa = 'Serra, J., Müller, M., Grosche, P., & Arcos, J. L. (2014). Unsupervised music structure annotation by time series structure features and segment similarity. IEEE Transactions on Multimedia, 16(5), 1229-1240.'
+    bib = '''@article{serra2014unsupervised,
+  title={Unsupervised music structure annotation by time series structure features and segment similarity},
+  author={Serra, Joan and M{\"u}ller, Meinard and Grosche, Peter and Arcos, Josep Ll},
+  journal={IEEE Transactions on Multimedia},
+  volume={16},
+  number={5},
+  pages={1229--1240},
+  year={2014},
+  publisher={IEEE}
+}'''
+    abstract = '''Automatically inferring the structural properties of raw multimedia documents is essential in today's digitized society. Given its hierarchical and multi-faceted organization, musical pieces represent a challenge for current computational systems. In this article, we present a novel approach to music structure annotation based on the combination of structure features with time series similarity. Structure features encapsulate both local and global properties of a time series, and allow us to detect boundaries between homogeneous, novel, or repeated segments. Time series similarity is used to identify equivalent segments, corresponding to musically meaningful parts. Extensive tests with a total of five benchmark music collections and seven different human annotations show that the proposed approach is robust to different ground truth choices and parameter settings. Moreover, we see that it outperforms previous approaches evaluated under the same framework.'''
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+Intro has a nice review.  
+Not only clustering, but also cut according to novelty peaks.  
+我没读完。  
+'''
+
+class boundary_detection_in_music_structure_analysis_using_convolutional_neural_networks:
+    apa = 'Ullrich, K., Schlüter, J., & Grill, T. (2014, October). Boundary Detection in Music Structure Analysis using Convolutional Neural Networks. In ISMIR (pp. 417-422).'
+    bib = '''@inproceedings{ullrich2014boundary,
+  title={Boundary Detection in Music Structure Analysis using Convolutional Neural Networks.},
+  author={Ullrich, Karen and Schl{\"u}ter, Jan and Grill, Thomas},
+  booktitle={ISMIR},
+  pages={417--422},
+  year={2014}
+}'''
+    abstract = '''The recognition of boundaries, e.g., between chorus andverse, is an important task in music structure analysis. Thegoal is to automatically detect such boundaries in audiosignals so that the results are close to human annotation.In this work, we apply Convolutional Neural Networks tothe task, trained directly on mel-scaled magnitude spectrograms. On a representative subset of the SALAMI structural annotation dataset, our method outperforms currenttechniques in terms of boundary retrieval F-measure at different temporal tolerances: We advance the state-of-the-artfrom 0.33 to 0.46 for tolerances of ±0.5 seconds, and from0.52 to 0.62 for tolerances of ±3 seconds. As the algorithm is trained on annotated audio data without the needof expert knowledge, we expect it to be easily adaptableto changed annotation guidelines and also to related taskssuch as the detection of song transitions.'''
+    tags = [lit_review_for_junyan_ismir_2022]
+
+class automatic_analysis_and_influence_of_hierarchical_structure_on_melody_rhythm_and_harmony_in_popular_music:
+    apa = 'Dai, S., Zhang, H., & Dannenberg, R. B. (2020). Automatic analysis and influence of hierarchical structure on melody, rhythm and harmony in popular music. arXiv preprint arXiv:2010.07518.'
+    bib = '''@article{dai2020automatic,
+  title={Automatic analysis and influence of hierarchical structure on melody, rhythm and harmony in popular music},
+  author={Dai, Shuqi and Zhang, Huan and Dannenberg, Roger B},
+  journal={arXiv preprint arXiv:2010.07518},
+  year={2020}
+}'''
+    abstract = '''Repetition is a basic indicator of musical structure. This study introduces new algorithms for identifying musical phrases based on repetition. Phrases combine to form sections yielding a two-level hierarchical structure. Automatically detected hierarchical repetition structures reveal significant interactions between structure and chord progressions, melody and rhythm. Different levels of hierarchy interact differently, providing evidence that structural hierarchy plays an important role in music beyond simple notions of repetition or similarity. Our work suggests new applications for music generation and music evaluation.'''
+    tags = [lit_review_for_junyan_ismir_2022]
+    my_notes = '''
+First segment the song by minimizing SDL (Structure 
+Description Length).  
 '''
