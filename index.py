@@ -887,3 +887,18 @@ class automatic_analysis_and_influence_of_hierarchical_structure_on_melody_rhyth
 First segment the song by minimizing SDL (Structure 
 Description Length).  
 '''
+
+class hierarchical_motion_understanding_via_motion_programs:
+    apa = 'Kulal, S., Mao, J., Aiken, A., & Wu, J. (2021). Hierarchical motion understanding via motion programs. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 6568-6576).'
+    bib = '''@inproceedings{kulal2021hierarchical,
+  title={Hierarchical motion understanding via motion programs},
+  author={Kulal, Sumith and Mao, Jiayuan and Aiken, Alex and Wu, Jiajun},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={6568--6576},
+  year={2021}
+}'''
+    abstract = '''Current approaches to video analysis of human motion focus on raw pixels or keypoints as the basic units of reasoning. We posit that adding higher-level motion primitives, which can capture natural coarser units of motion such as backswing or follow-through, can be used to improve downstream analysis tasks. This higher level of abstraction can also capture key features, such as loops of repeated primitives, that are currently inaccessible at lower levels of representation. We therefore introduce Motion Programs, a neuro-symbolic, program-like representation that expresses motions as a composition of high-level primitives. We also present a system for automatically inducing motion programs from videos of human motion and for leveraging motion programs in video synthesis. Experiments show that motion programs can accurately describe a diverse set of human motions and the inferred programs contain semantically meaningful motion primitives, such as arm swings and jumping jacks. Our representation also benefits downstream tasks such as video interpolation and video prediction and outperforms off-the-shelf models. We further demonstrate how these programs can detect diverse kinds of repetitive motion and facilitate interactive video editing.'''
+    tags = [computer_vision]
+    my_notes = '''
+Just one level of time hierarchy. Simple inductive bias to understand human videos. Ablation tests are a little insufficient, I would say. 
+'''
