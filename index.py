@@ -927,7 +927,7 @@ class time_in_distributed_real_time_systems:
 For ardu and proc, use midpoint estimate.  
 '''
 
-class take_a_video_text_to_video_generation_without_text_video_data:
+class make_a_video_text_to_video_generation_without_text_video_data:
     apa = 'Singer, U., Polyak, A., Hayes, T., Yin, X., An, J., Zhang, S., ... & Taigman, Y. (2022). Make-A-Video: Text-to-Video Generation without Text-Video Data. arXiv preprint arXiv:2209.14792.'
     bib = '''@article{singer2022make,
   title={Make-A-Video: Text-to-Video Generation without Text-Video Data},
