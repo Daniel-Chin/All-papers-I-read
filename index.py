@@ -912,3 +912,17 @@ class overcoming_the_disentanglement_vs_reconstruction_trade_off_via_jacobian_su
   year={2018}
 }'''
     abstract = '''A major challenge in learning image representations is the disentangling of the factors of variation underlying the image formation.  This is typically achieved with an autoencoder architecture where a subset of the latent variables is constrained to correspond to specific factors, and the rest of them are considered nuisance variables. This approach has an important drawback: as the dimension of the nuisance variables is increased, image reconstruction is improved, but the decoder has the flexibility to ignore the specified factors, thus losing the ability to condition the output on them.  In this work, we propose to overcome this trade-off by progressively growing the dimension of the latent code, while constraining the Jacobian of the output image with respect to the disentangled variables to remain the same.  As a result, the obtained models are effective at both disentangling and reconstruction.  We demonstrate the applicability of this method in both unsupervised and supervised scenarios for learning disentangled representations. In a facial attribute manipulation task, we obtain high quality image generation while smoothly controlling dozens of attributes with a single model. This is an order of magnitude more disentangled factors than state-of-the-art methods, while obtaining visually similar or superior results, and avoiding adversarial training.'''
+
+class time_in_distributed_real_time_systems:
+    apa = 'Brandt, E., & Dannenberg, R. B. (1999). Time in distributed real-time systems.'
+    bib = '''@article{brandt1999time,
+  title={Time in distributed real-time systems},
+  author={Brandt, Eli and Dannenberg, Roger B},
+  year={1999},
+  publisher={Carnegie Mellon University}
+}'''
+    abstract = '''A real-time music system is responsible for deciding what happens when, when each task runs and each message takes effect. This question becomes acute when there are several classes of tasks running and intercommunicating: user interface, control processing, and audio, for example. We briefly examine and classify past approaches and their applicability to distributed systems, then propose and discuss an alternative. The shared access to a sample clock that it requires is not trivial to achieve in a distributed system, so we describe and assess a way to do so.'''
+    tags = [realtime]
+    my_notes = '''
+For ardu and proc, use midpoint estimate.  
+'''
