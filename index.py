@@ -942,3 +942,30 @@ It's text to image (embedding) to video.
 The image 2 video part finetunes an existing image diffusion model.  i.e. the 3rd D is added and then trained.  
 Various details and techniques are worth learning from.  
 '''
+
+class learning_temporally_causal_latent_processes_from_general_temporal_data:
+    apa = 'Yao, W., Sun, Y., Ho, A., Sun, C., & Zhang, K. (2021). Learning Temporally Causal Latent Processes from General Temporal Data. arXiv preprint arXiv:2110.05428.'
+    bib = '''@article{yao2021learning,
+  title={Learning Temporally Causal Latent Processes from General Temporal Data},
+  author={Yao, Weiran and Sun, Yuewen and Ho, Alex and Sun, Changyin and Zhang, Kun},
+  journal={arXiv preprint arXiv:2110.05428},
+  year={2021}
+}'''
+    abstract = '''Our goal is to recover time-delayed latent causal variables and identify their relations from measured temporal data. Estimating causally-related latent variables from observations is particularly challenging as the latent variables are not uniquely recoverable in the most general case. In this work, we consider both a nonparametric, nonstationary setting and a parametric setting for the latent processes and propose two provable conditions under which temporally causal latent processes can be identified from their nonlinear mixtures. We propose LEAP, a theoretically-grounded framework that extends Variational AutoEncoders (VAEs) by enforcing our conditions through proper constraints in causal process prior. Experimental results on various datasets demonstrate that temporally causal latent processes are reliably identified from observed variables under different dependency structures and that our approach considerably outperforms baselines that do not properly leverage history or nonstationarity information. This demonstrates that using temporal information to learn latent processes from their invertible nonlinear mixtures in an unsupervised manner, for which we believe our work is one of the first, seems promising even without sparsity or minimality assumptions.'''
+    tags = [causality, self_supervise, relation]
+    my_notes = '''
+"LEAP", "五小球".  
+Using causality (高深，我不懂) to learn a system concepts from video.  
+What I don't understand:  
+why is it possible to infer causality when there's noise?  
+Say x, \epsilon -> y. We observe x and y. How do we know the direction of the causation?  
+'''
+
+class the_surprising_effectiveness_of_equivariant_models_in_domains_with_latent_symmetry:
+    ANONYMOUS = True
+    assert not ANONYMOUS
+    abstract = '''Extensive work has demonstrated that equivariant neural networks can significantly improve sample efficiency and generalization by enforcing an inductive bias in the network architecture. These applications typically assume that the domain symmetry is fully described by explicit transformations of the model inputs and outputs. However, many real-life applications contain only latent or partial symmetries which cannot be easily described by simple transformations of the input. In these cases, it is necessary to learn symmetry in the environment instead of imposing it mathematically on the network architecture. We discover, surprisingly, that imposing equivariance constraints that do not exactly match the domain symmetry is very helpful in learning the true symmetry in the environment. We differentiate between extrinsic and incorrect symmetry constraints and show that while imposing incorrect symmetry can impede the model's performance, imposing extrinsic symmetry can actually improve performance. We demonstrate that an equivariant model can significantly outperform non-equivariant methods on domains with latent symmetries both in supervised learning and in reinforcement learning for robotic manipulation and control problems.'''
+    tags = [symmetry]
+    my_notes = '''
+it seems that plain encoders with wrong symm can learn well.  
+'''
