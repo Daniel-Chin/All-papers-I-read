@@ -29,3 +29,5 @@ def realtime(): pass
 def diffusion(): pass
 def causality(): pass
 def symmetry(): pass
+def control(): pass
+def nlp(): pass

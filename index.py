@@ -969,3 +969,22 @@ class the_surprising_effectiveness_of_equivariant_models_in_domains_with_latent_
     my_notes = '''
 it seems that plain encoders with wrong symm can learn well.  
 '''
+
+class diffusion_lm_improves_controllable_text_generation:
+    apa = 'Li, X. L., Thickstun, J., Gulrajani, I., Liang, P., & Hashimoto, T. B. (2022). Diffusion-LM Improves Controllable Text Generation. arXiv preprint arXiv:2205.14217.'
+    bib = '''@article{li2022diffusion,
+  title={Diffusion-LM Improves Controllable Text Generation},
+  author={Li, Xiang Lisa and Thickstun, John and Gulrajani, Ishaan and Liang, Percy and Hashimoto, Tatsunori B},
+  journal={arXiv preprint arXiv:2205.14217},
+  year={2022}
+}'''
+    abstract = '''Controlling the behavior of language models (LMs) without re-training is a major open problem in natural language generation. While recent works have demonstrated successes on controlling simple sentence attributes (e.g., sentiment), there has been little progress on complex, fine-grained controls (e.g., syntactic structure). To address this challenge, we develop a new non-autoregressive language model based on continuous diffusions that we call Diffusion-LM. Building upon the recent successes of diffusion models in continuous domains, Diffusion-LM iteratively denoises a sequence of Gaussian vectors into word vectors, yielding a sequence of intermediate latent variables. The continuous, hierarchical nature of these intermediate variables enables a simple gradient-based algorithm to perform complex, controllable generation tasks. We demonstrate successful control of Diffusion-LM for six challenging fine-grained control tasks, significantly outperforming prior work.'''
+    tags = [diffusion, control, nlp]
+    my_notes = '''
+read abstract and Fig. 1.  
+Fairly straight forward.  
+
+The condition is applied via classifier guidance.  
+The classifier is trained to classify diffusion-intermediate vectors.  
+During inference, alternate between classifier grad step and diffusion denoise step.  
+'''
