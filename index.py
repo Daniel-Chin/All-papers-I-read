@@ -983,6 +983,7 @@ class diffusion_lm_improves_controllable_text_generation:
     my_notes = '''
 read abstract and Fig. 1.  
 Fairly straight forward.  
+Presented on study group: https://docs.google.com/presentation/d/1cuB6Y67DCRje5U3fvr08c2671iqo_4CG/edit?usp=share_link&ouid=111628173406875267677&rtpof=true&sd=true  
 
 The condition is applied via classifier guidance.  
 The classifier is trained to classify diffusion-intermediate vectors.  
