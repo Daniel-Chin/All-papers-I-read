@@ -1019,3 +1019,18 @@ Q1. Why is 1x1 conv not trivially invertible?
     I wrote an email to ask the 1st author.  
 Q2. Why does this method not suffer from vanishing gradients?  
 '''
+
+class equivariant_self_supervision_for_musical_tempo_estimation:
+    apa = 'Quinton, E. (2022). Equivariant Self-Supervision for Musical Tempo Estimation. arXiv preprint arXiv:2209.01478.'
+    bib = '''@article{quinton2022equivariant,
+  title={Equivariant Self-Supervision for Musical Tempo Estimation},
+  author={Quinton, Elio},
+  journal={arXiv preprint arXiv:2209.01478},
+  year={2022}
+}'''
+    abstract = '''Self-supervised methods have emerged as a promising avenue for representation learning in the recent years since they alleviate the need for labeled datasets, which are scarce and expensive to acquire. Contrastive methods are a popular choice for self-supervision in the audio domain, and typically provide a learning signal by forcing the model to be invariant to some transformations of the input. These methods, however, require measures such as negative sampling or some form of regularisation to be taken to prevent the model from collapsing on trivial solutions. In this work, instead of invariance, we propose to use equivariance as a self-supervision signal to learn audio tempo representations from unlabelled data. We derive a simple loss function that prevents the network from collapsing on a trivial solution during training, without requiring any form of regularisation or negative sampling. Our experiments show that it is possible to learn meaningful representations for tempo estimation by solely relying on equivariant self-supervision, achieving performance comparable with supervised methods on several benchmarks. As an added benefit, our method only requires moderate compute resources and therefore remains accessible to a wide research community.'''
+    tags = [ismir2022, self_supervise]
+    my_notes = '''
+SPICE, but extracts tempo.  
+(Not exactly, because SPICE is still different.)  
+'''
