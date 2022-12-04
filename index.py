@@ -989,3 +989,33 @@ The condition is applied via classifier guidance.
 The classifier is trained to classify diffusion-intermediate vectors.  
 During inference, alternate between classifier grad step and diffusion denoise step.  
 '''
+
+class exploiting_pre_trained_feature_networks_for_generative_adversarial_networks_in_audio_domain_loop_generation:
+    apa = 'Yeh, Y. T., Chen, B. Y., & Yang, Y. H. (2022). Exploiting Pre-trained Feature Networks for Generative Adversarial Networks in Audio-domain Loop Generation. arXiv preprint arXiv:2209.01751.'
+    bib = '''@article{yeh2022exploiting,
+  title={Exploiting Pre-trained Feature Networks for Generative Adversarial Networks in Audio-domain Loop Generation},
+  author={Yeh, Yen-Tung and Chen, Bo-Yu and Yang, Yi-Hsuan},
+  journal={arXiv preprint arXiv:2209.01751},
+  year={2022}
+}'''
+    abstract = '''While generative adversarial networks (GANs) have been widely used in research on audio generation, the training of a GAN model is known to be unstable, time consuming, and data inefficient. Among the attempts to ameliorate the training process of GANs, the idea of Projected GAN emerges as an effective solution for GAN-based image generation, establishing the state-of-the-art in different image applications. The core idea is to use a pre-trained classifier to constrain the feature space of the discriminator to stabilize and improve GAN training. This paper investigates whether Projected GAN can similarly improve audio generation, by evaluating the performance of a StyleGAN2-based audio-domain loop generation model with and without using a pre-trained feature space in the discriminator. Moreover, we compare the performance of using a general versus domain-specific classifier as the pre-trained audio classifier. With experiments on both drum loop and synth loop generation, we show that a general audio classifier works better, and that with Projected GAN our loop generation models can converge around 5 times faster without performance degradation.'''
+    tags = [ismir2022, gan]
+
+class projected_gans_converge_faster:
+    apa = 'Sauer, A., Chitta, K., Müller, J., & Geiger, A. (2021). Projected gans converge faster. Advances in Neural Information Processing Systems, 34, 17480-17492.'
+    bib = '''@article{sauer2021projected,
+  title={Projected gans converge faster},
+  author={Sauer, Axel and Chitta, Kashyap and M{\"u}ller, Jens and Geiger, Andreas},
+  journal={Advances in Neural Information Processing Systems},
+  volume={34},
+  pages={17480--17492},
+  year={2021}
+}'''
+    abstract = '''Generative Adversarial Networks (GANs) produce high-quality images but are challenging to train. They need careful regularization, vast amounts of compute, and expensive hyper-parameter sweeps. We make significant headway on these issues by projecting generated and real samples into a fixed, pretrained feature space. Motivated by the finding that the discriminator cannot fully exploit features from deeper layers of the pretrained model, we propose a more effective strategy that mixes features across channels and resolutions. Our Projected GAN improves image quality, sample efficiency, and convergence speed. It is further compatible with resolutions of up to one Megapixel and advances the state-of-the-art Fréchet Inception Distance (FID) on twenty-two benchmark datasets. Importantly, Projected GANs match the previously lowest FIDs up to 40 times faster, cutting the wall-clock time from 5 days to less than 3 hours given the same computational resources.'''
+    tags = [gan]
+    my_notes = '''
+Uses random CCM and CSM to make discriminator look at the entire feature.  
+Q1. Why is 1x1 conv not trivially invertible?  
+    I wrote an email to ask the 1st author.  
+Q2. Why does this method not suffer from vanishing gradients?  
+'''

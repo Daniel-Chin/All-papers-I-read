@@ -31,3 +31,5 @@ def causality(): pass
 def symmetry(): pass
 def control(): pass
 def nlp(): pass
+def ismir2022(): pass
+def gan(): pass
