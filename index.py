@@ -1034,3 +1034,19 @@ class equivariant_self_supervision_for_musical_tempo_estimation:
 SPICE, but extracts tempo.  
 (Not exactly, because SPICE is still different.)  
 '''
+
+class semantic_control_of_generative_musical_attributes:
+    apa = None
+    bib = None  # ismir2022
+    abstract = '''Deep generative neural networks have been successful in tasks such as composing novel music and rendering expressive performance. Controllability is essential for building creative tools from such models. Recent work in this area has focused on disentangled latent space representations, but this is only part of the solution. Efficient control of semantic attributes must handle non-linearities and holes that occur in latent spaces, whilst minimising unwanted changes to other attributes. This paper introduces SeNT-Gen, a neural traversal algorithm that uses a secondary neural network to model the complex relationships between latent codes and musical attributes. This enables precise editing of semantic attributes that adapts to context. We demonstrate the method using the dMelodies dataset, and show strong performance for several VAE models.'''
+    authors = '''Greenhill, Stewart*, Abdolshah, Majid, Le, Vuong, Gupta, Sunil, Venkatesh, Svetha'''
+    tags = [ismir2022, control]
+    my_notes = '''
+if irrelevant dims should stay constant, why not prescribe?
+limitations: all factors in the data are known, i.e., $c$ fully characterizes data.  
+    when you require "change this and leave the rest unchanged", you have full knowledge of what "the rest" are. 
+    rho: is it even right?
+        if two factors are correlated, you can still disentangle. rho allows correlated dimensions to change. 
+        the baseline would be `rho=1` always. Consider dimensions where z** != z*. z** is the "actually correct" z*. 
+        given such a toy dataset, the only role of rho is to "clip" dimensions that are off because of data availablity. 
+'''
