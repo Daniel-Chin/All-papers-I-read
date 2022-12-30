@@ -1050,3 +1050,56 @@ limitations: all factors in the data are known, i.e., $c$ fully characterizes da
         the baseline would be `rho=1` always. Consider dimensions where z** != z*. z** is the "actually correct" z*. 
         given such a toy dataset, the only role of rho is to "clip" dimensions that are off because of data availablity. 
 '''
+
+class haptic_guidance_benefits_musical_motor_learning;
+    apa = 'Grindlay, G. (2008, March). Haptic guidance benefits musical motor learning. In 2008 Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems (pp. 397-404). IEEE.'
+    bib = None  # google freaked out
+    abstract = '''This paper presents the results of a pilot experiment looking at the effect of haptic guidance on musical training. A percussion performance task was used where subjects learned to play short rhythmic sequences on a device capable of recording drumstick movements with a high degree of spatiotemporal accuracy. Subjects learned to perform the sequences under three primary training paradigms: listening to the rhythm (audio), being guided through the motions involved in the rhythm's performance (haptic), and being guided through the required motions while listening to the resulting sound (audio+haptic). Performance was assessed in terms of both timing and loudness (velocity) accuracy using several different metrics. Results indicate that haptic guidance can significantly benefit recall of both note timing and velocity. When subject performance was compared in terms of note velocity recall, the addition of haptic guidance to audio-based training produced a 17% reduction in final error when compared to audio training alone. When performance was evaluated in terms of liming recall, the combination of audio and haptic guidance led to an 18% reduction in early-stage error.'''
+    tags = [haptic]
+    my_notes = '''
+cited in nime22 "A Computer-aided Multimodal Music Learning System with Curriculum: A Pilot Study"
+Check "related works" section for a summary. 
+'''
+
+class haptic_technology_in_digital_music_learning_context_a_state_of_the_art_analysis:
+    apa = 'Dörr, B., Norouzinia, F., Altmeyer, K., & Werth, D. (2022, October). Haptic Technology in Digital Music Learning Context: A State-of-the-Art Analysis. In European Conference on e-Learning (Vol. 21, No. 1, pp. 87-94). Academic Conferences International Limited.'
+    bib = None  # google freaked out
+    abstract = '''Digital media have become increasingly established in learning contexts in recent decades, and it seems impossibleto imagine education without them, especially in recent years. Various technological advances can be observed, such asdevelopments in virtual reality and augmented reality. To give learners a realistic impression of the virtual world, as manysensory impressions as possible should be addressed. However, current developments have mainly addressed the visual andauditory modalities, which make up two of the five human senses. Research and developments for the use of the othersenses are being made but at this stage they are not yet ready for mass use. Especially the sense of touch based on skin asthe largest human sensory organ or tactile and haptic perception seem to be of interest. Particularly in manual or medicalareas where motor skills are required, haptic technologies are declared to be supportive and beneficial. One area that hashardly focused on digital learning so far is the music sector. Learning a musical instrument in this context seems to be aninteresting field of research, as it not only promotes motor skills, but also cognitive development in both children and adults.To give an update on the technical developments in the field of digital teaching and learning in music, and especially tohighlight the use of haptic technologies, we will briefly review the state of the art in this paper. It begins with a brief overviewof the basics of digital learning and haptics, as well as previous work in this field. Using the method of a scoping review, thetopic of haptic technologies in the field of music education will be researched, analysed, and summarised according todefined criteria to give a condensed overview of it. The selected database and appropriate search strings will be used toachieve the aim of the paper. The results help to shed light on current research gaps and give indications for futuredevelopments of haptic technology in the music learning context.'''
+
+class unsupervised_latent_tree_induction_with_deep_inside_outside_recursive_autoencoders:
+    apa = 'Drozdov, A., Verga, P., Yadav, M., Iyyer, M., & McCallum, A. (2019). Unsupervised latent tree induction with deep inside-outside recursive autoencoders. arXiv preprint arXiv:1904.02142.'
+    bib = '''@article{drozdov2019unsupervised,
+  title={Unsupervised latent tree induction with deep inside-outside recursive autoencoders},
+  author={Drozdov, Andrew and Verga, Pat and Yadav, Mohit and Iyyer, Mohit and McCallum, Andrew},
+  journal={arXiv preprint arXiv:1904.02142},
+  year={2019}
+}'''
+    abstract = '''We introduce deep inside-outside recursive autoencoders (DIORA), a fully-unsupervised method for discovering syntax that simultaneously learns representations for constituents within the induced tree. Our approach predicts each word in an input sentence conditioned on the rest of the sentence and uses inside-outside dynamic programming to consider all possible binary trees over the sentence. At test time the CKY algorithm extracts the highest scoring parse. DIORA achieves a new state-of-the-art F1 in unsupervised binary constituency parsing (unlabeled) in two benchmark datasets, WSJ and MultiNLI.'''
+    tags = [self_supervise, repr_learning]
+
+class vicreg_variance_invariance_covariance_regularization_for_self_supervised_learning:
+    apa = 'Bardes, A., Ponce, J., & LeCun, Y. (2021). Vicreg: Variance-invariance-covariance regularization for self-supervised learning. arXiv preprint arXiv:2105.04906.'
+    bib = '''@article{bardes2021vicreg,
+  title={Vicreg: Variance-invariance-covariance regularization for self-supervised learning},
+  author={Bardes, Adrien and Ponce, Jean and LeCun, Yann},
+  journal={arXiv preprint arXiv:2105.04906},
+  year={2021}
+}'''
+    abstract = '''Recent self-supervised methods for image representation learning are based on maximizing the agreement between embedding vectors from different views of the same image. A trivial solution is obtained when the encoder outputs constant vectors. This collapse problem is often avoided through implicit biases in the learning architecture, that often lack a clear justification or interpretation. In this paper, we introduce VICReg (Variance-Invariance-Covariance Regularization), a method that explicitly avoids the collapse problem with a simple regularization term on the variance of the embeddings along each dimension individually. VICReg combines the variance term with a decorrelation mechanism based on redundancy reduction and covariance regularization, and achieves results on par with the state of the art on several downstream tasks. In addition, we show that incorporating our new variance term into other methods helps stabilize the training and leads to performance improvements.'''
+    tags = [self_supervise, jepa]
+    my_notes = '''
+why need expander? what's the diff between repr and emb? 
+"expander ... eliminate the information by which the two representations differ"
+    strange. 
+    - you are trying to train the repr, not the emb, to be good. 
+    - invariance ("s" in fig 1) makes sense, and should apply to repr. 
+    - you are allowing repr to be sensitive to e.g. data aug, but emb should not? 
+"expander ... expand the dimension in a non-linear
+fashion so that decorrelating the embedding variables will reduce the dependencies (not just the
+correlations) between the variables of the representation vector. "
+    what? sounds like you need adverserial training. 
+    optim the expander to maximize covariance. 
+    optim the encoder to minimize covariance. 
+    (ensemble of expanders?)
+    if there is no adversetial training, wouldn't covariance just encourage the expander to scramble the repr into non-linear emb? 
+'''
