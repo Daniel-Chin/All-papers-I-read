@@ -34,4 +34,4 @@ def nlp(): pass
 def ismir2022(): pass
 def gan(): pass
 def repr_learning(): pass
-def jepa(): pass
+def jepa_or_jem(): pass
