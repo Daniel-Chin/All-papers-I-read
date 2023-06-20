@@ -1063,7 +1063,16 @@ Check "related works" section for a summary.
 
 class haptic_technology_in_digital_music_learning_context_a_state_of_the_art_analysis:
     apa = 'Dörr, B., Norouzinia, F., Altmeyer, K., & Werth, D. (2022, October). Haptic Technology in Digital Music Learning Context: A State-of-the-Art Analysis. In European Conference on e-Learning (Vol. 21, No. 1, pp. 87-94). Academic Conferences International Limited.'
-    bib = None  # google freaked out
+    bib = '''@inproceedings{dorr2022haptic,
+  title={Haptic Technology in Digital Music Learning Context: A State-of-the-Art Analysis},
+  author={D{\"o}rr, Bianka and Norouzinia, Farzaneh and Altmeyer, Kristin and Werth, Dirk},
+  booktitle={European Conference on e-Learning},
+  volume={21},
+  number={1},
+  pages={87--94},
+  year={2022},
+  organization={Academic Conferences International Limited}
+}'''
     abstract = '''Digital media have become increasingly established in learning contexts in recent decades, and it seems impossibleto imagine education without them, especially in recent years. Various technological advances can be observed, such asdevelopments in virtual reality and augmented reality. To give learners a realistic impression of the virtual world, as manysensory impressions as possible should be addressed. However, current developments have mainly addressed the visual andauditory modalities, which make up two of the five human senses. Research and developments for the use of the othersenses are being made but at this stage they are not yet ready for mass use. Especially the sense of touch based on skin asthe largest human sensory organ or tactile and haptic perception seem to be of interest. Particularly in manual or medicalareas where motor skills are required, haptic technologies are declared to be supportive and beneficial. One area that hashardly focused on digital learning so far is the music sector. Learning a musical instrument in this context seems to be aninteresting field of research, as it not only promotes motor skills, but also cognitive development in both children and adults.To give an update on the technical developments in the field of digital teaching and learning in music, and especially tohighlight the use of haptic technologies, we will briefly review the state of the art in this paper. It begins with a brief overviewof the basics of digital learning and haptics, as well as previous work in this field. Using the method of a scoping review, thetopic of haptic technologies in the field of music education will be researched, analysed, and summarised according todefined criteria to give a condensed overview of it. The selected database and appropriate search strings will be used toachieve the aim of the paper. The results help to shed light on current research gaps and give indications for futuredevelopments of haptic technology in the music learning context.'''
 
 class unsupervised_latent_tree_induction_with_deep_inside_outside_recursive_autoencoders:
@@ -1216,3 +1225,74 @@ class unsupervised_learning_of_visual_features_by_contrasting_cluster_assignment
 }'''
     abstract = '''Unsupervised image representations have significantly reduced the gap with supervised pretraining, notably with the recent achievements of contrastive learning methods. These contrastive methods typically work online and rely on a large number of explicit pairwise feature comparisons, which is computationally challenging. In this paper, we propose an online algorithm, SwAV, that takes advantage of contrastive methods without requiring to compute pairwise comparisons. Specifically, our method simultaneously clusters the data while enforcing consistency between cluster assignments produced for different augmentations (or views) of the same image, instead of comparing features directly as in contrastive learning. Simply put, we use a swapped prediction mechanism where we predict the code of a view from the representation of another view. Our method can be trained with large and small batches and can scale to unlimited amounts of data. Compared to previous contrastive methods, our method is more memory efficient since it does not require a large memory bank or a special momentum network. In addition, we also propose a new data augmentation strategy, multi-crop, that uses a mix of views with different resolutions in place of two full-resolution views, without increasing the memory or compute requirements. We validate our findings by achieving 75.3% top-1 accuracy on ImageNet with ResNet-50, as well as surpassing supervised pretraining on all the considered transfer tasks.'''
     tags = [self_supervise, jepa_or_jem]
+
+class a_unified_model_for_zero_shot_music_source_separation_transcription_and_synthesis:
+    apa = 'Lin, L., Kong, Q., Jiang, J., & Xia, G. (2021). A unified model for zero-shot music source separation, transcription and synthesis. arXiv preprint arXiv:2108.03456.'
+    bib = '''@article{lin2021unified,
+  title={A unified model for zero-shot music source separation, transcription and synthesis},
+  author={Lin, Liwei and Kong, Qiuqiang and Jiang, Junyan and Xia, Gus},
+  journal={arXiv preprint arXiv:2108.03456},
+  year={2021}
+}'''
+    abstract = '''We propose a unified model for three inter-related tasks: 1) to \textit{separate} individual sound sources from a mixed music audio, 2) to \textit{transcribe} each sound source to MIDI notes, and 3) to\textit{ synthesize} new pieces based on the timbre of separated sources. The model is inspired by the fact that when humans listen to music, our minds can not only separate the sounds of different instruments, but also at the same time perceive high-level representations such as score and timbre. To mirror such capability computationally, we designed a pitch-timbre disentanglement module based on a popular encoder-decoder neural architecture for source separation. The key inductive biases are vector-quantization for pitch representation and pitch-transformation invariant for timbre representation. In addition, we adopted a query-by-example method to achieve \textit{zero-shot} learning, i.e., the model is capable of doing source separation, transcription, and synthesis for \textit{unseen} instruments. The current design focuses on audio mixtures of two monophonic instruments. Experimental results show that our model outperforms existing multi-task baselines, and the transcribed score serves as a powerful auxiliary for separation tasks.'''
+    tags = [
+        self_supervise, music_knowledge, f0, 
+        multi_source_seperation, zero_shot, 
+        pitch_shift_invariance, 
+    ]
+
+class blip_2_bootstrapping_language_image_pre_training_with_frozen_image_encoders_and_large_language_models:
+    apa = 'Li, J., Li, D., Savarese, S., & Hoi, S. (2023). Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models. arXiv preprint arXiv:2301.12597.'
+    bib = '''@article{li2023blip,
+  title={Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models},
+  author={Li, Junnan and Li, Dongxu and Savarese, Silvio and Hoi, Steven},
+  journal={arXiv preprint arXiv:2301.12597},
+  year={2023}
+}'''
+    abstract = '''The cost of vision-and-language pre-training has become increasingly prohibitive due to end-to-end training of large-scale models. This paper proposes BLIP-2, a generic and efficient pre-training strategy that bootstraps vision-language pre-training from off-the-shelf frozen pre-trained image encoders and frozen large language models. BLIP-2 bridges the modality gap with a lightweight Querying Transformer, which is pre-trained in two stages. The first stage bootstraps vision-language representation learning from a frozen image encoder. The second stage bootstraps vision-to-language generative learning from a frozen language model. BLIP-2 achieves state-of-the-art performance on various vision-language tasks, despite having significantly fewer trainable parameters than existing methods. For example, our model outperforms Flamingo80B by 8.7% on zero-shot VQAv2 with 54x fewer trainable parameters. We also demonstrate the model's emerging capabilities of zero-shot image-to-text generation that can follow natural language instructions.'''
+    tags = [llm, hyper_network, contrastive]
+    notes = '''
+Nearest neighbor (English words) of the image feature seq.  
+Ablate: use text instead of image features to prompt LLM.  
+'''
+
+class generative_agents_interactive_simulacra_of_human_behavior:
+    apa = "Park, J. S., O'Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442."
+    bib = '''@article{park2023generative,
+  title={Generative agents: Interactive simulacra of human behavior},
+  author={Park, Joon Sung and O'Brien, Joseph C and Cai, Carrie J and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S},
+  journal={arXiv preprint arXiv:2304.03442},
+  year={2023}
+}'''
+    abstract = '''Believable proxies of human behavior can empower interactive applications ranging from immersive environments to rehearsal spaces for interpersonal communication to prototyping tools. In this paper, we introduce generative agents--computational software agents that simulate believable human behavior. Generative agents wake up, cook breakfast, and head to work; artists paint, while authors write; they form opinions, notice each other, and initiate conversations; they remember and reflect on days past as they plan the next day. To enable generative agents, we describe an architecture that extends a large language model to store a complete record of the agent's experiences using natural language, synthesize those memories over time into higher-level reflections, and retrieve them dynamically to plan behavior. We instantiate generative agents to populate an interactive sandbox environment inspired by The Sims, where end users can interact with a small town of twenty five agents using natural language. In an evaluation, these generative agents produce believable individual and emergent social behaviors: for example, starting with only a single user-specified notion that one agent wants to throw a Valentine's Day party, the agents autonomously spread invitations to the party over the next two days, make new acquaintances, ask each other out on dates to the party, and coordinate to show up for the party together at the right time. We demonstrate through ablation that the components of our agent architecture--observation, planning, and reflection--each contribute critically to the believability of agent behavior. By fusing large language models with computational, interactive agents, this work introduces architectural and interaction patterns for enabling believable simulations of human behavior.'''
+    tags = [llm, llm_add_system_2]
+
+class haptic_training_which_types_facilitate_re_learning_of_which_motor_task_and_for_whom_answers_by_a_review:
+    apa = 'Basalp, E., Wolf, P., & Marchal-Crespo, L. (2021). Haptic training: which types facilitate (re) learning of which motor task and for whom? answers by a review. IEEE transactions on haptics, 14(4), 722-739.'
+    bib = '''@article{basalp2021haptic,
+  title={Haptic training: which types facilitate (re) learning of which motor task and for whom? answers by a review},
+  author={Basalp, Ekin and Wolf, Peter and Marchal-Crespo, Laura},
+  journal={IEEE transactions on haptics},
+  volume={14},
+  number={4},
+  pages={722--739},
+  year={2021},
+  publisher={IEEE}
+}'''
+    abstract = '''The use of robots has attracted researchers to design numerous haptic training methods to support motor learning. However, investigations of new methods yielded inconclusive results regarding their effectiveness to enhance learning due to the diversity of tasks, haptic designs, participants’ skill level, and study protocols. In this review, we developed a taxonomy to identify generalizable findings out of publications on haptic training. In the taxonomy, we grouped the results of studies on healthy learners based on participants’ skill level and tasks’ characteristics. Our inspection of included studies revealed that: i) Performance-enhancing haptic methods were beneficial for novices, ii) Training with haptics was as effective as training with other feedback modalities, and iii) Performance-enhancing and performance-degrading haptic methods were useful for the learning of temporal and spatial aspects, respectively. We also observed that these findings are in line with results from robot-aided neurorehabilitation studies on patients. Our review suggests that haptic training can be effective to foster learning, especially when the information cannot be provided with other feedback modalities. We believe the findings from the taxonomy constitute a general guide, which can assist researchers when designing studies to investigate the effectiveness of haptics on learning different tasks.'''
+    tags = [haptic, education, psychology]
+
+class musicjacket_combining_motion_capture_and_vibrotactile_feedback_to_teach_violin_bowing:
+    apa = 'Van Der Linden, J., Schoonderwaldt, E., Bird, J., & Johnson, R. (2010). Musicjacket—combining motion capture and vibrotactile feedback to teach violin bowing. IEEE Transactions on Instrumentation and Measurement, 60(1), 104-113.'
+    bib = '''@article{van2010musicjacket,
+  title={Musicjacket—combining motion capture and vibrotactile feedback to teach violin bowing},
+  author={Van Der Linden, Janet and Schoonderwaldt, Erwin and Bird, Jon and Johnson, Rose},
+  journal={IEEE Transactions on Instrumentation and Measurement},
+  volume={60},
+  number={1},
+  pages={104--113},
+  year={2010},
+  publisher={IEEE}
+}'''
+    abstract = '''We describe MusicJacket, which is a wearable system to support the teaching of good posture and bowing technique to novice violin players. The system uses an inertial motion capture system to track the following in real time: 1) whether the player is holding the violin correctly and 2) the player's bowing action and whether it deviates from a target trajectory. We provide the musicians with vibrotactile feedback about their bowing and posture using vibration motors that are positioned on their arms and torso. We describe a user study with novice violin players that compared a group who was trained using vibrotactile feedback with a control group who only received conventional teaching. We found that vibrotactile feedback is effective at improving novices' straight bowing technique and that half of these subjects continued to show improved bowing technique even when they no longer received vibrotactile feedback. None of the control subjects who received the same number of training sessions using conventional teaching techniques showed a comparable improvement.'''
+    tags = [haptic]
