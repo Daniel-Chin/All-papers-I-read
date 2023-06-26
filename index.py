@@ -1251,7 +1251,7 @@ class blip_2_bootstrapping_language_image_pre_training_with_frozen_image_encoder
 }'''
     abstract = '''The cost of vision-and-language pre-training has become increasingly prohibitive due to end-to-end training of large-scale models. This paper proposes BLIP-2, a generic and efficient pre-training strategy that bootstraps vision-language pre-training from off-the-shelf frozen pre-trained image encoders and frozen large language models. BLIP-2 bridges the modality gap with a lightweight Querying Transformer, which is pre-trained in two stages. The first stage bootstraps vision-language representation learning from a frozen image encoder. The second stage bootstraps vision-to-language generative learning from a frozen language model. BLIP-2 achieves state-of-the-art performance on various vision-language tasks, despite having significantly fewer trainable parameters than existing methods. For example, our model outperforms Flamingo80B by 8.7% on zero-shot VQAv2 with 54x fewer trainable parameters. We also demonstrate the model's emerging capabilities of zero-shot image-to-text generation that can follow natural language instructions.'''
     tags = [llm, hyper_network, contrastive]
-    notes = '''
+    my_notes = '''
 Nearest neighbor (English words) of the image feature seq.  
 Ablate: use text instead of image features to prompt LLM.  
 '''
@@ -1265,7 +1265,7 @@ class generative_agents_interactive_simulacra_of_human_behavior:
   year={2023}
 }'''
     abstract = '''Believable proxies of human behavior can empower interactive applications ranging from immersive environments to rehearsal spaces for interpersonal communication to prototyping tools. In this paper, we introduce generative agents--computational software agents that simulate believable human behavior. Generative agents wake up, cook breakfast, and head to work; artists paint, while authors write; they form opinions, notice each other, and initiate conversations; they remember and reflect on days past as they plan the next day. To enable generative agents, we describe an architecture that extends a large language model to store a complete record of the agent's experiences using natural language, synthesize those memories over time into higher-level reflections, and retrieve them dynamically to plan behavior. We instantiate generative agents to populate an interactive sandbox environment inspired by The Sims, where end users can interact with a small town of twenty five agents using natural language. In an evaluation, these generative agents produce believable individual and emergent social behaviors: for example, starting with only a single user-specified notion that one agent wants to throw a Valentine's Day party, the agents autonomously spread invitations to the party over the next two days, make new acquaintances, ask each other out on dates to the party, and coordinate to show up for the party together at the right time. We demonstrate through ablation that the components of our agent architecture--observation, planning, and reflection--each contribute critically to the believability of agent behavior. By fusing large language models with computational, interactive agents, this work introduces architectural and interaction patterns for enabling believable simulations of human behavior.'''
-    tags = [llm, llm_add_system_2]
+    tags = [llm, llm_add_system_2, llm_in_the_loop]
 
 class haptic_training_which_types_facilitate_re_learning_of_which_motor_task_and_for_whom_answers_by_a_review:
     apa = 'Basalp, E., Wolf, P., & Marchal-Crespo, L. (2021). Haptic training: which types facilitate (re) learning of which motor task and for whom? answers by a review. IEEE transactions on haptics, 14(4), 722-739.'
@@ -1295,4 +1295,174 @@ class musicjacket_combining_motion_capture_and_vibrotactile_feedback_to_teach_vi
   publisher={IEEE}
 }'''
     abstract = '''We describe MusicJacket, which is a wearable system to support the teaching of good posture and bowing technique to novice violin players. The system uses an inertial motion capture system to track the following in real time: 1) whether the player is holding the violin correctly and 2) the player's bowing action and whether it deviates from a target trajectory. We provide the musicians with vibrotactile feedback about their bowing and posture using vibration motors that are positioned on their arms and torso. We describe a user study with novice violin players that compared a group who was trained using vibrotactile feedback with a control group who only received conventional teaching. We found that vibrotactile feedback is effective at improving novices' straight bowing technique and that half of these subjects continued to show improved bowing technique even when they no longer received vibrotactile feedback. None of the control subjects who received the same number of training sessions using conventional teaching techniques showed a comparable improvement.'''
-    tags = [haptic]
+    tags = [haptic, education, vibration]
+
+class towards_passive_haptic_learning_of_piano_songs:
+    apa = 'Seim, C., Estes, T., & Starner, T. (2015, June). Towards passive haptic learning of piano songs. In 2015 IEEE World Haptics Conference (WHC) (pp. 445-450). IEEE.'
+    bib = '''@inproceedings{seim2015towards,
+  title={Towards passive haptic learning of piano songs},
+  author={Seim, Caitlyn and Estes, Tanya and Starner, Thad},
+  booktitle={2015 IEEE World Haptics Conference (WHC)},
+  pages={445--450},
+  year={2015},
+  organization={IEEE}
+}'''
+    tags = [haptic, education, passive_learning, vibration]
+    abstract = '''Passive Haptic Learning (PHL) enables users to acquire motor skills by receiving tactile stimulation while no perceived attention is given to learning. Initial work used gloves with embedded vibration motors to passively teach users how to play simple, one-handed, one-note-at-a-time piano melodies. In an effort to create a practical system for learning full piano pieces, we have developed a method of passively teaching two-handed chorded skills, initially focusing on Braille typing. Here, we extend this effort to piano and show that passive stimulation is more effective at teaching piano pieces when presented on both hands simultaneously as opposed to training the left hand and then the right, as is common in many active teaching methods. We also demonstrate that accompanying audio is not needed for passive learning of piano melodies, which allows mobile PHL gloves to be used in more everyday situations.'''
+    my_notes = '''
+In addition to its abstract:  
+2x2 (A, H) piano passive reviewing  
+'''
+
+class passive_haptic_learning_of_braille_typing:
+    apa = 'Seim, C., Chandler, J., DesPortes, K., Dhingra, S., Park, M., & Starner, T. (2014, September). Passive haptic learning of Braille typing. In Proceedings of the 2014 ACM International Symposium on Wearable Computers (pp. 111-118).'
+    bib = '''@inproceedings{seim2014passive,
+  title={Passive haptic learning of Braille typing},
+  author={Seim, Caitlyn and Chandler, John and DesPortes, Kayla and Dhingra, Siddharth and Park, Miru and Starner, Thad},
+  booktitle={Proceedings of the 2014 ACM International Symposium on Wearable Computers},
+  pages={111--118},
+  year={2014}
+}'''
+    abstract = '''Passive Haptic Learning (PHL) is the acquisition of sensorimotor skills without active attention to learning. One method is to "teach" motor skills using vibration cues delivered by a wearable, tactile interface while the user is focusing on another, primary task. We have created a system for Passive Haptic Learning of typing skills. In a study containing 16 participants, users demonstrated significantly reduced error typing a phrase in Braille after receiving passive instruction versus control (32.85% average decline in error vs. 2.73% increase in error). PHL users were also able to recognize and read more Braille letters from the phrase (72.5% vs. 22.4%). In a second study, containing 8 participants thus far, we passively teach the full Braille alphabet over four sessions. Typing error reductions in participants receiving PHL were more rapid and consistent, with 75% of PHL vs. 0% of control users reaching zero typing error. By the end of the study, PHL participants were also able to recognize and read 93.3% of all Braille alphabet letters. These results suggest that Passive Haptic instruction facilitated by wearable computers may be a feasible method of teaching Braille typing and reading.'''
+    tags = [haptic, education, passive_learning, vibration]
+    my_notes = '''
+Passive haptic learning successfully teaching novel mappings?  
+Stimuli: coordinated H and A (spoken letter).  
+Is contrary to our results.  
+Also, staggering simultaneous haptic stimuli may help, (consistent w/ our haptic hat findings).  
+'''
+
+class computer_assisted_music_instructment_tutoring_applied_to_violin_practice:
+    apa = 'Huanhuan, L. (2009). Computer assisted music instructment tutoring applied to violin practice.'
+    bib = '''@article{huanhuan2009computer,
+  title={Computer assisted music instructment tutoring applied to violin practice},
+  author={Huanhuan, Lu},
+  year={2009}
+}'''
+    my_notes = '''
+A thesis. No haptic feedback.  
+'''
+
+class haptic_learning_and_how_it_can_enhance_digital_learning_experiences_an_innovative_approach:
+    apa = 'Dörr, B., Funk, M., Norouzinia, F., & Werth, D. (2022). Haptic learning and how it can enhance digital learning experiences: an innovative approach. In INTED2022 Proceedings (pp. 3909-3917). IATED.'
+    bib = '''@inproceedings{dorr2022haptic,
+  title={Haptic learning and how it can enhance digital learning experiences: an innovative approach},
+  author={D{\"o}rr, B and Funk, M and Norouzinia, F and Werth, D},
+  booktitle={INTED2022 Proceedings},
+  pages={3909--3917},
+  year={2022},
+  organization={IATED}
+}'''
+    tags = [haptic, education]
+    abstract = '''Digital learning has increased rapidly in the recent years but has primarily focused on teaching knowledge, using auditory and visual modalities. However, the use of haptic modalities has been hardly considered so far, even though it would be particularly interesting for the learning of skills and processes. Especially in the medical field, it is shown e.g., that the addition of haptic feedback in a virtual learning environment can have a positive influence on the learning of skills.
+In order to take a further step towards the inclusion of haptics in teaching and learning processes, we want to give an overview of our understanding of haptic learning in this paper. We will do this by presenting our definition of haptic learning with corresponding delimitations and by introducing our model of haptic learning. The model will be explained by describing its structure with its three core areas and justifying why each of these areas is meaningful for haptic learning or why we have chosen them accordingly. This model is an attempt to relate different concepts of haptics to each other, especially the understanding of haptic learning, and to look at it from a broader holistic perspective. The aim is to make use cases in practice more describable and analyzable and to show the range of possible applications for haptic learning. Furthermore, in addition to the evaluation of use cases, it should be possible to optimize them with regard to learning effectiveness and efficiency. Also, we will have a closer look at the models’ features by which use cases can be analyzed and characterized to make haptic learning systematically describable. Based on these features some use cases will be analyzed as a next step to demonstrate their application. Finally, a summary of the paper and an outlook will be given to demonstrate the potential of our model for digital use cases of haptic learning.
+'''
+    my_notes = '''
+I see limited usability of their model.  
+'''
+
+class haptic_learning_and_technology_analyses_of_digital_use_cases_of_haptics_using_the_haptic_learning_model:
+    apa = 'Norouzinia, F., Dörr, B., Funk, M., & Werth, D. (2022, June). Haptic learning and technology: Analyses of digital use cases of haptics using the haptic learning model. In HCI International 2022 Posters: 24th International Conference on Human-Computer Interaction, HCII 2022, Virtual Event, June 26–July 1, 2022, Proceedings, Part III (pp. 72-79). Cham: Springer International Publishing.'
+    bib = '''@inproceedings{norouzinia2022haptic,
+  title={Haptic learning and technology: Analyses of digital use cases of haptics using the haptic learning model},
+  author={Norouzinia, Farzaneh and D{\"o}rr, Bianka and Funk, Mareike and Werth, Dirk},
+  booktitle={HCI International 2022 Posters: 24th International Conference on Human-Computer Interaction, HCII 2022, Virtual Event, June 26--July 1, 2022, Proceedings, Part III},
+  pages={72--79},
+  year={2022},
+  organization={Springer}
+}'''
+    abstract = '''Learning with involvement of haptic technologies can provide advanced opportunities in digital learning. Especially over the course of the pandemic the value of digital learning solutions became more obvious. There are attempts with various technologies, which can enhance the quality of learning processes and refine the learning results. However, it should be remembered that the sense of touch is not contained in all of them, even though it might be helpful, e.g., in the medical field. To show how haptic technology may improve the digital learning solutions, this paper will briefly define haptic learning and analyze some haptic learning use cases using the Haptic Learning Model of Dörr et al. [2].
+We describe haptic learning as the sum of all learning processes which use haptic interactions to enhance the effectiveness and/or efficiency of learning process. In this paper, haptic technology use cases which are not directly related to learning or do not give any haptic feedback to the learners are excluded.
+'''
+    tags = [haptic, education]
+    my_notes = '''
+Using the model proposed by computer_assisted_music_instructment_tutoring_applied_to_violin_practice.  
+'''
+
+class passive_somatosensory_training_enhances_piano_skill_in_adolescent_and_adult_pianists_a_preliminary_study:
+    apa = 'Furuya, S., Tanibuchi, R., Nishioka, H., Kimoto, Y., Hirano, M., & Oku, T. (2023). Passive somatosensory training enhances piano skill in adolescent and adult pianists: A preliminary study. Annals of the New York Academy of Sciences, 1519(1), 167-172.'
+    bib = '''@article{furuya2023passive,
+  title={Passive somatosensory training enhances piano skill in adolescent and adult pianists: A preliminary study},
+  author={Furuya, Shinichi and Tanibuchi, Ryuya and Nishioka, Hayato and Kimoto, Yudai and Hirano, Masato and Oku, Takanori},
+  journal={Annals of the New York Academy of Sciences},
+  volume={1519},
+  number={1},
+  pages={167--172},
+  year={2023},
+  publisher={Wiley Online Library}
+}'''
+    abstract = '''Sensory afferent information, such as auditory and somatosensory feedback while moving, plays a crucial role in both control and learning of motor performance across the lifespan. Music performance requires skillful integration of multimodal sensory information for the production of dexterous movements. However, it has not been understood what roles somatosensory afferent information plays in the acquisition and sophistication of specialized motor skills of musicians across different stages of development. In the present preliminary study, we addressed this issue by using a novel technique with a hand exoskeleton robot that can externally move the fingers of pianists. Short-term exposure to fast and complex finger movements generated by the exoskeleton (i.e., passive movements) increased the maximum rate of repetitive piano keystrokes by the pianists. This indicates that somatosensory inputs derived from the externally generated motions enhanced the quickness of the sequential finger movements in piano performance, even though the pianists did not voluntarily move the fingers. The enhancement of motor skill through passive somatosensory training using the exoskeleton was more pronounced in adolescent pianists than adult pianists. These preliminary results implicate a sensitive period of neuroplasticity of the somatosensory-motor system of trained pianists, which emphasizes the importance of somatosensory-motor training in professional music education during adolescence.'''
+    tags = [haptic, education]
+    my_notes = '''Piano skill: press a key really fast'''
+
+class augmented_visual_auditory_haptic_and_multimodal_feedback_in_motor_learning_a_review:
+    apa = 'Sigrist, R., Rauter, G., Riener, R., & Wolf, P. (2013). Augmented visual, auditory, haptic, and multimodal feedback in motor learning: a review. Psychonomic bulletin & review, 20, 21-53.'
+    bib = '''@article{sigrist2013augmented,
+  title={Augmented visual, auditory, haptic, and multimodal feedback in motor learning: a review},
+  author={Sigrist, Roland and Rauter, Georg and Riener, Robert and Wolf, Peter},
+  journal={Psychonomic bulletin \& review},
+  volume={20},
+  pages={21--53},
+  year={2013},
+  publisher={Springer}
+}'''
+    abstract = '''It is generally accepted that augmented feedback, provided by a human expert or a technical display, effectively enhances motor learning. However, discussion of the way to most effectively provide augmented feedback has been controversial. Related studies have focused primarily on simple or artificial tasks enhanced by visual feedback. Recently, technical advances have made it possible also to investigate more complex, realistic motor tasks and to implement not only visual, but also auditory, haptic, or multimodal augmented feedback. The aim of this review is to address the potential of augmented unimodal and multimodal feedback in the framework of motor learning theories. The review addresses the reasons for the different impacts of feedback strategies within or between the visual, auditory, and haptic modalities and the challenges that need to be overcome to provide appropriate feedback in these modalities, either in isolation or in combination. Accordingly, the design criteria for successful visual, auditory, haptic, and multimodal feedback are elaborated.'''
+    tags = [education, audio_visual_haptic]
+    my_notes = '''
+Identifies AVH.  
+Good paper to go back to. (And when you do, take notes this time.)  
+'''
+
+class instructional_design_and_intelligent_tutoring_theory_and_the_precision_of_design:
+    apa = 'Capell, P., & Dannenberg, R. B. (1993). Instructional design and intelligent tutoring: Theory and the precision of design.'
+    bib = '''@article{capell1993instructional,
+  title={Instructional design and intelligent tutoring: Theory and the precision of design},
+  author={Capell, Peter and Dannenberg, Roger B},
+  year={1993},
+  publisher={Carnegie Mellon University}
+}'''
+    abstract = '''Instructional Design aspires to define a sound curriculum by using instructional analysis and concept organization. Along with other criteria, the purpose of instructional design is to ensure integrity among instructional objectives, tasks that students must perform, and the evaluation of their performance. Currently, the methods used in instructional design models have a limited scientific basis. Even with many efforts towards a science of instruction, this goal remains elusive. Computers may provide a positive shift towards systematic and verifiable instructional analysis with the advent of intelligent tutoring systems and the byproducts of their development. One such system, the Piano Tutor, has led to a formal model for curriculum design and analysis and is described in detail.'''    
+    tags = [education]
+    my_notes = '''
+Skill & lesson graph. Formal analysis.  
+'''
+
+class an_expert_system_for_teaching_piano_to_novices:
+    apa = 'Dannenberg, R. B., Sanchez, M., Joseph, A., Capell, P., Joseph, R., & Saul, R. (1990). An expert system for teaching piano to novices. In ICMC.'
+    bib = '''@inproceedings{dannenberg1990expert,
+  title={An expert system for teaching piano to novices},
+  author={Dannenberg, Roger B and Sanchez, Marta and Joseph, Annabel and Capell, Peter and Joseph, Robert and Saul, Ronald},
+  booktitle={ICMC},
+  year={1990}
+}'''
+    abstract = '''The Piano Tutor is a computer system for teaching beginning piano students. The system is highly interactive, with an expert system to analyze student performances and a multi-media presentation system to deliver instruction. Score following, which matches performances against a model, is used as the basis for detecting student errors. The Piano Tutor gives intelligent feedback and help rather than just listing all errors that are detected. The curriculum is organized into a set of lessons that are automatically chosen by the system according to students' needs.'''
+    tags = [education, multimodal]
+    my_notes = '''
+Piano Tutor can hypothesize the cause behind a student error.  
+'''
+
+class a_computer_based_multi_media_tutor_for_beginning_piano_students:
+    apa = 'Dannenberg, R. B., Sanchez, M., Joseph, A., Capell, P., Joseph, R., & Saul, R. (1990). A computer‐based multi‐media tutor for beginning piano students. Journal of New Music Research, 19(2-3), 155-173.'
+    bib = '''@article{dannenberg1990computer,
+  title={A computer-based multi-media tutor for beginning piano students},
+  author={Dannenberg, Roger B and Sanchez, Marta and Joseph, Annabelle and Capell, Peter and Joseph, Robert and Saul, Ronald},
+  journal={Journal of New Music Research},
+  volume={19},
+  number={2-3},
+  pages={155--173},
+  year={1990},
+  publisher={Taylor \& Francis}
+}'''
+    abstract = '''The Piano Tutor provides computer‐based instruction to beginning piano students. Intended as a supplement to traditional instruction, the Piano Tutor helps students by correcting mistakes before they become ingrained through practice and by teaching new material as soon as the student is ready. The Piano Tutor combines an expert system with state‐of‐the‐art music recognition software and multimedia output devices to provide a stimulating learning environment that tailors instruction to the student's needs.'''
+    tags = [education, multimodal]
+
+class visual_chatgpt_talking_drawing_and_editing_with_visual_foundation_models:
+    apa = 'Wu, C., Yin, S., Qi, W., Wang, X., Tang, Z., & Duan, N. (2023). Visual chatgpt: Talking, drawing and editing with visual foundation models. arXiv preprint arXiv:2303.04671.'
+    bib = '''@article{wu2023visual,
+  title={Visual chatgpt: Talking, drawing and editing with visual foundation models},
+  author={Wu, Chenfei and Yin, Shengming and Qi, Weizhen and Wang, Xiaodong and Tang, Zecheng and Duan, Nan},
+  journal={arXiv preprint arXiv:2303.04671},
+  year={2023}
+}'''
+    abstract = '''ChatGPT is attracting a cross-field interest as it provides a language interface with remarkable conversational competency and reasoning capabilities across many domains. However, since ChatGPT is trained with languages, it is currently not capable of processing or generating images from the visual world. At the same time, Visual Foundation Models, such as Visual Transformers or Stable Diffusion, although showing great visual understanding and generation capabilities, they are only experts on specific tasks with one-round fixed inputs and outputs. To this end, We build a system called \textbf{Visual ChatGPT}, incorporating different Visual Foundation Models, to enable the user to interact with ChatGPT by 1) sending and receiving not only languages but also images 2) providing complex visual questions or visual editing instructions that require the collaboration of multiple AI models with multi-steps. 3) providing feedback and asking for corrected results. We design a series of prompts to inject the visual model information into ChatGPT, considering models of multiple inputs/outputs and models that require visual feedback. Experiments show that Visual ChatGPT opens the door to investigating the visual roles of ChatGPT with the help of Visual Foundation Models. Our system is publicly available at https://github.com/microsoft/visual-chatgpt.'''
+    tags = [llm, llm_in_the_loop]

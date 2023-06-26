@@ -18,6 +18,7 @@ def multimodal(): pass
 def adaptive_curriculum_scaffolding(): pass
 def visual(): pass
 def audio(): pass
+def audio_visual_haptic(): pass
 def music_edu(): pass
 def network(): pass
 def transfer_learning(): pass
@@ -40,3 +41,4 @@ def zero_shot(): pass
 def llm(): pass
 def hyper_network(): pass
 def llm_add_system_2(): pass
+def llm_in_the_loop(): pass
