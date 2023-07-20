@@ -1480,3 +1480,26 @@ class the_learning_of_90_continuous_relative_phase_with_and_without_lissajous_fe
   publisher={Elsevier}
 }'''
     abstract = '''Results from recent experiments (e.g., Kovacs, Buchanan, & Shea, 2009a–b, 2010a,b) suggest that when salient visual information is presented using Lissajous plots bimanual coordination patterns typically thought to be very difficult to perform without extensive practice can be performed with remarkably low relative phase error and variability with 5 min or less of practice. However, when this feedback is removed, performance deteriorates. The purpose of the present experiment was to determine if reducing the frequency of feedback presentation will decrease the participant's reliance on the feedback and will facilitate the development of an internal representation capable of sustaining performance when the Lissajous feedback is withdrawn. The results demonstrated that reduced frequency Lissajous feedback results in very effective bimanual coordination performance on tests with Lissajous feedback available and when feedback is withdrawn. Taken together the present experiments add to the growing literature that supports the notion that salient perceptual information can override some aspects of the system's intrinsic dynamics typically linked to motor output control. Additionally, the present results suggest that the learning of both externally and internally driven bimanual coordination is facilitated by providing reduced frequency Lissajous feedback.'''
+    my_notes = '''
+Reduce feedback frequency over time.  
+"For a block of 10 trials feedback presentation
+under the fading schedule was presented as follows: 25–25–20–20–
+15–15–10–10–5–5 s for each consecutive trial. The feedback was
+provided at the beginning of each trial and withdrawn according to
+the schedule above."
+'''
+
+class performance_on_trials_without_knowledge_of_results_kr_in_reduced_relative_frequency_presentations_of_kr:
+    apa = 'Sparrow, W. A., & Summers, J. J. (1992). Performance on trials without knowledge of results (KR) in reduced relative frequency presentations of KR. Journal of motor behavior, 24(2), 197-209.'
+    bib = '''@article{sparrow1992performance,
+  title={Performance on trials without knowledge of results (KR) in reduced relative frequency presentations of KR},
+  author={Sparrow, Wl A and Summers, JJ},
+  journal={Journal of motor behavior},
+  volume={24},
+  number={2},
+  pages={197--209},
+  year={1992},
+  publisher={Taylor \& Francis}
+}'''
+    abstract = '''Following Salmoni, Schmidt, & Walter's (1984) discussion of knowledge of results (KR) as a variable influencing learning, the effect of varying relative frequency of KR while holding absolute number of trials constant was examined. In two experiments, the same treatment groups were compared in acquisition, retention (after 2 min and 24 hr), and on their pattern of responses on the sequence of no-KR trials following a KR trial. In Experiment 1, differences between groups in acquisition were consistent with the number of KR trials received, and there were no differences between groups in either of the retention conditions. Experiment 2 replicated Experiment 1 with a more difficult task. There were no between-group differences in acquisition. In Retention 1, the 100% and 33% relative frequency groups outperformed the less frequent KR groups, whereas in Retention 2, this trend was reversed. The findings from Experiment 2 provide qualified support for the hypothesis that reduced relative frequency of KR in acquisition facilitates performance in retention. The pattern of responses on the sequence of no-KR trials following a KR trial were consistent with Adams' (1971) perceptual-trace decay hypothesis.'''
+    tags = [education, adaptive_curriculum_scaffolding]
