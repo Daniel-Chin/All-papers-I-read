@@ -39,6 +39,8 @@ def jepa_or_jem(): pass
 def multi_source_seperation(): pass
 def zero_shot(): pass
 def llm(): pass
+def lm(): pass
 def hyper_network(): pass
 def llm_add_system_2(): pass
 def llm_in_the_loop(): pass
+def emergent_symbols(): pass

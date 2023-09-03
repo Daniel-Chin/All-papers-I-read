@@ -1503,3 +1503,116 @@ class performance_on_trials_without_knowledge_of_results_kr_in_reduced_relative_
 }'''
     abstract = '''Following Salmoni, Schmidt, & Walter's (1984) discussion of knowledge of results (KR) as a variable influencing learning, the effect of varying relative frequency of KR while holding absolute number of trials constant was examined. In two experiments, the same treatment groups were compared in acquisition, retention (after 2 min and 24 hr), and on their pattern of responses on the sequence of no-KR trials following a KR trial. In Experiment 1, differences between groups in acquisition were consistent with the number of KR trials received, and there were no differences between groups in either of the retention conditions. Experiment 2 replicated Experiment 1 with a more difficult task. There were no between-group differences in acquisition. In Retention 1, the 100% and 33% relative frequency groups outperformed the less frequent KR groups, whereas in Retention 2, this trend was reversed. The findings from Experiment 2 provide qualified support for the hypothesis that reduced relative frequency of KR in acquisition facilitates performance in retention. The pattern of responses on the sequence of no-KR trials following a KR trial were consistent with Adams' (1971) perceptual-trace decay hypothesis.'''
     tags = [education, adaptive_curriculum_scaffolding]
+
+class bert_pre_training_of_deep_bidirectional_transformers_for_language_understanding:
+    apa = 'Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805.'
+    bib = '''@article{devlin2018bert,
+  title={Bert: Pre-training of deep bidirectional transformers for language understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  journal={arXiv preprint arXiv:1810.04805},
+  year={2018}
+}'''
+    abstract = '''We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications.
+BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).'''
+    tags = [lm]
+
+class auto_encoding_variational_bayes:
+    apa = 'Kingma, D. P., & Welling, M. (2013). Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114.'
+    bib = '''@article{kingma2013auto,
+  title={Auto-encoding variational bayes},
+  author={Kingma, Diederik P and Welling, Max},
+  journal={arXiv preprint arXiv:1312.6114},
+  year={2013}
+}'''
+    abstract = '''How can we perform efficient inference and learning in directed probabilistic models, in the presence of continuous latent variables with intractable posterior distributions, and large datasets? We introduce a stochastic variational inference and learning algorithm that scales to large datasets and, under some mild differentiability conditions, even works in the intractable case. Our contributions are two-fold. First, we show that a reparameterization of the variational lower bound yields a lower bound estimator that can be straightforwardly optimized using standard stochastic gradient methods. Second, we show that for i.i.d. datasets with continuous latent variables per datapoint, posterior inference can be made especially efficient by fitting an approximate inference model (also called a recognition model) to the intractable posterior using the proposed lower bound estimator. Theoretical advantages are reflected in experimental results.'''
+    my_notes = '''vae'''
+
+class a_recurrent_latent_variable_model_for_sequential_data:
+    apa = 'Chung, J., Kastner, K., Dinh, L., Goel, K., Courville, A. C., & Bengio, Y. (2015). A recurrent latent variable model for sequential data. Advances in neural information processing systems, 28.'
+    bib = '''@article{chung2015recurrent,
+  title={A recurrent latent variable model for sequential data},
+  author={Chung, Junyoung and Kastner, Kyle and Dinh, Laurent and Goel, Kratarth and Courville, Aaron C and Bengio, Yoshua},
+  journal={Advances in neural information processing systems},
+  volume={28},
+  year={2015}
+}'''
+    abstract = '''In this paper, we explore the inclusion of latent random variables into the hidden state of a recurrent neural network (RNN) by combining the elements of the variational autoencoder. We argue that through the use of high-level latent random variables, the variational RNN (VRNN) can model the kind of variability observed in highly structured sequential data such as natural speech. We empirically evaluate the proposed model against other related sequential models on four speech datasets and one handwriting dataset. Our results show the important roles that latent random variables can play in the RNN dynamics.'''
+    my_notes = '''vrnn'''
+
+class deep_symmetry_networks:
+    apa = 'Gens, R., & Domingos, P. M. (2014). Deep symmetry networks. Advances in neural information processing systems, 27.'
+    bib = '''@article{gens2014deep,
+  title={Deep symmetry networks},
+  author={Gens, Robert and Domingos, Pedro M},
+  journal={Advances in neural information processing systems},
+  volume={27},
+  year={2014}
+}'''
+    abstract = '''The chief difficulty in object recognition is that objects’ classes are obscured by a large number of extraneous sources of variability, such as pose and part deformation. These sources of variation can be represented by symmetry groups, sets of composable transformations that preserve object identity. Convolutional neural networks (convnets) achieve a degree of translational invariance by computing feature maps over the translation group, but cannot handle other groups. As a result, these groups’ effects have to be approximated by small translations, which often requires augmenting datasets and leads to high sample complexity. In this paper, we introduce deep symmetry networks (symnets), a generalization of convnets that forms feature maps over arbitrary symmetry groups. Symnets use kernel-based interpolation to tractably tie parameters and pool over symmetry spaces of any dimension. Like convnets, they are trained with backpropagation. The composition of feature transformations through the layers of a symnet provides a new approach to deep learning. Experiments on NORB and MNIST-rot show that symnets over the affine group greatly reduce sample complexity relative to convnets by better capturing the symmetries in the data.'''
+    tags = [symmetry]
+
+class group_equivariant_convolutional_networks:
+    apa = 'Cohen, T., & Welling, M. (2016, June). Group equivariant convolutional networks. In International conference on machine learning (pp. 2990-2999). PMLR.'
+    bib = '''@inproceedings{cohen2016group,
+  title={Group equivariant convolutional networks},
+  author={Cohen, Taco and Welling, Max},
+  booktitle={International conference on machine learning},
+  pages={2990--2999},
+  year={2016},
+  organization={PMLR}
+}'''
+    abstract = '''We introduce Group equivariant Convolutional Neural Networks (G-CNNs), a natural generalization of convolutional neural networks that reduces sample complexity by exploiting symmetries. G-CNNs use G-convolutions, a new type of layer that enjoys a substantially higher degree of weight sharing than regular convolution layers. G-convolutions increase the expressive capacity of the network without increasing the number of parameters. Group convolution layers are easy to use and can be implemented with negligible computational overhead for discrete groups generated by translations, reflections and rotations. G-CNNs achieve state of the art results on CIFAR10 and rotated MNIST.'''
+    tags = [symmetry, repr_learning]
+
+class perceiver_general_perception_with_iterative_attention:
+    apa = 'Jaegle, A., Gimeno, F., Brock, A., Vinyals, O., Zisserman, A., & Carreira, J. (2021, July). Perceiver: General perception with iterative attention. In International conference on machine learning (pp. 4651-4664). PMLR.'
+    bib = '''@inproceedings{jaegle2021perceiver,
+  title={Perceiver: General perception with iterative attention},
+  author={Jaegle, Andrew and Gimeno, Felix and Brock, Andy and Vinyals, Oriol and Zisserman, Andrew and Carreira, Joao},
+  booktitle={International conference on machine learning},
+  pages={4651--4664},
+  year={2021},
+  organization={PMLR}
+}'''
+    abstract = '''Biological systems understand the world by simultaneously processing high-dimensional inputs from modalities as diverse as vision, audition, touch, proprioception, etc. The perception models used in deep learning on the other hand are designed for individual modalities, often relying on domain-specific assumptions such as the local grid structures exploited by virtually all existing vision models. These priors introduce helpful inductive biases, but also lock models to individual modalities. In this paper we introduce the Perceiver {–} a model that builds upon Transformers and hence makes few architectural assumptions about the relationship between its inputs, but that also scales to hundreds of thousands of inputs, like ConvNets. The model leverages an asymmetric attention mechanism to iteratively distill inputs into a tight latent bottleneck, allowing it to scale to handle very large inputs. We show that this architecture is competitive with or outperforms strong, specialized models on classification tasks across various modalities: images, point clouds, audio, video and video+audio. The Perceiver obtains performance comparable to ResNet-50 and ViT on ImageNet without 2D convolutions by directly attending to 50,000 pixels. It is also competitive in all modalities in AudioSet.'''
+    questions = '''
+C, D, N, M is wrong???  
+'''
+
+class emergent_world_representations_exploring_a_sequence_model_trained_on_a_synthetic_task:
+    apa = 'Li, K., Hopkins, A. K., Bau, D., Viégas, F., Pfister, H., & Wattenberg, M. (2022). Emergent world representations: Exploring a sequence model trained on a synthetic task. arXiv preprint arXiv:2210.13382.'
+    bib = '''@article{li2022emergent,
+  title={Emergent world representations: Exploring a sequence model trained on a synthetic task},
+  author={Li, Kenneth and Hopkins, Aspen K and Bau, David and Vi{\'e}gas, Fernanda and Pfister, Hanspeter and Wattenberg, Martin},
+  journal={arXiv preprint arXiv:2210.13382},
+  year={2022}
+}'''
+    abstract = '''Language models show a surprising range of capabilities, but the source of their apparent competence is unclear. Do these networks just memorize a collection of surface statistics, or do they rely on internal representations of the process that generates the sequences they see? We investigate this question by applying a variant of the GPT model to the task of predicting legal moves in a simple board game, Othello. Although the network has no a priori knowledge of the game or its rules, we uncover evidence of an emergent nonlinear internal representation of the board state. Interventional experiments indicate this representation can be used to control the output of the network and create "latent saliency maps" that can help explain predictions in human terms.'''
+    tags = [emergent_symbols]
+    my_notes = '''
+Good.  
+The world state is highly probe-able.  
+The probe is so nice you can use its gradients to  
+    - analyze saliency  
+    - intervene predictions.  
+My ideas:
+    - Probe-ability says something about 
+(existence of repr \intersect quality of repr). I believe the existence of repr is always true. Probe-ability usually evaluates repr quality. 
+    - Symm's number experiment cannot use this method because probe-ability is also determined by probing task complexity. Forming a bijective map of 15 elements is too trivial. Poor-quality repr can be probe-able.  
+Questions:
+    - Why call transformer "GPT"?  
+'''
+
+class deep_symbolic_learning_discovering_symbols_and_rules_from_perceptions:
+    apa = 'Daniele, A., Campari, T., Malhotra, S., & Serafini, L. (2022). Deep symbolic learning: Discovering symbols and rules from perceptions. arXiv preprint arXiv:2208.11561.'
+    bib = '''@article{daniele2022deep,
+  title={Deep symbolic learning: Discovering symbols and rules from perceptions},
+  author={Daniele, Alessandro and Campari, Tommaso and Malhotra, Sagar and Serafini, Luciano},
+  journal={arXiv preprint arXiv:2208.11561},
+  year={2022}
+}'''
+    abstract = '''Neuro-Symbolic (NeSy) integration combines symbolic reasoning with Neural Networks (NNs) for tasks requiring perception and reasoning. Most NeSy systems rely on continuous relaxation of logical knowledge, and no discrete decisions are made within the model pipeline. Furthermore, these methods assume that the symbolic rules are given. In this paper, we propose Deep Symbolic Learning (DSL), a NeSy system that learns NeSy-functions, i.e., the composition of a (set of) perception functions which map continuous data to discrete symbols, and a symbolic function over the set of symbols. DSL learns simultaneously the perception and symbolic functions while being trained only on their composition (NeSy-function). The key novelty of DSL is that it can create internal (interpretable) symbolic representations and map them to perception inputs within a differentiable NN learning pipeline. The created symbols are automatically selected to generate symbolic functions that best explain the data. We provide experimental analysis to substantiate the efficacy of DSL in simultaneously learning perception and symbolic functions.'''
+    tags = [emergent_symbols]
+    my_notes = '''
+Too trivial?  
+'''
