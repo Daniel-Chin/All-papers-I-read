@@ -1616,3 +1616,39 @@ class deep_symbolic_learning_discovering_symbols_and_rules_from_perceptions:
     my_notes = '''
 Too trivial?  
 '''
+
+class understanding_the_challenges_for_adult_beginners_at_piano_practice_from_an_analysis_of_errors:
+    apa = None
+    bib = None
+    abstract = '''Adult beginners at piano playing tend to have positive characteristics related to learning, such as being analytical, goal-oriented, and attentive. While some adult beginners face the need to acquire performance skills, for example, in teacher training, some people learn to play the piano just as a hobby. From an educational standpoint, it is important to understand the tendencies of their errors in playing and how these errors can be reduced over time with practice. \nThe purpose of this research was to investigate the types of errors that adult beginners at piano playing experienced during their practice time and how they improved their performance. Eight adults (M = 6, F=2; mean age = 42.5 years), who were beginners at keyboard playing, participated in an experimental study. All the participants were given a sheet, with music newly composed for this study, and asked to practice it for three minutes on an electric piano(Yamaha Digital Piano P-125) after watching a demo. After the three-minute practice, each participant was asked to perform the piece once from the beginning to the end. A set of three minutes of practice followed by a performance was repeated five times. After all sessions,each participant took part in a semi-structured interview. All performance data, including practices, were recorded with two cameras set at different angles, and exported as MIDI audiodata. Audio and video data were analyzed and the errors identified were categorized into three types: beat interruption, rhythm errors, and pitch errors. \nThe data revealed that errors of beat interruption were most frequent among all types of errors and remained up to the final stage of practice. The distribution of decreased errors was not always linear, but was highly likely to be graphically presented as a zig-zag line with over adaptation and self-regulated processes. The interview data indicated that adult learners had different strategies and priorities for playing. The results showed that some new processes learned could temporally interfere with other parts of playing, and a certain amount of time is needed to assimilate what they achieved. The study also suggested that understanding the learners’ individual needs during their practices could be crucial, as well as support for practice strategies.'''
+    tags = [education]
+    my_notes = '''
+Three kinds of error: pause, rhythm error, pitch error.
+'''
+
+class gait_retraining_to_reduce_lower_extremity_loading_in_runners:
+    apa = 'Crowell, H. P., & Davis, I. S. (2011). Gait retraining to reduce lower extremity loading in runners. Clinical biomechanics, 26(1), 78-83.'
+    bib = '''@article{crowell2011gait,
+  title={Gait retraining to reduce lower extremity loading in runners},
+  author={Crowell, Harrison Philip and Davis, Irene S},
+  journal={Clinical biomechanics},
+  volume={26},
+  number={1},
+  pages={78--83},
+  year={2011},
+  publisher={Elsevier}
+}'''
+    abstract = '''Background
+Tibial stress fractures, which are among the most common running related injuries, have been associated with increased lower extremity loading (i.e., peak positive acceleration of the tibia, vertical force impact peak, and average and instantaneous vertical force loading rates) during initial contact. This study was conducted to evaluate the efficacy of a gait retraining program designed to reduce this loading during running and to assess the short-term persistence of these reductions.
+
+Methods
+Ten runners (six females and four males) with peak positive tibial acceleration greater than 8 g, measured in an initial screening, participated in the retraining program. During the retraining sessions, subjects ran on a treadmill and received real-time visual feedback from an accelerometer attached to their distal tibias. Tibial acceleration and vertical ground reaction force data were collected from subjects during overground data collection sessions held pre-training, post-training, and at a 1-month follow-up.
+
+Findings
+Peak positive acceleration of the tibia, vertical force impact peak, and average and instantaneous vertical force loading rates were all reduced immediately following the gait retraining. The decrease in tibial acceleration was nearly 50%. The reductions in vertical force loading rates and vertical force impact peak were approximately 30% and 20%, respectively. These reductions were maintained at the 1-month follow-up.
+
+Interpretation
+Subjects were able to run with reduced tibial acceleration and vertical force loading immediately following completion of the gait retraining program and at the 1-month follow-up evaluation. This may reduce their risk of stress fractures.
+'''
+    tags = [education, adaptive_curriculum_scaffolding]
+    my_notes = ''''''
