@@ -1695,6 +1695,7 @@ Cannot find inpainting demo.
 '''
 
 class music_sketchnet_controllable_music_generation_via_factorized_representations_of_pitch_and_rhythm:
+    short = 'Music sketchnet'
     apa = 'Chen, K., Wang, C. I., Berg-Kirkpatrick, T., & Dubnov, S. (2020). Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm. arXiv preprint arXiv:2008.01291.'
     bib = '''@article{chen2020music,
   title={Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm},
