@@ -44,3 +44,9 @@ def hyper_network(): pass
 def llm_add_system_2(): pass
 def llm_in_the_loop(): pass
 def emergent_symbols(): pass
+def lit_review_for_liwei_ijcai_2024(): pass
+def inpaint(): pass
+def symbolic_music(): pass
+def music_audio(): pass
+def rule_based(): pass
+

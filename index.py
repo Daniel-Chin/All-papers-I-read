@@ -1652,3 +1652,208 @@ Subjects were able to run with reduced tibial acceleration and vertical force lo
 '''
     tags = [education, adaptive_curriculum_scaffolding]
     my_notes = ''''''
+
+class gacela_a_generative_adversarial_context_encoder_for_long_audio_inpainting_of_music:
+    apa = 'Marafioti, A., Majdak, P., Holighaus, N., & Perraudin, N. (2020). GACELA: A generative adversarial context encoder for long audio inpainting of music. IEEE Journal of Selected Topics in Signal Processing, 15(1), 120-131.'
+    bib = '''@article{marafioti2020gacela,
+  title={GACELA: A generative adversarial context encoder for long audio inpainting of music},
+  author={Marafioti, Andres and Majdak, Piotr and Holighaus, Nicki and Perraudin, Nathana{\"e}l},
+  journal={IEEE Journal of Selected Topics in Signal Processing},
+  volume={15},
+  number={1},
+  pages={120--131},
+  year={2020},
+  publisher={IEEE}
+}'''
+    abstract = '''In this article, we introduce GACELA, a conditional generative adversarial network (cGAN) designed to restore missing audio data with durations ranging between hundreds of milliseconds and a few seconds, i.e., to perform long-gap audio inpainting. While previous work either addressed shorter gaps or relied on exemplars by copying available information from other signal parts, GACELA addresses the inpainting of long gaps in two aspects. First, it considers various time scales of audio information by relying on five parallel discriminators with increasing resolution of receptive fields. Second, it is conditioned not only on the available information surrounding the gap, i.e., the context, but also on the latent variable of the cGAN. This addresses the inherent multi-modality of audio inpainting for such long gaps while providing the user with different inpainting options. GACELA was evaluated in listening tests on music signals of varying complexity and varying gap durations from 375 to 1500 ms. Under laboratory conditions, our subjects were often able to detect the inpainting. However, the severity of the inpainted artifacts was rated between not disturbing and mildly disturbing. GACELA represents a framework capable of integrating future improvements such as processing of more auditory-related features or explicit musical features. Our software and trained models, complemented by instructive examples, are available online.'''
+    tags = [inpaint, music_audio, lit_review_for_liwei_ijcai_2024]
+
+class vision_infused_deep_audio_inpainting:
+    apa = 'Zhou, H., Liu, Z., Xu, X., Luo, P., & Wang, X. (2019). Vision-infused deep audio inpainting. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 283-292).'
+    bib = '''@inproceedings{zhou2019vision,
+  title={Vision-infused deep audio inpainting},
+  author={Zhou, Hang and Liu, Ziwei and Xu, Xudong and Luo, Ping and Wang, Xiaogang},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={283--292},
+  year={2019}
+}'''
+    abstract = '''Multi-modality perception is essential to develop interactive intelligence. In this work, we consider a new task of visual information-infused audio inpainting, i.e., synthesizing missing audio segments that correspond to their accompanying videos. We identify two key aspects for a successful inpainter: (1) It is desirable to operate on spectrograms instead of raw audios. Recent advances in deep semantic image inpainting could be leveraged to go beyond the limitations of traditional audio inpainting. (2) To synthesize visually indicated audio, a visual-audio joint feature space needs to be learned with synchronization of audio and video. To facilitate a large-scale study, we collect a new multi-modality instrument-playing dataset called MUSIC-Extra-Solo (MUSICES) by enriching MUSIC dataset. Extensive experiments demonstrate that our framework is capable of inpainting realistic and varying audio segments with or without visual contexts. More importantly, our synthesized audio segments are coherent with their video counterparts, showing the effectiveness of our proposed Vision-Infused Audio Inpainter (VIAI).'''
+    tags = [inpaint, music_audio, lit_review_for_liwei_ijcai_2024]
+
+class the_piano_inpainting_application:
+    apa = 'Hadjeres, G., & Crestel, L. (2021). The piano inpainting application. arXiv preprint arXiv:2107.05944.'
+    bib = '''@article{hadjeres2021piano,
+  title={The piano inpainting application},
+  author={Hadjeres, Ga{\"e}tan and Crestel, L{\'e}opold},
+  journal={arXiv preprint arXiv:2107.05944},
+  year={2021}
+}'''
+    abstract = '''Autoregressive models are now capable of generating high-quality minute-long expressive MIDI piano performances. Even though this progress suggests new tools to assist music composition, we observe that generative algorithms are still not widely used by artists due to the limited control they offer, prohibitive inference times or the lack of integration within musicians' workflows. In this work, we present the Piano Inpainting Application (PIA), a generative model focused on inpainting piano performances, as we believe that this elementary operation (restoring missing parts of a piano performance) encourages human-machine interaction and opens up new ways to approach music composition. Our approach relies on an encoder-decoder Linear Transformer architecture trained on a novel representation for MIDI piano performances termed Structured MIDI Encoding. By uncovering an interesting synergy between Linear Transformers and our inpainting task, we are able to efficiently inpaint contiguous regions of a piano performance, which makes our model suitable for interactive and responsive A.I.-assisted composition. Finally, we introduce our freely-available Ableton Live PIA plugin, which allows musicians to smoothly generate or modify any MIDI clip using PIA within a widely-used professional Digital Audio Workstation.'''
+    tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
+    my_notes = '''
+Cannot find inpainting demo.  
+'''
+
+class music_sketchnet_controllable_music_generation_via_factorized_representations_of_pitch_and_rhythm:
+    apa = 'Chen, K., Wang, C. I., Berg-Kirkpatrick, T., & Dubnov, S. (2020). Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm. arXiv preprint arXiv:2008.01291.'
+    bib = '''@article{chen2020music,
+  title={Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm},
+  author={Chen, Ke and Wang, Cheng-i and Berg-Kirkpatrick, Taylor and Dubnov, Shlomo},
+  journal={arXiv preprint arXiv:2008.01291},
+  year={2020}
+}'''
+    abstract = '''Drawing an analogy with automatic image completion systems, we propose Music SketchNet, a neural network framework that allows users to specify partial musical ideas guiding automatic music generation. We focus on generating the missing measures in incomplete monophonic musical pieces, conditioned on surrounding context, and optionally guided by user-specified pitch and rhythm snippets. First, we introduce SketchVAE, a novel variational autoencoder that explicitly factorizes rhythm and pitch contour to form the basis of our proposed model. Then we introduce two discriminative architectures, SketchInpainter and SketchConnector, that in conjunction perform the guided music completion, filling in representations for the missing measures conditioned on surrounding context and user-specified snippets. We evaluate SketchNet on a standard dataset of Irish folk music and compare with models from recent works. When used for music completion, our approach outperforms the state-of-the-art both in terms of objective metrics and subjective listening tests. Finally, we demonstrate that our model can successfully incorporate user-specified snippets during the generation process.'''
+    tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
+
+class vampnet_music_generation_via_masked_acoustic_token_modeling:
+    apa = 'Garcia, H. F., Seetharaman, P., Kumar, R., & Pardo, B. (2023). Vampnet: Music generation via masked acoustic token modeling. arXiv preprint arXiv:2307.04686.'
+    bib = '''@article{garcia2023vampnet,
+  title={Vampnet: Music generation via masked acoustic token modeling},
+  author={Garcia, Hugo Flores and Seetharaman, Prem and Kumar, Rithesh and Pardo, Bryan},
+  journal={arXiv preprint arXiv:2307.04686},
+  year={2023}
+}'''
+    abstract = '''We introduce VampNet, a masked acoustic token modeling approach to music synthesis, compression, inpainting, and variation. We use a variable masking schedule during training which allows us to sample coherent music from the model by applying a variety of masking approaches (called prompts) during inference. VampNet is non-autoregressive, leveraging a bidirectional transformer architecture that attends to all tokens in a forward pass. With just 36 sampling passes, VampNet can generate coherent high-fidelity musical waveforms. We show that by prompting VampNet in various ways, we can apply it to tasks like music compression, inpainting, outpainting, continuation, and looping with variation (vamping). Appropriately prompted, VampNet is capable of maintaining style, genre, instrumentation, and other high-level aspects of the music. This flexible prompting capability makes VampNet a powerful music co-creation tool. Code and audio samples are available online.'''
+    tags = [inpaint, music_audio, lit_review_for_liwei_ijcai_2024]
+    my_notes = '''
+Direct MLM.  
+1 or 2 sec inpaint.  
+'''
+
+class musiac_an_extensible_generative_framework_for_music_infilling_applications_with_multi_level_control:
+    apa = 'Guo, R., Simpson, I., Kiefer, C., Magnusson, T., & Herremans, D. (2022, April). MusIAC: An extensible generative framework for Music Infilling Applications with multi-level Control. In International Conference on Computational Intelligence in Music, Sound, Art and Design (Part of EvoStar) (pp. 341-356). Cham: Springer International Publishing.'
+    bib = '''@inproceedings{guo2022musiac,
+  title={MusIAC: An extensible generative framework for Music Infilling Applications with multi-level Control},
+  author={Guo, Rui and Simpson, Ivor and Kiefer, Chris and Magnusson, Thor and Herremans, Dorien},
+  booktitle={International Conference on Computational Intelligence in Music, Sound, Art and Design (Part of EvoStar)},
+  pages={341--356},
+  year={2022},
+  organization={Springer}
+}'''
+    abstract = '''We present a novel music generation framework for music infilling, with a user friendly interface. Infilling refers to the task of generating musical sections given the surrounding multi-track music. The proposed transformer-based framework is extensible for new control tokens as the added music control tokens such as tonal tension per bar and track polyphony level in this work. We explore the effects of including several musically meaningful control tokens, and evaluate the results using objective metrics related to pitch and rhythm. Our results demonstrate that adding additional control tokens helps to generate music with stronger stylistic similarities to the original music. It also provides the user with more control to change properties like the music texture and tonal tension in each bar compared to previous research which only provided control for track density. We present the model in a Google Colab notebook to enable interactive generation.'''
+    tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
+    my_notes = '''
+direct MLM.  
+1-bar inpaint.  
+two-stage training: first short masks then long masks.  
+'''
+
+class variable_length_music_score_infilling_via_xlnet_and_musically_specialized_positional_encoding:
+    apa = 'Chang, C. J., Lee, C. Y., & Yang, Y. H. (2021). Variable-length music score infilling via XLNet and musically specialized positional encoding. arXiv preprint arXiv:2108.05064.'
+    bib = '''@article{chang2021variable,
+  title={Variable-length music score infilling via XLNet and musically specialized positional encoding},
+  author={Chang, Chin-Jui and Lee, Chun-Yi and Yang, Yi-Hsuan},
+  journal={arXiv preprint arXiv:2108.05064},
+  year={2021}
+}'''
+    abstract = '''This paper proposes a new self-attention based model for music score infilling, i.e., to generate a polyphonic music sequence that fills in the gap between given past and future contexts. While existing approaches can only fill in a short segment with a fixed number of notes, or a fixed time span between the past and future contexts, our model can infill a variable number of notes (up to 128) for different time spans. We achieve so with three major technical contributions. First, we adapt XLNet, an autoregressive model originally proposed for unsupervised model pre-training, to music score infilling. Second, we propose a new, musically specialized positional encoding called relative bar encoding that better informs the model of notes' position within the past and future context. Third, to capitalize relative bar encoding, we perform look-ahead onset prediction to predict the onset of a note one time step before predicting the other attributes of the note. We compare our proposed model with two strong baselines and show that our model is superior in both objective and subjective analyses.'''
+    tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
+
+class infilling_piano_performances:
+    apa = 'Ippolito, D., Huang, A., Hawthorne, C., & Eck, D. (2018). Infilling piano performances. In NIPS Workshop on Machine Learning for Creativity and Design (Vol. 2, p. 5).'
+    bib = '''@inproceedings{ippolito2018infilling,
+  title={Infilling piano performances},
+  author={Ippolito, Daphne and Huang, Anna and Hawthorne, Curtis and Eck, Douglas},
+  booktitle={NIPS Workshop on Machine Learning for Creativity and Design},
+  volume={2},
+  pages={5},
+  year={2018}
+}'''
+    abstract = '''Existing systems for music generation have generated music in a left-to-right direction or have used a fill-in-the-blank approach on a quantized piano-roll musical representation. In this work, we show that it is possible to train a self-attention based Transformer to infill deleted sections of MIDI transcriptions of performed piano music. This infilling technique can be used collaboratively by composers to select contiguous sections of their work to be ‘rewritten’ by a neural net. It can also be used to gradually morph one musical piece into a different one.'''
+    tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
+    my_notes = '''
+Prefix; suffix; continuation.  
+Inpainting via reordering. MLM via auto-regressive LM.  
+'''
+
+class polyffusion_a_diffusion_model_for_polyphonic_score_generation_with_internal_and_external_controls:
+    apa = 'Min, L., Jiang, J., Xia, G., & Zhao, J. (2023, November). Polyffusion: A Diffusion Model for Polyphonic Score Generation With Internal and External Controls. In Ismir 2023 Hybrid Conference.'
+    bib = '''@inproceedings{min2023polyffusion,
+  title={Polyffusion: A Diffusion Model for Polyphonic Score Generation With Internal and External Controls},
+  author={Min, Lejun and Jiang, Junyan and Xia, Gus and Zhao, Jingwei},
+  booktitle={Ismir 2023 Hybrid Conference},
+  year={2023}
+}'''
+    abstract = '''We propose Polyffusion, a diffusion model that generates polyphonic music scores by regarding music as image-like piano roll representations. The model is capable of controllable music generation with two paradigms: internal control and external control. Internal control refers to the process in which users pre-define a part of the music and then let the model infill the rest, similar to the task of masked music generation (or music inpainting). External control conditions the model with external yet related information, such as chord, texture, or other features, via the cross-attention mechanism. We show that by using internal and external controls, Polyffusion unifies a wide range of music creation tasks, including melody generation given accompaniment, accompaniment generation given melody, arbitrary music segment inpainting, and music arrangement given chords or textures. Experimental results show that our model significantly outperforms existing Transformer and sampling-based baselines, and using pre-trained disentangled representations as external conditions yields more effective controls.'''
+    tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024, diffusion]
+
+class counterpoint_by_convolution:
+    short = 'Coconet'
+    apa = 'Huang, C. Z. A., Cooijmans, T., Roberts, A., Courville, A., & Eck, D. (2019). Counterpoint by convolution. arXiv preprint arXiv:1903.07227.'
+    bib = '''@article{huang2019counterpoint,
+  title={Counterpoint by convolution},
+  author={Huang, Cheng-Zhi Anna and Cooijmans, Tim and Roberts, Adam and Courville, Aaron and Eck, Douglas},
+  journal={arXiv preprint arXiv:1903.07227},
+  year={2019}
+}'''
+    abstract = '''Machine learning models of music typically break up the task of composition into a chronological process, composing a piece of music in a single pass from beginning to end. On the contrary, human composers write music in a nonlinear fashion, scribbling motifs here and there, often revisiting choices previously made. In order to better approximate this process, we train a convolutional neural network to complete partial musical scores, and explore the use of blocked Gibbs sampling as an analogue to rewriting. Neither the model nor the generative procedure are tied to a particular causal direction of composition. Our model is an instance of orderless NADE (Uria et al., 2014), which allows more direct ancestral sampling. However, we find that Gibbs sampling greatly improves sample quality, which we demonstrate to be due to some conditional distributions being poorly modeled. Moreover, we show that even the cheap approximate blocked Gibbs procedure from Yao et al. (2014) yields better samples than ancestral sampling, based on both log-likelihood and human evaluation.'''
+    demo = 'https://coconets.github.io/'
+    tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
+
+class a_context_encoder_for_audio_inpainting:
+    apa = 'Marafioti, A., Perraudin, N., Holighaus, N., & Majdak, P. (2019). A context encoder for audio inpainting. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 27(12), 2362-2372.'
+    bib = '''@article{marafioti2019context,
+  title={A context encoder for audio inpainting},
+  author={Marafioti, Andr{\'e}s and Perraudin, Nathana{\"e}l and Holighaus, Nicki and Majdak, Piotr},
+  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+  volume={27},
+  number={12},
+  pages={2362--2372},
+  year={2019},
+  publisher={IEEE}
+}'''
+    abstract = '''In this article, we study the ability of deep neural networks (DNNs) to restore missing audio content based on its context, i.e., inpaint audio gaps. We focus on a condition which has not received much attention yet: gaps in the range of tens of milliseconds. We propose a DNN structure that is provided with the signal surrounding the gap in the form of time-frequency (TF) coefficients. Two DNNs with either complex-valued TF coefficient output or magnitude TF coefficient output were studied by separately training them on inpainting two types of audio signals (music and musical instruments) having 64-ms long gaps. The magnitude DNN outperformed the complex-valued DNN in terms of signal-to-noise ratios and objective difference grades. Although, for instruments, a reference inpainting obtained through linear predictive coding performed better in both metrics, it performed worse than the magnitude DNN for music. This demonstrates the potential of the magnitude DNN, in particular for inpainting signals that are more complex than single instrument sounds.'''
+    tags = [inpaint, music_audio, lit_review_for_liwei_ijcai_2024]
+    my_notes = '''
+tens of ms gaps.  
+'''
+
+class inpainting_of_long_audio_segments_with_similarity_graphs:
+    apa = 'Perraudin, N., Holighaus, N., Majdak, P., & Balazs, P. (2018). Inpainting of long audio segments with similarity graphs. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 26(6), 1083-1094.'
+    bib = '''@article{perraudin2018inpainting,
+  title={Inpainting of long audio segments with similarity graphs},
+  author={Perraudin, Nathanael and Holighaus, Nicki and Majdak, Piotr and Balazs, Peter},
+  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+  volume={26},
+  number={6},
+  pages={1083--1094},
+  year={2018},
+  publisher={IEEE}
+}'''
+    abstract = '''We present a novel method for the compensation of long duration data loss in audio signals, in particular music. The concealment of such signal defects is based on a graph that encodes signal structure in terms of time-persistent spectral similarity. A suitable candidate segment for the substitution of the lost content is proposed by an intuitive optimization scheme and smoothly inserted into the gap , i.e., the lost or distorted signal region. Extensive listening tests show that the proposed algorithm provides highly promising results when applied to a variety of real-world music signals.'''
+    tags = [inpaint, music_audio, lit_review_for_liwei_ijcai_2024, rule_based]
+    my_notes = '''
+rule-based.  
+'''
+
+class deepbach_a_steerable_model_for_bach_chorales_generation:
+    apa = 'Hadjeres, G., Pachet, F., & Nielsen, F. (2017, July). Deepbach: a steerable model for bach chorales generation. In International conference on machine learning (pp. 1362-1371). PMLR.'
+    bib = '''@inproceedings{hadjeres2017deepbach,
+  title={Deepbach: a steerable model for bach chorales generation},
+  author={Hadjeres, Ga{\"e}tan and Pachet, Fran{\c{c}}ois and Nielsen, Frank},
+  booktitle={International conference on machine learning},
+  pages={1362--1371},
+  year={2017},
+  organization={PMLR}
+}'''
+    abstract = '''This paper introduces DeepBach, a graphical model aimed at modeling polyphonic music and specifically hymn-like pieces. We claim that, after being trained on the chorale harmonizations by Johann Sebastian Bach, our model is capable of generating highly convincing chorales in the style of Bach. DeepBach’s strength comes from the use of pseudo-Gibbs sampling coupled with an adapted representation of musical data. This is in contrast with many automatic music composition approaches which tend to compose music sequentially. Our model is also steerable in the sense that a user can constrain the generation by imposing positional constraints such as notes, rhythms or cadences in the generated score. We also provide a plugin on top of the MuseScore music editor making the interaction with DeepBach easy to use.'''
+    tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
+    my_notes = '''
+Two RNNs to encode the context from both directions.  
+pseudo-Gibbs sampling.  
+'''
+
+class anticipation_rnn_enforcing_unary_constraints_in_sequence_generation_with_application_to_interactive_music_generation:
+    apa = 'Hadjeres, G., & Nielsen, F. (2020). Anticipation-RNN: Enforcing unary constraints in sequence generation, with application to interactive music generation. Neural Computing and Applications, 32(4), 995-1005.'
+    bib = '''@article{hadjeres2020anticipation,
+  title={Anticipation-RNN: Enforcing unary constraints in sequence generation, with application to interactive music generation},
+  author={Hadjeres, Ga{\"e}tan and Nielsen, Frank},
+  journal={Neural Computing and Applications},
+  volume={32},
+  number={4},
+  pages={995--1005},
+  year={2020},
+  publisher={Springer}
+}'''
+    abstract = '''Recurrent neural networks (RNNs) are now widely used on sequence generation tasks due to their ability to learn long-range dependencies and to generate sequences of arbitrary length. However, their left-to-right generation procedure only allows a limited control from a potential user which makes them unsuitable for interactive and creative usages such as interactive music generation. This article introduces a novel architecture called anticipation-RNN which possesses the assets of the RNN-based generative models while allowing to enforce user-defined unary constraints. We demonstrate its efficiency on the task of generating melodies satisfying unary constraints in the style of the soprano parts of the J.S. Bach chorale harmonizations. Sampling using the anticipation-RNN is of the same order of complexity than sampling from the traditional RNN model. This fast and interactive generation of musical sequences opens ways to devise real-time systems that could be used for creative purposes.'''
+    tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
