@@ -1696,22 +1696,23 @@ Cannot find inpainting demo.
 
 class music_sketchnet_controllable_music_generation_via_factorized_representations_of_pitch_and_rhythm:
     short = 'Music sketchnet'
-    apa = 'Chen, K., Wang, C. I., Berg-Kirkpatrick, T., & Dubnov, S. (2020). Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm. arXiv preprint arXiv:2008.01291.'
-    bib = '''@article{chen2020music,
+    apa = 'Chen, K., Wang, C. I., Berg-Kirkpatrick, T., & Dubnov, S. (2020). Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm. In Ismir 2020 Conference.'
+    bib = '''@inproceedings{chen2020music,
   title={Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm},
   author={Chen, Ke and Wang, Cheng-i and Berg-Kirkpatrick, Taylor and Dubnov, Shlomo},
-  journal={arXiv preprint arXiv:2008.01291},
+  booktitle={Ismir 2020 Conference},
   year={2020}
 }'''
     abstract = '''Drawing an analogy with automatic image completion systems, we propose Music SketchNet, a neural network framework that allows users to specify partial musical ideas guiding automatic music generation. We focus on generating the missing measures in incomplete monophonic musical pieces, conditioned on surrounding context, and optionally guided by user-specified pitch and rhythm snippets. First, we introduce SketchVAE, a novel variational autoencoder that explicitly factorizes rhythm and pitch contour to form the basis of our proposed model. Then we introduce two discriminative architectures, SketchInpainter and SketchConnector, that in conjunction perform the guided music completion, filling in representations for the missing measures conditioned on surrounding context and user-specified snippets. We evaluate SketchNet on a standard dataset of Irish folk music and compare with models from recent works. When used for music completion, our approach outperforms the state-of-the-art both in terms of objective metrics and subjective listening tests. Finally, we demonstrate that our model can successfully incorporate user-specified snippets during the generation process.'''
     tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
 
 class vampnet_music_generation_via_masked_acoustic_token_modeling:
-    apa = 'Garcia, H. F., Seetharaman, P., Kumar, R., & Pardo, B. (2023). Vampnet: Music generation via masked acoustic token modeling. arXiv preprint arXiv:2307.04686.'
-    bib = '''@article{garcia2023vampnet,
-  title={Vampnet: Music generation via masked acoustic token modeling},
-  author={Garcia, Hugo Flores and Seetharaman, Prem and Kumar, Rithesh and Pardo, Bryan},
-  journal={arXiv preprint arXiv:2307.04686},
+    short = 'Vampnet'
+    apa = 'Garcia, H. F. F., Seetharaman, P., Kumar, R., & Pardo, B. (2023, November). VampNet: Music Generation via Masked Acoustic Token Modeling. In Ismir 2023 Hybrid Conference.'
+    bib = '''@inproceedings{garcia2023vampnet,
+  title={VampNet: Music Generation via Masked Acoustic Token Modeling},
+  author={Garcia, Hugo F Flores and Seetharaman, Prem and Kumar, Rithesh and Pardo, Bryan},
+  booktitle={Ismir 2023 Hybrid Conference},
   year={2023}
 }'''
     abstract = '''We introduce VampNet, a masked acoustic token modeling approach to music synthesis, compression, inpainting, and variation. We use a variable masking schedule during training which allows us to sample coherent music from the model by applying a variety of masking approaches (called prompts) during inference. VampNet is non-autoregressive, leveraging a bidirectional transformer architecture that attends to all tokens in a forward pass. With just 36 sampling passes, VampNet can generate coherent high-fidelity musical waveforms. We show that by prompting VampNet in various ways, we can apply it to tasks like music compression, inpainting, outpainting, continuation, and looping with variation (vamping). Appropriately prompted, VampNet is capable of maintaining style, genre, instrumentation, and other high-level aspects of the music. This flexible prompting capability makes VampNet a powerful music co-creation tool. Code and audio samples are available online.'''
@@ -1740,11 +1741,11 @@ two-stage training: first short masks then long masks.
 '''
 
 class variable_length_music_score_infilling_via_xlnet_and_musically_specialized_positional_encoding:
-    apa = 'Chang, C. J., Lee, C. Y., & Yang, Y. H. (2021). Variable-length music score infilling via XLNet and musically specialized positional encoding. arXiv preprint arXiv:2108.05064.'
-    bib = '''@article{chang2021variable,
+    apa = 'Chang, C. J., Lee, C. Y., & Yang, Y. H. (2021). Variable-length music score infilling via XLNet and musically specialized positional encoding. In Ismir 2021 Conference.'
+    bib = '''@inproceedings{chang2021variable,
   title={Variable-length music score infilling via XLNet and musically specialized positional encoding},
   author={Chang, Chin-Jui and Lee, Chun-Yi and Yang, Yi-Hsuan},
-  journal={arXiv preprint arXiv:2108.05064},
+  booktitle={Ismir 2021 Conference},
   year={2021}
 }'''
     abstract = '''This paper proposes a new self-attention based model for music score infilling, i.e., to generate a polyphonic music sequence that fills in the gap between given past and future contexts. While existing approaches can only fill in a short segment with a fixed number of notes, or a fixed time span between the past and future contexts, our model can infill a variable number of notes (up to 128) for different time spans. We achieve so with three major technical contributions. First, we adapt XLNet, an autoregressive model originally proposed for unsupervised model pre-training, to music score infilling. Second, we propose a new, musically specialized positional encoding called relative bar encoding that better informs the model of notes' position within the past and future context. Third, to capitalize relative bar encoding, we perform look-ahead onset prediction to predict the onset of a note one time step before predicting the other attributes of the note. We compare our proposed model with two strong baselines and show that our model is superior in both objective and subjective analyses.'''
