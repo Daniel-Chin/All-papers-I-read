@@ -1859,3 +1859,21 @@ class anticipation_rnn_enforcing_unary_constraints_in_sequence_generation_with_a
 }'''
     abstract = '''Recurrent neural networks (RNNs) are now widely used on sequence generation tasks due to their ability to learn long-range dependencies and to generate sequences of arbitrary length. However, their left-to-right generation procedure only allows a limited control from a potential user which makes them unsuitable for interactive and creative usages such as interactive music generation. This article introduces a novel architecture called anticipation-RNN which possesses the assets of the RNN-based generative models while allowing to enforce user-defined unary constraints. We demonstrate its efficiency on the task of generating melodies satisfying unary constraints in the style of the soprano parts of the J.S. Bach chorale harmonizations. Sampling using the anticipation-RNN is of the same order of complexity than sampling from the traditional RNN model. This fast and interactive generation of musical sequences opens ways to devise real-time systems that could be used for creative purposes.'''
     tags = [inpaint, symbolic_music, lit_review_for_liwei_ijcai_2024]
+
+class transformer_vae_a_hierarchical_model_for_structure_aware_and_interpretable_music_representation_learning:
+    apa = 'Jiang, J., Xia, G. G., Carlton, D. B., Anderson, C. N., & Miyakawa, R. H. (2020, May). Transformer vae: A hierarchical model for structure-aware and interpretable music representation learning. In ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 516-520). IEEE.'
+    bib = '''@inproceedings{jiang2020transformer,
+  title={Transformer vae: A hierarchical model for structure-aware and interpretable music representation learning},
+  author={Jiang, Junyan and Xia, Gus G and Carlton, Dave B and Anderson, Chris N and Miyakawa, Ryan H},
+  booktitle={ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={516--520},
+  year={2020},
+  organization={IEEE}
+}'''
+    abstract = '''Structure awareness and interpretability are two of the most desired properties of music generation algorithms. Structure-aware models generate more natural and coherent music with long-term dependencies, while interpretable models are more friendly for human-computer interaction and co-creation. To achieve these two goals simultaneously, we designed the Transformer Variational AutoEncoder, a hierarchical model that unifies the efforts of two recent breakthroughs in deep music generation: 1) the Music Transformer and 2) Deep Music Analogy. The former learns long-term dependencies using attention mechanism, and the latter learns interpretable latent representations using a disentangled conditional-VAE. We showed that Transformer VAE is essentially capable of learning a context-sensitive hierarchical representation, regarding local representations as the context and the dependencies among the local representations as the global structure. By interacting with the model, we can achieve context transfer, realizing the imaginary situation of "what if" a piece is developed following the music flow of another piece.'''
+    tags = []
+    my_notes = '''
+From the perspective of z_question:  
+z is the answer.  
+the question lies in h_{0...i-1}, but is not directly seen by the decoder.  
+'''

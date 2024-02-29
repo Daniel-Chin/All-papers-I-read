@@ -1,0 +1,5 @@
+https://arxiv.org/pdf/1703.01780.pdf
+
+https://arxiv.org/pdf/1610.02242.pdf
+
+Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks
