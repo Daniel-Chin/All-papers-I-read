@@ -1,3 +1,7 @@
+from typing import Callable
+
+Tag = Callable
+
 def transformer(): pass
 def music_knowledge(): pass
 def contrastive(): pass
@@ -49,4 +53,3 @@ def inpaint(): pass
 def symbolic_music(): pass
 def music_audio(): pass
 def rule_based(): pass
-

@@ -1,21 +1,63 @@
+from __future__ import annotations
+
+from typing import List, Optional
+from dataclasses import dataclass
+
+import tags
 from tags import *
 
-class theme_transformer:
-    apa = 'Shih, Y. J., Wu, S. L., Zalkow, F., Müller, M., & Yang, Y. H. (2021). Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer. arXiv preprint arXiv:2111.04093.'
-    bib = '''@article{shih2021theme,
+@dataclass
+class Paper:
+    shorts: Optional[List[str]]
+    apa: Optional[str]
+    bib: Optional[str]
+    abstract: Optional[str]
+    tags: Optional[List[Tag]]
+    my_notes: Optional[str]
+
+    def __init__(
+        self, shorts=None, apa=None, bib=None, abstract=None, 
+        tags=None, my_notes=None, 
+    ):
+        self.shorts = shorts
+        self.apa = apa
+        self.bib = bib
+        self.abstract = abstract
+        self.tags = tags
+        self.my_notes = my_notes
+
+def allPapers():
+    s = []
+    tags_and_more = set(tags.__dict__.keys())
+    for key, value in globals().items():
+        if key.startswith('__'):
+            continue
+        if key in [
+            'allPapers', 'Paper', 'tags', 
+            'annotations', 'Optional', 'List', 'dataclass', 
+        ]:
+            continue
+        if key in tags_and_more:
+            continue
+        s.append((key, value))
+    return s
+
+theme_transformer = Paper(
+    apa = 'Shih, Y. J., Wu, S. L., Zalkow, F., Müller, M., & Yang, Y. H. (2021). Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer. arXiv preprint arXiv:2111.04093.', 
+    bib = r'''@article{shih2021theme,
   title={Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer},
   author={Shih, Yi-Jen and Wu, Shih-Lun and Zalkow, Frank and M{\"u}ller, Meinard and Yang, Yi-Hsuan},
   journal={arXiv preprint arXiv:2111.04093},
   year={2021}
-}'''
-    abstract = '''Attention-based Transformer models have been increasingly employed for automatic music generation. To condition the generation process of such a model with a user-specified sequence, a popular approach is to take that conditioning sequence as a priming sequence and ask a Transformer decoder to generate a continuation. However, this prompt-based conditioning cannot guarantee that the conditioning sequence would develop or even simply repeat itself in the generated continuation. In this paper, we propose an alternative conditioning approach, called theme-based conditioning, that explicitly trains the Transformer to treat the conditioning sequence as a thematic material that has to manifest itself multiple times in its generation result. This is achieved with two main technical contributions. First, we propose a deep learning-based approach that uses contrastive representation learning and clustering to automatically retrieve thematic materials from music pieces in the training data. Second, we propose a novel gated parallel attention module to be used in a sequence-to-sequence (seq2seq) encoder/decoder architecture to more effectively account for a given conditioning thematic material in the generation process of the Transformer decoder. We report on objective and subjective evaluations of variants of the proposed Theme Transformer and the conventional prompt-based baseline, showing that our best model can generate, to some extent, polyphonic pop piano music with repetition and plausible variations of a given condition.
-'''
-    tags = [transformer, music_knowledge, contrastive]
-    my_notes = None
+}''', 
+    abstract = '''Attention-based Transformer models have been increasingly employed for automatic music generation. To condition the generation process of such a model with a user-specified sequence, a popular approach is to take that conditioning sequence as a priming sequence and ask a Transformer decoder to generate a continuation. However, this prompt-based conditioning cannot guarantee that the conditioning sequence would develop or even simply repeat itself in the generated continuation. In this paper, we propose an alternative conditioning approach, called theme-based conditioning, that explicitly trains the Transformer to treat the conditioning sequence as a thematic material that has to manifest itself multiple times in its generation result. This is achieved with two main technical contributions. First, we propose a deep learning-based approach that uses contrastive representation learning and clustering to automatically retrieve thematic materials from music pieces in the training data. Second, we propose a novel gated parallel attention module to be used in a sequence-to-sequence (seq2seq) encoder/decoder architecture to more effectively account for a given conditioning thematic material in the generation process of the Transformer decoder. We report on objective and subjective evaluations of variants of the proposed Theme Transformer and the conventional prompt-based baseline, showing that our best model can generate, to some extent, polyphonic pop piano music with repetition and plausible variations of a given condition.''', 
+    tags = [transformer, music_knowledge, contrastive], 
+    my_notes = None, 
+)
 
 class Melon_form_then_content:
     apa = 'Zou, Y., Zou, P., Zhao, Y., Zhang, K., Zhang, R., & Wang, X. (2021). MELONS: generating melody with long-term structure using transformers and structure graph. arXiv preprint arXiv:2110.05020.'
-    bib = '''@article{zou2021melons,
+    bib = r'''@article{zou2021melons,
   title={MELONS: generating melody with long-term structure using transformers and structure graph},
   author={Zou, Yi and Zou, Pei and Zhao, Yi and Zhang, Kaixiang and Zhang, Ran and Wang, Xiaorui},
   journal={arXiv preprint arXiv:2110.05020},
@@ -50,7 +92,7 @@ my notes
 
 class KLI:
     apa = 'Koedinger, K. R., Corbett, A. T., & Perfetti, C. (2012). The Knowledge‐Learning‐Instruction framework: Bridging the science‐practice chasm to enhance robust student learning. Cognitive science, 36(5), 757-798.'
-    bib = '''@article{koedinger2012knowledge,
+    bib = r'''@article{koedinger2012knowledge,
   title={The Knowledge-Learning-Instruction framework: Bridging the science-practice chasm to enhance robust student learning},
   author={Koedinger, Kenneth R and Corbett, Albert T and Perfetti, Charles},
   journal={Cognitive science},
@@ -112,7 +154,7 @@ table 5 (P25)
 
 class Jukebox:
     apa = 'Dhariwal, P., Jun, H., Payne, C., Kim, J. W., Radford, A., & Sutskever, I. (2020). Jukebox: A generative model for music. arXiv preprint arXiv:2005.00341.'
-    bib = '''@article{dhariwal2020jukebox,
+    bib = r'''@article{dhariwal2020jukebox,
   title={Jukebox: A generative model for music},
   author={Dhariwal, Prafulla and Jun, Heewoo and Payne, Christine and Kim, Jong Wook and Radford, Alec and Sutskever, Ilya},
   journal={arXiv preprint arXiv:2005.00341},
@@ -127,7 +169,7 @@ Transformer over VQ-VAE. Supervised with lyrics as condition.
 
 class SPICE:
     apa = 'Gfeller, B., Frank, C., Roblek, D., Sharifi, M., Tagliasacchi, M., & Velimirović, M. (2020). SPICE: Self-supervised pitch estimation. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 28, 1118-1128.'
-    bib = '''@article{gfeller2020spice,
+    bib = r'''@article{gfeller2020spice,
   title={SPICE: Self-supervised pitch estimation},
   author={Gfeller, Beat and Frank, Christian and Roblek, Dominik and Sharifi, Matt and Tagliasacchi, Marco and Velimirovi{\'c}, Mihajlo},
   journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
@@ -145,7 +187,7 @@ This works??? What the heck
 
 class improving_music_performance_assessment_with_contrastive_learning:
     apa = 'Seshadri, P., & Lerch, A. (2021). Improving Music Performance Assessment with Contrastive Learning. arXiv preprint arXiv:2108.01711.'
-    bib = '''@article{seshadri2021improving,
+    bib = r'''@article{seshadri2021improving,
   title={Improving Music Performance Assessment with Contrastive Learning},
   author={Seshadri, Pavan and Lerch, Alexander},
   journal={arXiv preprint arXiv:2108.01711},
@@ -159,7 +201,7 @@ class improving_music_performance_assessment_with_contrastive_learning:
 
 class PianoTouch:
     apa = 'Huang, K., Do, E. Y. L., & Starner, T. (2008, September). PianoTouch: A wearable haptic piano instruction system for passive learning of piano skills. In 2008 12th IEEE international symposium on wearable computers (pp. 41-44). IEEE.'
-    bib = '''@inproceedings{huang2008pianotouch,
+    bib = r'''@inproceedings{huang2008pianotouch,
   title={PianoTouch: A wearable haptic piano instruction system for passive learning of piano skills},
   author={Huang, Kevin and Do, Ellen Yi-Luen and Starner, Thad},
   booktitle={2008 12th IEEE international symposium on wearable computers},
@@ -178,7 +220,7 @@ Q: During active learning, was there a score? During testing, was there a score?
 
 class developing_a_haptic_glove_for_basic_piano_education:
     apa = 'Pala, F. K. (2019). Developing a haptic glove for basic piano education. World Journal on Educational Technology: Current Issues, 11(1), 38-47.'
-    bib = '''@article{pala2019developing,
+    bib = r'''@article{pala2019developing,
   title={Developing a haptic glove for basic piano education},
   author={Pala, Ferhat Kadir and others},
   journal={World Journal on Educational Technology: Current Issues},
@@ -193,7 +235,7 @@ class developing_a_haptic_glove_for_basic_piano_education:
 
 class visiohaptic_trace_shape_longterm:
     apa = 'Yang, X. D., Bischof, W. F., & Boulanger, P. (2008, March). Validating the performance of haptic motor skill training. In 2008 Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems (pp. 129-135). IEEE.'
-    bib = '''@inproceedings{yang2008validating,
+    bib = r'''@inproceedings{yang2008validating,
   title={Validating the performance of haptic motor skill training},
   author={Yang, Xing-Dong and Bischof, Walter F and Boulanger, Pierre},
   booktitle={2008 Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems},
@@ -216,7 +258,7 @@ paper:
 
 class drum_haptic_audio:
     apa = 'Grindlay, G. (2008, March). Haptic guidance benefits musical motor learning. In 2008 Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems (pp. 397-404). IEEE.'
-    bib = '''@inproceedings{grindlay2008haptic,
+    bib = r'''@inproceedings{grindlay2008haptic,
   title={Haptic guidance benefits musical motor learning},
   author={Grindlay, Graham},
   booktitle={2008 Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems},
@@ -231,7 +273,7 @@ class drum_haptic_audio:
 
 class three_d_trajectory_haptic:
     apa = 'Feygin, D., Keehner, M., & Tendick, R. (2002, March). Haptic guidance: Experimental evaluation of a haptic training method for a perceptual motor skill. In Proceedings 10th Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems. HAPTICS 2002 (pp. 40-47). IEEE.'
-    bib = '''@inproceedings{feygin2002haptic,
+    bib = r'''@inproceedings{feygin2002haptic,
   title={Haptic guidance: Experimental evaluation of a haptic training method for a perceptual motor skill},
   author={Feygin, David and Keehner, Madeleine and Tendick, R},
   booktitle={Proceedings 10th Symposium on Haptic Interfaces for Virtual Environment and Teleoperator Systems. HAPTICS 2002},
@@ -253,7 +295,7 @@ Q: 为什么 V training phase 只是观察 ground truth, 没有同时动手？�
 
 class MoveMe_haptic_guide_theremin:
     apa = 'Fujii, K., Russo, S. S., Maes, P., & Rekimoto, J. (2015, November). MoveMe: 3D haptic support for a musical instrument. In Proceedings of the 12th International Conference on Advances in Computer Entertainment Technology (pp. 1-8).'
-    bib = '''@inproceedings{fujii2015moveme,
+    bib = r'''@inproceedings{fujii2015moveme,
   title={MoveMe: 3D haptic support for a musical instrument},
   author={Fujii, Katsuya and Russo, Sophia S and Maes, Pattie and Rekimoto, Jun},
   booktitle={Proceedings of the 12th International Conference on Advances in Computer Entertainment Technology},
@@ -267,7 +309,7 @@ class MoveMe_haptic_guide_theremin:
 
 class vibro_tactile_drum:
     apa = 'Tom, A., Singh, A., Daigle, M., Marandola, F., & Wanderley, M. (2020). Haptic Tutor-A haptics-based music education tool for beginners. In International Workshop on Haptic and Audio Interaction Design.'
-    bib = '''@inproceedings{tom2020haptic,
+    bib = r'''@inproceedings{tom2020haptic,
   title={Haptic Tutor-A haptics-based music education tool for beginners},
   author={Tom, Ajin and Singh, Ankita and Daigle, Martin and Marandola, Fabrice and Wanderley, Marcelo},
   booktitle={International Workshop on Haptic and Audio Interaction Design},
@@ -279,7 +321,7 @@ class vibro_tactile_drum:
 
 class scaffolding:
     apa = 'Wood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in problem solving. Journal of child psychology and psychiatry, 17(2), 89-100.'
-    bib = '''@article{wood1976role,
+    bib = r'''@article{wood1976role,
   title={The role of tutoring in problem solving},
   author={Wood, David and Bruner, Jerome S and Ross, Gail},
   journal={Journal of child psychology and psychiatry},
@@ -300,7 +342,7 @@ I think: learn one thing at a time.
 
 class fading_scaffold:
     apa = "McNeill, K. L., Lizotte, D. J., Krajcik, J., & Marx, R. W. (2006). Supporting students' construction of scientific explanations by fading scaffolds in instructional materials. The Journal of the Learning Sciences, 15(2), 153-191."
-    bib = '''@article{mcneill2006supporting,
+    bib = r'''@article{mcneill2006supporting,
   title={Supporting students' construction of scientific explanations by fading scaffolds in instructional materials},
   author={McNeill, Katherine L and Lizotte, David J and Krajcik, Joseph and Marx, Ronald W},
   journal={The Journal of the Learning Sciences},
@@ -317,7 +359,7 @@ class fading_scaffold:
 
 class xcp:
     apa = 'Katabi, D., Handley, M., & Rohrs, C. (2002, August). Congestion control for high bandwidth-delay product networks. In Proceedings of the 2002 conference on Applications, technologies, architectures, and protocols for computer communications (pp. 89-102).'
-    bib = '''@inproceedings{katabi2002congestion,
+    bib = r'''@inproceedings{katabi2002congestion,
   title={Congestion control for high bandwidth-delay product networks},
   author={Katabi, Dina and Handley, Mark and Rohrs, Charlie},
   booktitle={Proceedings of the 2002 conference on Applications, technologies, architectures, and protocols for computer communications},
@@ -335,7 +377,7 @@ Uses control theory to ensure stablity.
 
 class deep_emb_helps_segmentation:
     apa = 'Salamon, J., Nieto, O., & Bryan, N. J. (2017). Deep Embeddings and Section Fusion Improve Music Segmentation. IEEE Signal Processing Letters, 24(3), 279-283.'
-    bib = '''@article{salamon2017deep,
+    bib = r'''@article{salamon2017deep,
   title={Deep Embeddings and Section Fusion Improve Music Segmentation},
   author={Salamon, Justin and Nieto, Oriol and Bryan, Nicholas J},
   journal={IEEE Signal Processing Letters},
@@ -354,7 +396,7 @@ No finetuning. Using existing clustering algo on deep emb.
 
 class implementing_a_generative_theory_of_tonal_music:
     apa = 'Hamanaka, M., Hirata, K., & Tojo, S. (2006). Implementing “A generative theory of tonal music”. Journal of New Music Research, 35(4), 249-277.'
-    bib = '''@article{hamanaka2006implementing,
+    bib = r'''@article{hamanaka2006implementing,
   title={Implementing “A generative theory of tonal music”},
   author={Hamanaka, Masatoshi and Hirata, Keiji and Tojo, Satoshi},
   journal={Journal of New Music Research},
@@ -382,7 +424,7 @@ staff.aist.go.jp/m.hamanaka/atta/
 
 class deepGTTM_I_II_local_boundary_and_metrical_structure_analyzer_based_on_deep_learning:
     apa = 'Hamanaka, M., Hirata, K., & Tojo, S. (2016, July). deepGTTM-I&II: Local boundary and metrical structure analyzer based on deep learning technique. In International Symposium on Computer Music Multidisciplinary Research (pp. 3-21). Springer, Cham.'
-    bib = '''@inproceedings{hamanaka2016deepgttm,
+    bib = r'''@inproceedings{hamanaka2016deepgttm,
   title={deepGTTM-I\&II: Local boundary and metrical structure analyzer based on deep learning technique},
   author={Hamanaka, Masatoshi and Hirata, Keiji and Tojo, Satoshi},
   booktitle={International Symposium on Computer Music Multidisciplinary Research},
@@ -404,7 +446,7 @@ Misc.
 
 class music_structural_analysis_database_based_on_GTTM:
     apa = 'Hamanaka, M., Hirata, K., & Tojo, S. (2014). Musical structural analysis database based on GTTM.'
-    bib = '''@article{hamanaka2014musical,
+    bib = r'''@article{hamanaka2014musical,
   title={Musical structural analysis database based on GTTM},
   author={Hamanaka, Masatoshi and Hirata, Keiji and Tojo, Satoshi},
   year={2014},
@@ -417,7 +459,7 @@ A dataset of GTTM-annotated monophonic pieces, each ~ 8 bars.
 
 class deepGTTM_III_simultaneous_learning_of_grouping_and_metrical_structures:
     apa = 'Hirata, M. H. K., & Tojo, S. deepGTTM-III: Simultaneous Learning of Grouping and Metrical Structures.'
-    bib = '''@article{hiratadeepgttm,
+    bib = r'''@article{hiratadeepgttm,
   title={deepGTTM-III: Simultaneous Learning of Grouping and Metrical Structures},
   author={Hirata, Masatoshi Hamanaka1 Keiji and Tojo, Satoshi}
 }'''
@@ -430,7 +472,7 @@ backbones.
 
 class searching_for_metric_structure_of_musical_files:
     apa = 'Kostek, B., Wojcik, J., & Szczuko, P. (2007, June). Searching for Metric Structure of Musical Files. In International Conference on Rough Sets and Intelligent Systems Paradigms (pp. 774-783). Springer, Berlin, Heidelberg.'
-    bib = '''@inproceedings{kostek2007searching,
+    bib = r'''@inproceedings{kostek2007searching,
   title={Searching for Metric Structure of Musical Files},
   author={Kostek, Bozena and Wojcik, Jaroslaw and Szczuko, Piotr},
   booktitle={International Conference on Rough Sets and Intelligent Systems Paradigms},
@@ -446,7 +488,7 @@ Only one level of metrical struct.
 
 class machine_rhythm_computer_emulation_of_human_rhythm_perception:
     apa = 'Rosenthal, D. F. (1992). Machine rhythm--computer emulation of human rhythm perception (Doctoral dissertation, Massachusetts Institute of Technology).'
-    bib = '''@phdthesis{rosenthal1992machine,
+    bib = r'''@phdthesis{rosenthal1992machine,
   title={Machine rhythm--computer emulation of human rhythm perception},
   author={Rosenthal, David Felix},
   year={1992},
@@ -461,7 +503,7 @@ A 1977 PhD thesis. So probably you can't get their code.
 
 class modeling_meter_and_harmony_a_preference_rule_approach:
     apa = 'Temperley, D., & Sleator, D. (1999). Modeling meter and harmony: A preference-rule approach. Computer Music Journal, 23(1), 10-27.'
-    bib = '''@article{temperley1999modeling,
+    bib = r'''@article{temperley1999modeling,
   title={Modeling meter and harmony: A preference-rule approach},
   author={Temperley, David and Sleator, Daniel},
   journal={Computer Music Journal},
@@ -489,7 +531,7 @@ Open source at http://www.link.cs.cmu.edu/music-analysis
 
 class inferring_metrical_structure_in_music_using_particle_filters:
     apa = 'Krebs, F., Holzapfel, A., Cemgil, A. T., & Widmer, G. (2015). Inferring metrical structure in music using particle filters. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 23(5), 817-827.'
-    bib = '''@article{krebs2015inferring,
+    bib = r'''@article{krebs2015inferring,
   title={Inferring metrical structure in music using particle filters},
   author={Krebs, Florian and Holzapfel, Andre and Cemgil, Ali Taylan and Widmer, Gerhard},
   journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
@@ -506,7 +548,7 @@ non symbolic -> 2-level metrical struct
 
 class gtsim_a_computer_simulation_of_music_perception:
     apa = 'Jones, J., Scarborough, D., & Miller, B. (1993). Gtsim a computer simulation of music perception. Computers and the Humanities, 27(1), 19-23.'
-    bib = '''@article{jones1993gtsim,
+    bib = r'''@article{jones1993gtsim,
   title={Gtsim a computer simulation of music perception},
   author={Jones, Jacqueline and Scarborough, Don and Miller, Benjamin},
   journal={Computers and the Humanities},
@@ -523,7 +565,7 @@ Work in progress from 1993...
 
 class on_hierarchical_clustering_of_spectrogram:
     apa = 'Sawada, S., Takegawa, Y., & Hirata, K. (2017, September). On Hierarchical Clustering of Spectrogram. In International Symposium on Computer Music Multidisciplinary Research (pp. 226-237). Springer, Cham.'
-    bib = '''@inproceedings{sawada2017hierarchical,
+    bib = r'''@inproceedings{sawada2017hierarchical,
   title={On Hierarchical Clustering of Spectrogram},
   author={Sawada, Shun and Takegawa, Yoshinari and Hirata, Keiji},
   booktitle={International Symposium on Computer Music Multidisciplinary Research},
@@ -540,7 +582,7 @@ Looks like a good paper, but so hard to read.
 
 class a_constraint_based_approach_to_grouping_in_language_and_music:
     apa = 'van der Werf, S., & Hendriks, P. (2004). A constraint-based approach to grouping in language and music. In Proceedings: First Conference on Interdisciplinary Musicology CIM04, Graz, Austria.'
-    bib = '''@inproceedings{van2004constraint,
+    bib = r'''@inproceedings{van2004constraint,
   title={A constraint-based approach to grouping in language and music},
   author={van der Werf, Sybrand and Hendriks, Petra},
   booktitle={Proceedings: First Conference on Interdisciplinary Musicology CIM04, Graz, Austria},
@@ -556,7 +598,7 @@ Parser is based on the magic of Prolog.
 
 class a_rule_based_expert_system_for_music_perception:
     apa = 'Jones, J. A., Miller, B. O., & Scarborough, D. L. (1988). A rule-based expert system for music perception. Behavior Research Methods, Instruments, & Computers, 20(2), 255-262.'
-    bib = '''@article{jones1988rule,
+    bib = r'''@article{jones1988rule,
   title={A rule-based expert system for music perception},
   author={Jones, Jacqueline A and Miller, Benjamin O and Scarborough, Don L},
   journal={Behavior Research Methods, Instruments, \& Computers},
@@ -575,7 +617,7 @@ Rule-based. Does not *seem* to consider PR, only WFR.
 
 class a_theoretical_framework_for_rhythm_perception:
     apa = 'Povel, D. J. (1984). A theoretical framework for rhythm perception. Psychological research, 45(4), 315-337.'
-    bib = '''@article{povel1984theoretical,
+    bib = r'''@article{povel1984theoretical,
   title={A theoretical framework for rhythm perception},
   author={Povel, Dirk-Jan},
   journal={Psychological research},
@@ -593,7 +635,7 @@ Proposes grid theory.
 
 class perception_of_temporal_patterns:
     apa = 'Povel, D. J., & Essens, P. (1985). Perception of temporal patterns. Music perception, 2(4), 411-440.'
-    bib = '''@article{povel1985perception,
+    bib = r'''@article{povel1985perception,
   title={Perception of temporal patterns},
   author={Povel, Dirk-Jan and Essens, Peter},
   journal={Music perception},
@@ -612,7 +654,7 @@ Proposes an algo too.
 
 class a_review_of_automatic_rhythm_description_systems:
     apa = 'Gouyon, F., & Dixon, S. (2005). A review of automatic rhythm description systems. Computer music journal, 29(1), 34-54.'
-    bib = '''@article{gouyon2005review,
+    bib = r'''@article{gouyon2005review,
   title={A review of automatic rhythm description systems},
   author={Gouyon, Fabien and Dixon, Simon},
   journal={Computer music journal},
@@ -633,7 +675,7 @@ Section "Time Signature Determination" is useful.
 
 class a_hybrid_graphical_model_for_rhythmic_parsing:
     apa = 'Raphael, C. (2002). A hybrid graphical model for rhythmic parsing. Artificial Intelligence, 137(1-2), 217-238.'
-    bib = '''@article{raphael2002hybrid,
+    bib = r'''@article{raphael2002hybrid,
   title={A hybrid graphical model for rhythmic parsing},
   author={Raphael, Christopher},
   journal={Artificial Intelligence},
@@ -651,7 +693,7 @@ method: ???
 
 class robust_downbeat_tracking_using_an_ensemble_of_convolutional_networks:
     apa = 'Durand, S., Bello, J. P., David, B., & Richard, G. (2016). Robust downbeat tracking using an ensemble of convolutional networks. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 25(1), 76-89.'
-    bib = '''@article{durand2016robust,
+    bib = r'''@article{durand2016robust,
   title={Robust downbeat tracking using an ensemble of convolutional networks},
   author={Durand, Simon and Bello, Juan Pablo and David, Bertrand and Richard, Ga{\"e}l},
   journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
@@ -665,7 +707,7 @@ class robust_downbeat_tracking_using_an_ensemble_of_convolutional_networks:
 
 class a_generalized_bayesian_model_for_tracking_long_metrical_cycles_in_acoustic_music_signals:
     apa = 'Srinivasamurthy, A., Holzapfel, A., Cemgil, A. T., & Serra, X. (2016, March). A generalized bayesian model for tracking long metrical cycles in acoustic music signals. In 2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 76-80). IEEE.'
-    bib = '''@inproceedings{srinivasamurthy2016generalized,
+    bib = r'''@inproceedings{srinivasamurthy2016generalized,
   title={A generalized bayesian model for tracking long metrical cycles in acoustic music signals},
   author={Srinivasamurthy, Ajay and Holzapfel, Andre and Cemgil, Ali Taylan and Serra, Xavier},
   booktitle={2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
@@ -681,7 +723,7 @@ is very long.
 
 class automatic_salience_based_hypermetric_rhythm_retrieval:
     apa = "Kostek, B., & Wojcik, J. (2007, April). Automatic salience-based hypermetric rhythm retrieval. In 2007 International Conference on Multimedia and Ubiquitous Engineering (MUE'07) (pp. 1220-1226). IEEE."
-    bib = '''@inproceedings{kostek2007automatic,
+    bib = r'''@inproceedings{kostek2007automatic,
   title={Automatic salience-based hypermetric rhythm retrieval},
   author={Kostek, Bozena and Wojcik, Jaroslaw},
   booktitle={2007 International Conference on Multimedia and Ubiquitous Engineering (MUE'07)},
@@ -696,7 +738,7 @@ class automatic_salience_based_hypermetric_rhythm_retrieval:
 
 class a_unified_probabilistic_model_for_polyphonic_music_analysis:
     apa = 'Temperley, D. (2009). A unified probabilistic model for polyphonic music analysis. Journal of New Music Research, 38(1), 3-18.'
-    bib = '''@article{temperley2009unified,
+    bib = r'''@article{temperley2009unified,
   title={A unified probabilistic model for polyphonic music analysis},
   author={Temperley, David},
   journal={Journal of New Music Research},
@@ -717,7 +759,7 @@ very regular parses.
 
 class determination_of_the_meter_of_musical_scores_by_autocorrelation:
     apa = 'Brown, J. C. (1993). Determination of the meter of musical scores by autocorrelation. The Journal of the Acoustical Society of America, 94(4), 1953-1957.'
-    bib = '''@article{brown1993determination,
+    bib = r'''@article{brown1993determination,
   title={Determination of the meter of musical scores by autocorrelation},
   author={Brown, Judith C},
   journal={The Journal of the Acoustical Society of America},
@@ -736,7 +778,7 @@ No pitch, only onsets.
 
 class automatic_meter_extraction_from_midi_files:
     apa = "Meudic, B. (2002, June). Automatic meter extraction from MIDI files. In Journées d'informatique musicale (pp. 1-1)."
-    bib = '''@inproceedings{meudic2002automatic,
+    bib = r'''@inproceedings{meudic2002automatic,
   title={Automatic meter extraction from MIDI files},
   author={Meudic, Benoit},
   booktitle={Journ{\'e}es d'informatique musicale},
@@ -753,7 +795,7 @@ Method is auto-correlation.
 
 class finding_meter_in_music_using_an_autocorrelation_phase_matrix_and_shannon_entropy:
     apa = 'Eck, D., & Casagrande, N. (2005). Finding meter in music using an autocorrelation phase matrix and shannon entropy. Target, 300(350), 400.'
-    bib = '''@article{eck2005finding,
+    bib = r'''@article{eck2005finding,
   title={Finding meter in music using an autocorrelation phase matrix and shannon entropy},
   author={Eck, Douglas and Casagrande, Norman},
   journal={Target},
@@ -766,7 +808,7 @@ class finding_meter_in_music_using_an_autocorrelation_phase_matrix_and_shannon_e
 
 class meter_detection_in_symbolic_music_using_inner_metric_analysis:
     apa = 'De Haas, W. B., & Volk, A. (2016, August). Meter detection in symbolic music using inner metric analysis. In International Society for Music Information Retrieval Conference (p. 441).'
-    bib = '''@inproceedings{de2016meter,
+    bib = r'''@inproceedings{de2016meter,
   title={Meter detection in symbolic music using inner metric analysis},
   author={De Haas, W Bas and Volk, Anja},
   booktitle={International Society for Music Information Retrieval Conference},
@@ -777,7 +819,7 @@ class meter_detection_in_symbolic_music_using_inner_metric_analysis:
 
 class automatic_generation_of_grouping_structure_based_on_the_gttm:
     apa = 'Hamanaka, M., Hirata, K., & Tojo, S. (2004, November). Automatic Generation of Grouping Structure based on the GTTM. In ICMC.'
-    bib = '''@inproceedings{hamanaka2004automatic,
+    bib = r'''@inproceedings{hamanaka2004automatic,
   title={Automatic Generation of Grouping Structure based on the GTTM},
   author={Hamanaka, Masatoshi and Hirata, Keiji and Tojo, Satoshi},
   booktitle={ICMC},
@@ -790,7 +832,7 @@ Looks just like ATTA.
 
 class beat_and_downbeat_tracking_of_symbolic_music_data_using_deep_recurrent_neural_networks:
     apa = 'Chuang, Y. C., & Su, L. (2020, December). Beat and downbeat tracking of symbolic music data using deep recurrent neural networks. In 2020 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC) (pp. 346-352). IEEE.'
-    bib = '''@inproceedings{chuang2020beat,
+    bib = r'''@inproceedings{chuang2020beat,
   title={Beat and downbeat tracking of symbolic music data using deep recurrent neural networks},
   author={Chuang, Yi-Chin and Su, Li},
   booktitle={2020 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)},
@@ -807,7 +849,7 @@ timestep.
 
 class representations_of_music_in_ranking_rhythmic_hypotheses:
     apa = 'Wojcik, J., & Kostek, B. (2010). Representations of music in ranking rhythmic hypotheses. In Advances in Music Information Retrieval (pp. 39-64). Springer, Berlin, Heidelberg.'
-    bib = '''@incollection{wojcik2010representations,
+    bib = r'''@incollection{wojcik2010representations,
   title={Representations of music in ranking rhythmic hypotheses},
   author={Wojcik, Jaroslaw and Kostek, Bozena},
   booktitle={Advances in Music Information Retrieval},
@@ -826,7 +868,7 @@ Propose parses and rank them using rule-based.
 
 class enhanced_hierarchical_music_structure_annotations_via_feature_level_similarity_fusion:
     apa = 'Tralie, C. J., & McFee, B. (2019, May). Enhanced hierarchical music structure annotations via feature level similarity fusion. In ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 201-205). IEEE.'
-    bib = '''@inproceedings{tralie2019enhanced,
+    bib = r'''@inproceedings{tralie2019enhanced,
   title={Enhanced hierarchical music structure annotations via feature level similarity fusion},
   author={Tralie, Christopher J and McFee, Brian},
   booktitle={ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
@@ -843,7 +885,7 @@ metrics. Then, they use spectral clustering.
 
 class unsupervised_music_structure_annotation_by_time_series_structure_features_and_segment_similarity:
     apa = 'Serra, J., Müller, M., Grosche, P., & Arcos, J. L. (2014). Unsupervised music structure annotation by time series structure features and segment similarity. IEEE Transactions on Multimedia, 16(5), 1229-1240.'
-    bib = '''@article{serra2014unsupervised,
+    bib = r'''@article{serra2014unsupervised,
   title={Unsupervised music structure annotation by time series structure features and segment similarity},
   author={Serra, Joan and M{\"u}ller, Meinard and Grosche, Peter and Arcos, Josep Ll},
   journal={IEEE Transactions on Multimedia},
@@ -863,7 +905,7 @@ Not only clustering, but also cut according to novelty peaks.
 
 class boundary_detection_in_music_structure_analysis_using_convolutional_neural_networks:
     apa = 'Ullrich, K., Schlüter, J., & Grill, T. (2014, October). Boundary Detection in Music Structure Analysis using Convolutional Neural Networks. In ISMIR (pp. 417-422).'
-    bib = '''@inproceedings{ullrich2014boundary,
+    bib = r'''@inproceedings{ullrich2014boundary,
   title={Boundary Detection in Music Structure Analysis using Convolutional Neural Networks.},
   author={Ullrich, Karen and Schl{\"u}ter, Jan and Grill, Thomas},
   booktitle={ISMIR},
@@ -875,7 +917,7 @@ class boundary_detection_in_music_structure_analysis_using_convolutional_neural_
 
 class automatic_analysis_and_influence_of_hierarchical_structure_on_melody_rhythm_and_harmony_in_popular_music:
     apa = 'Dai, S., Zhang, H., & Dannenberg, R. B. (2020). Automatic analysis and influence of hierarchical structure on melody, rhythm and harmony in popular music. arXiv preprint arXiv:2010.07518.'
-    bib = '''@article{dai2020automatic,
+    bib = r'''@article{dai2020automatic,
   title={Automatic analysis and influence of hierarchical structure on melody, rhythm and harmony in popular music},
   author={Dai, Shuqi and Zhang, Huan and Dannenberg, Roger B},
   journal={arXiv preprint arXiv:2010.07518},
@@ -890,7 +932,7 @@ Description Length).
 
 class hierarchical_motion_understanding_via_motion_programs:
     apa = 'Kulal, S., Mao, J., Aiken, A., & Wu, J. (2021). Hierarchical motion understanding via motion programs. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 6568-6576).'
-    bib = '''@inproceedings{kulal2021hierarchical,
+    bib = r'''@inproceedings{kulal2021hierarchical,
   title={Hierarchical motion understanding via motion programs},
   author={Kulal, Sumith and Mao, Jiayuan and Aiken, Alex and Wu, Jiajun},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
@@ -905,7 +947,7 @@ Just one level of time hierarchy. Simple inductive bias to understand human vide
 
 class overcoming_the_disentanglement_vs_reconstruction_trade_off_via_jacobian_supervision:
     apa = 'Lezama, J. (2018, September). Overcoming the disentanglement vs reconstruction trade-off via Jacobian supervision. In International Conference on Learning Representations.'
-    bib = '''@inproceedings{lezama2018overcoming,
+    bib = r'''@inproceedings{lezama2018overcoming,
   title={Overcoming the disentanglement vs reconstruction trade-off via Jacobian supervision},
   author={Lezama, Jos{\'e}},
   booktitle={International Conference on Learning Representations},
@@ -915,7 +957,7 @@ class overcoming_the_disentanglement_vs_reconstruction_trade_off_via_jacobian_su
 
 class time_in_distributed_real_time_systems:
     apa = 'Brandt, E., & Dannenberg, R. B. (1999). Time in distributed real-time systems.'
-    bib = '''@article{brandt1999time,
+    bib = r'''@article{brandt1999time,
   title={Time in distributed real-time systems},
   author={Brandt, Eli and Dannenberg, Roger B},
   year={1999},
@@ -929,7 +971,7 @@ For ardu and proc, use midpoint estimate.
 
 class make_a_video_text_to_video_generation_without_text_video_data:
     apa = 'Singer, U., Polyak, A., Hayes, T., Yin, X., An, J., Zhang, S., ... & Taigman, Y. (2022). Make-A-Video: Text-to-Video Generation without Text-Video Data. arXiv preprint arXiv:2209.14792.'
-    bib = '''@article{singer2022make,
+    bib = r'''@article{singer2022make,
   title={Make-A-Video: Text-to-Video Generation without Text-Video Data},
   author={Singer, Uriel and Polyak, Adam and Hayes, Thomas and Yin, Xi and An, Jie and Zhang, Songyang and Hu, Qiyuan and Yang, Harry and Ashual, Oron and Gafni, Oran and others},
   journal={arXiv preprint arXiv:2209.14792},
@@ -945,7 +987,7 @@ Various details and techniques are worth learning from.
 
 class learning_temporally_causal_latent_processes_from_general_temporal_data:
     apa = 'Yao, W., Sun, Y., Ho, A., Sun, C., & Zhang, K. (2021). Learning Temporally Causal Latent Processes from General Temporal Data. arXiv preprint arXiv:2110.05428.'
-    bib = '''@article{yao2021learning,
+    bib = r'''@article{yao2021learning,
   title={Learning Temporally Causal Latent Processes from General Temporal Data},
   author={Yao, Weiran and Sun, Yuewen and Ho, Alex and Sun, Changyin and Zhang, Kun},
   journal={arXiv preprint arXiv:2110.05428},
@@ -958,12 +1000,17 @@ class learning_temporally_causal_latent_processes_from_general_temporal_data:
 Using causality (高深，我不懂) to learn a system concepts from video.  
 What I don't understand:  
 why is it possible to infer causality when there's noise?  
-Say x, \epsilon -> y. We observe x and y. How do we know the direction of the causation?  
+Say x, \\epsilon -> y. We observe x and y. How do we know the direction of the causation?  
 '''
 
 class the_surprising_effectiveness_of_equivariant_models_in_domains_with_latent_symmetry:
-    ANONYMOUS = True
-    assert not ANONYMOUS
+    apa = 'Wang, D., Park, J. Y., Sortur, N., Wong, L. L., Walters, R., & Platt, R. (2022). The surprising effectiveness of equivariant models in domains with latent symmetry. arXiv preprint arXiv:2211.09231.'
+    bib = r'''@article{wang2022surprising,
+  title={The surprising effectiveness of equivariant models in domains with latent symmetry},
+  author={Wang, Dian and Park, Jung Yeon and Sortur, Neel and Wong, Lawson LS and Walters, Robin and Platt, Robert},
+  journal={arXiv preprint arXiv:2211.09231},
+  year={2022}
+}'''
     abstract = '''Extensive work has demonstrated that equivariant neural networks can significantly improve sample efficiency and generalization by enforcing an inductive bias in the network architecture. These applications typically assume that the domain symmetry is fully described by explicit transformations of the model inputs and outputs. However, many real-life applications contain only latent or partial symmetries which cannot be easily described by simple transformations of the input. In these cases, it is necessary to learn symmetry in the environment instead of imposing it mathematically on the network architecture. We discover, surprisingly, that imposing equivariance constraints that do not exactly match the domain symmetry is very helpful in learning the true symmetry in the environment. We differentiate between extrinsic and incorrect symmetry constraints and show that while imposing incorrect symmetry can impede the model's performance, imposing extrinsic symmetry can actually improve performance. We demonstrate that an equivariant model can significantly outperform non-equivariant methods on domains with latent symmetries both in supervised learning and in reinforcement learning for robotic manipulation and control problems.'''
     tags = [symmetry]
     my_notes = '''
@@ -972,7 +1019,7 @@ it seems that plain encoders with wrong symm can learn well.
 
 class diffusion_lm_improves_controllable_text_generation:
     apa = 'Li, X. L., Thickstun, J., Gulrajani, I., Liang, P., & Hashimoto, T. B. (2022). Diffusion-LM Improves Controllable Text Generation. arXiv preprint arXiv:2205.14217.'
-    bib = '''@article{li2022diffusion,
+    bib = r'''@article{li2022diffusion,
   title={Diffusion-LM Improves Controllable Text Generation},
   author={Li, Xiang Lisa and Thickstun, John and Gulrajani, Ishaan and Liang, Percy and Hashimoto, Tatsunori B},
   journal={arXiv preprint arXiv:2205.14217},
@@ -992,7 +1039,7 @@ During inference, alternate between classifier grad step and diffusion denoise s
 
 class exploiting_pre_trained_feature_networks_for_generative_adversarial_networks_in_audio_domain_loop_generation:
     apa = 'Yeh, Y. T., Chen, B. Y., & Yang, Y. H. (2022). Exploiting Pre-trained Feature Networks for Generative Adversarial Networks in Audio-domain Loop Generation. arXiv preprint arXiv:2209.01751.'
-    bib = '''@article{yeh2022exploiting,
+    bib = r'''@article{yeh2022exploiting,
   title={Exploiting Pre-trained Feature Networks for Generative Adversarial Networks in Audio-domain Loop Generation},
   author={Yeh, Yen-Tung and Chen, Bo-Yu and Yang, Yi-Hsuan},
   journal={arXiv preprint arXiv:2209.01751},
@@ -1003,7 +1050,7 @@ class exploiting_pre_trained_feature_networks_for_generative_adversarial_network
 
 class projected_gans_converge_faster:
     apa = 'Sauer, A., Chitta, K., Müller, J., & Geiger, A. (2021). Projected gans converge faster. Advances in Neural Information Processing Systems, 34, 17480-17492.'
-    bib = '''@article{sauer2021projected,
+    bib = r'''@article{sauer2021projected,
   title={Projected gans converge faster},
   author={Sauer, Axel and Chitta, Kashyap and M{\"u}ller, Jens and Geiger, Andreas},
   journal={Advances in Neural Information Processing Systems},
@@ -1022,7 +1069,7 @@ Q2. Why does this method not suffer from vanishing gradients?
 
 class equivariant_self_supervision_for_musical_tempo_estimation:
     apa = 'Quinton, E. (2022). Equivariant Self-Supervision for Musical Tempo Estimation. arXiv preprint arXiv:2209.01478.'
-    bib = '''@article{quinton2022equivariant,
+    bib = r'''@article{quinton2022equivariant,
   title={Equivariant Self-Supervision for Musical Tempo Estimation},
   author={Quinton, Elio},
   journal={arXiv preprint arXiv:2209.01478},
@@ -1063,7 +1110,7 @@ Check "related works" section for a summary.
 
 class haptic_technology_in_digital_music_learning_context_a_state_of_the_art_analysis:
     apa = 'Dörr, B., Norouzinia, F., Altmeyer, K., & Werth, D. (2022, October). Haptic Technology in Digital Music Learning Context: A State-of-the-Art Analysis. In European Conference on e-Learning (Vol. 21, No. 1, pp. 87-94). Academic Conferences International Limited.'
-    bib = '''@inproceedings{dorr2022haptic,
+    bib = r'''@inproceedings{dorr2022haptic,
   title={Haptic Technology in Digital Music Learning Context: A State-of-the-Art Analysis},
   author={D{\"o}rr, Bianka and Norouzinia, Farzaneh and Altmeyer, Kristin and Werth, Dirk},
   booktitle={European Conference on e-Learning},
@@ -1077,7 +1124,7 @@ class haptic_technology_in_digital_music_learning_context_a_state_of_the_art_ana
 
 class unsupervised_latent_tree_induction_with_deep_inside_outside_recursive_autoencoders:
     apa = 'Drozdov, A., Verga, P., Yadav, M., Iyyer, M., & McCallum, A. (2019). Unsupervised latent tree induction with deep inside-outside recursive autoencoders. arXiv preprint arXiv:1904.02142.'
-    bib = '''@article{drozdov2019unsupervised,
+    bib = r'''@article{drozdov2019unsupervised,
   title={Unsupervised latent tree induction with deep inside-outside recursive autoencoders},
   author={Drozdov, Andrew and Verga, Pat and Yadav, Mohit and Iyyer, Mohit and McCallum, Andrew},
   journal={arXiv preprint arXiv:1904.02142},
@@ -1088,7 +1135,7 @@ class unsupervised_latent_tree_induction_with_deep_inside_outside_recursive_auto
 
 class vicreg_variance_invariance_covariance_regularization_for_self_supervised_learning:
     apa = 'Bardes, A., Ponce, J., & LeCun, Y. (2021). Vicreg: Variance-invariance-covariance regularization for self-supervised learning. arXiv preprint arXiv:2105.04906.'
-    bib = '''@article{bardes2021vicreg,
+    bib = r'''@article{bardes2021vicreg,
   title={Vicreg: Variance-invariance-covariance regularization for self-supervised learning},
   author={Bardes, Adrien and Ponce, Jean and LeCun, Yann},
   journal={arXiv preprint arXiv:2105.04906},
@@ -1115,7 +1162,7 @@ correlations) between the variables of the representation vector. "
 
 class barlow_twins_self_supervised_learning_via_redundancy_reduction:
     apa = 'Zbontar, J., Jing, L., Misra, I., LeCun, Y., & Deny, S. (2021, July). Barlow twins: Self-supervised learning via redundancy reduction. In International Conference on Machine Learning (pp. 12310-12320). PMLR.'
-    bib = '''@inproceedings{zbontar2021barlow,
+    bib = r'''@inproceedings{zbontar2021barlow,
   title={Barlow twins: Self-supervised learning via redundancy reduction},
   author={Zbontar, Jure and Jing, Li and Misra, Ishan and LeCun, Yann and Deny, St{\'e}phane},
   booktitle={International Conference on Machine Learning},
@@ -1132,7 +1179,7 @@ Diff w/ VICReg: *Cross*-correlation between Z_A and Z_B.
 class a_simple_framework_for_contrastive_learning_of_visual_representations:
     short = 'SimCLR'
     apa = 'Chen, T., Kornblith, S., Norouzi, M., & Hinton, G. (2020, November). A simple framework for contrastive learning of visual representations. In International conference on machine learning (pp. 1597-1607). PMLR.'
-    bib = '''@inproceedings{chen2020simple,
+    bib = r'''@inproceedings{chen2020simple,
   title={A simple framework for contrastive learning of visual representations},
   author={Chen, Ting and Kornblith, Simon and Norouzi, Mohammad and Hinton, Geoffrey},
   booktitle={International conference on machine learning},
@@ -1151,7 +1198,7 @@ Diff w/ VICReg:
 class momentum_contrast_for_unsupervised_visual_representation_learning:
     short = 'MoCo'
     apa = 'He, K., Fan, H., Wu, Y., Xie, S., & Girshick, R. (2020). Momentum contrast for unsupervised visual representation learning. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition (pp. 9729-9738).'
-    bib = '''@inproceedings{he2020momentum,
+    bib = r'''@inproceedings{he2020momentum,
   title={Momentum contrast for unsupervised visual representation learning},
   author={He, Kaiming and Fan, Haoqi and Wu, Yuxin and Xie, Saining and Girshick, Ross},
   booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
@@ -1164,7 +1211,7 @@ class momentum_contrast_for_unsupervised_visual_representation_learning:
 class representation_learning_with_contrastive_predictive_coding:
     short = 'infoNCE', 'CPC'
     apa = 'Oord, A. V. D., Li, Y., & Vinyals, O. (2018). Representation learning with contrastive predictive coding. arXiv preprint arXiv:1807.03748.'
-    bib = '''@article{oord2018representation,
+    bib = r'''@article{oord2018representation,
   title={Representation learning with contrastive predictive coding},
   author={Oord, Aaron van den and Li, Yazhe and Vinyals, Oriol},
   journal={arXiv preprint arXiv:1807.03748},
@@ -1175,7 +1222,7 @@ class representation_learning_with_contrastive_predictive_coding:
 
 class whitening_for_self_supervised_representation_learning:
     apa = 'Ermolov, A., Siarohin, A., Sangineto, E., & Sebe, N. (2021, July). Whitening for self-supervised representation learning. In International Conference on Machine Learning (pp. 3015-3024). PMLR.'
-    bib = '''@inproceedings{ermolov2021whitening,
+    bib = r'''@inproceedings{ermolov2021whitening,
   title={Whitening for self-supervised representation learning},
   author={Ermolov, Aleksandr and Siarohin, Aliaksandr and Sangineto, Enver and Sebe, Nicu},
   booktitle={International Conference on Machine Learning},
@@ -1188,7 +1235,7 @@ class whitening_for_self_supervised_representation_learning:
 
 class bootstrap_your_own_latent_a_new_approach_to_self_supervised_learning:
     apa = 'Grill, J. B., Strub, F., Altché, F., Tallec, C., Richemond, P., Buchatskaya, E., ... & Valko, M. (2020). Bootstrap your own latent-a new approach to self-supervised learning. Advances in neural information processing systems, 33, 21271-21284.'
-    bib = '''@article{grill2020bootstrap,
+    bib = r'''@article{grill2020bootstrap,
   title={Bootstrap your own latent-a new approach to self-supervised learning},
   author={Grill, Jean-Bastien and Strub, Florian and Altch{\'e}, Florent and Tallec, Corentin and Richemond, Pierre and Buchatskaya, Elena and Doersch, Carl and Avila Pires, Bernardo and Guo, Zhaohan and Gheshlaghi Azar, Mohammad and others},
   journal={Advances in neural information processing systems},
@@ -1202,7 +1249,7 @@ class bootstrap_your_own_latent_a_new_approach_to_self_supervised_learning:
 class exploring_simple_siamese_representation_learning:
     short = 'SimSiam'
     apa = 'Chen, X., & He, K. (2021). Exploring simple siamese representation learning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 15750-15758).'
-    bib = '''@inproceedings{chen2021exploring,
+    bib = r'''@inproceedings{chen2021exploring,
   title={Exploring simple siamese representation learning},
   author={Chen, Xinlei and He, Kaiming},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
@@ -1215,7 +1262,7 @@ class exploring_simple_siamese_representation_learning:
 class unsupervised_learning_of_visual_features_by_contrasting_cluster_assignments:
     short = 'SwAV'
     apa = 'Caron, M., Misra, I., Mairal, J., Goyal, P., Bojanowski, P., & Joulin, A. (2020). Unsupervised learning of visual features by contrasting cluster assignments. Advances in Neural Information Processing Systems, 33, 9912-9924.'
-    bib = '''@article{caron2020unsupervised,
+    bib = r'''@article{caron2020unsupervised,
   title={Unsupervised learning of visual features by contrasting cluster assignments},
   author={Caron, Mathilde and Misra, Ishan and Mairal, Julien and Goyal, Priya and Bojanowski, Piotr and Joulin, Armand},
   journal={Advances in Neural Information Processing Systems},
@@ -1228,7 +1275,7 @@ class unsupervised_learning_of_visual_features_by_contrasting_cluster_assignment
 
 class a_unified_model_for_zero_shot_music_source_separation_transcription_and_synthesis:
     apa = 'Lin, L., Kong, Q., Jiang, J., & Xia, G. (2021). A unified model for zero-shot music source separation, transcription and synthesis. arXiv preprint arXiv:2108.03456.'
-    bib = '''@article{lin2021unified,
+    bib = r'''@article{lin2021unified,
   title={A unified model for zero-shot music source separation, transcription and synthesis},
   author={Lin, Liwei and Kong, Qiuqiang and Jiang, Junyan and Xia, Gus},
   journal={arXiv preprint arXiv:2108.03456},
@@ -1243,7 +1290,7 @@ class a_unified_model_for_zero_shot_music_source_separation_transcription_and_sy
 
 class blip_2_bootstrapping_language_image_pre_training_with_frozen_image_encoders_and_large_language_models:
     apa = 'Li, J., Li, D., Savarese, S., & Hoi, S. (2023). Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models. arXiv preprint arXiv:2301.12597.'
-    bib = '''@article{li2023blip,
+    bib = r'''@article{li2023blip,
   title={Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models},
   author={Li, Junnan and Li, Dongxu and Savarese, Silvio and Hoi, Steven},
   journal={arXiv preprint arXiv:2301.12597},
@@ -1258,7 +1305,7 @@ Ablate: use text instead of image features to prompt LLM.
 
 class generative_agents_interactive_simulacra_of_human_behavior:
     apa = "Park, J. S., O'Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442."
-    bib = '''@article{park2023generative,
+    bib = r'''@article{park2023generative,
   title={Generative agents: Interactive simulacra of human behavior},
   author={Park, Joon Sung and O'Brien, Joseph C and Cai, Carrie J and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S},
   journal={arXiv preprint arXiv:2304.03442},
@@ -1269,7 +1316,7 @@ class generative_agents_interactive_simulacra_of_human_behavior:
 
 class haptic_training_which_types_facilitate_re_learning_of_which_motor_task_and_for_whom_answers_by_a_review:
     apa = 'Basalp, E., Wolf, P., & Marchal-Crespo, L. (2021). Haptic training: which types facilitate (re) learning of which motor task and for whom? answers by a review. IEEE transactions on haptics, 14(4), 722-739.'
-    bib = '''@article{basalp2021haptic,
+    bib = r'''@article{basalp2021haptic,
   title={Haptic training: which types facilitate (re) learning of which motor task and for whom? answers by a review},
   author={Basalp, Ekin and Wolf, Peter and Marchal-Crespo, Laura},
   journal={IEEE transactions on haptics},
@@ -1284,7 +1331,7 @@ class haptic_training_which_types_facilitate_re_learning_of_which_motor_task_and
 
 class musicjacket_combining_motion_capture_and_vibrotactile_feedback_to_teach_violin_bowing:
     apa = 'Van Der Linden, J., Schoonderwaldt, E., Bird, J., & Johnson, R. (2010). Musicjacket—combining motion capture and vibrotactile feedback to teach violin bowing. IEEE Transactions on Instrumentation and Measurement, 60(1), 104-113.'
-    bib = '''@article{van2010musicjacket,
+    bib = r'''@article{van2010musicjacket,
   title={Musicjacket—combining motion capture and vibrotactile feedback to teach violin bowing},
   author={Van Der Linden, Janet and Schoonderwaldt, Erwin and Bird, Jon and Johnson, Rose},
   journal={IEEE Transactions on Instrumentation and Measurement},
@@ -1299,7 +1346,7 @@ class musicjacket_combining_motion_capture_and_vibrotactile_feedback_to_teach_vi
 
 class towards_passive_haptic_learning_of_piano_songs:
     apa = 'Seim, C., Estes, T., & Starner, T. (2015, June). Towards passive haptic learning of piano songs. In 2015 IEEE World Haptics Conference (WHC) (pp. 445-450). IEEE.'
-    bib = '''@inproceedings{seim2015towards,
+    bib = r'''@inproceedings{seim2015towards,
   title={Towards passive haptic learning of piano songs},
   author={Seim, Caitlyn and Estes, Tanya and Starner, Thad},
   booktitle={2015 IEEE World Haptics Conference (WHC)},
@@ -1316,7 +1363,7 @@ In addition to its abstract:
 
 class passive_haptic_learning_of_braille_typing:
     apa = 'Seim, C., Chandler, J., DesPortes, K., Dhingra, S., Park, M., & Starner, T. (2014, September). Passive haptic learning of Braille typing. In Proceedings of the 2014 ACM International Symposium on Wearable Computers (pp. 111-118).'
-    bib = '''@inproceedings{seim2014passive,
+    bib = r'''@inproceedings{seim2014passive,
   title={Passive haptic learning of Braille typing},
   author={Seim, Caitlyn and Chandler, John and DesPortes, Kayla and Dhingra, Siddharth and Park, Miru and Starner, Thad},
   booktitle={Proceedings of the 2014 ACM International Symposium on Wearable Computers},
@@ -1334,7 +1381,7 @@ Also, staggering simultaneous haptic stimuli may help, (consistent w/ our haptic
 
 class computer_assisted_music_instructment_tutoring_applied_to_violin_practice:
     apa = 'Huanhuan, L. (2009). Computer assisted music instructment tutoring applied to violin practice.'
-    bib = '''@article{huanhuan2009computer,
+    bib = r'''@article{huanhuan2009computer,
   title={Computer assisted music instructment tutoring applied to violin practice},
   author={Huanhuan, Lu},
   year={2009}
@@ -1345,7 +1392,7 @@ A thesis. No haptic feedback.
 
 class haptic_learning_and_how_it_can_enhance_digital_learning_experiences_an_innovative_approach:
     apa = 'Dörr, B., Funk, M., Norouzinia, F., & Werth, D. (2022). Haptic learning and how it can enhance digital learning experiences: an innovative approach. In INTED2022 Proceedings (pp. 3909-3917). IATED.'
-    bib = '''@inproceedings{dorr2022haptic,
+    bib = r'''@inproceedings{dorr2022haptic,
   title={Haptic learning and how it can enhance digital learning experiences: an innovative approach},
   author={D{\"o}rr, B and Funk, M and Norouzinia, F and Werth, D},
   booktitle={INTED2022 Proceedings},
@@ -1363,7 +1410,7 @@ I see limited usability of their model.
 
 class haptic_learning_and_technology_analyses_of_digital_use_cases_of_haptics_using_the_haptic_learning_model:
     apa = 'Norouzinia, F., Dörr, B., Funk, M., & Werth, D. (2022, June). Haptic learning and technology: Analyses of digital use cases of haptics using the haptic learning model. In HCI International 2022 Posters: 24th International Conference on Human-Computer Interaction, HCII 2022, Virtual Event, June 26–July 1, 2022, Proceedings, Part III (pp. 72-79). Cham: Springer International Publishing.'
-    bib = '''@inproceedings{norouzinia2022haptic,
+    bib = r'''@inproceedings{norouzinia2022haptic,
   title={Haptic learning and technology: Analyses of digital use cases of haptics using the haptic learning model},
   author={Norouzinia, Farzaneh and D{\"o}rr, Bianka and Funk, Mareike and Werth, Dirk},
   booktitle={HCI International 2022 Posters: 24th International Conference on Human-Computer Interaction, HCII 2022, Virtual Event, June 26--July 1, 2022, Proceedings, Part III},
@@ -1381,7 +1428,7 @@ Using the model proposed by computer_assisted_music_instructment_tutoring_applie
 
 class passive_somatosensory_training_enhances_piano_skill_in_adolescent_and_adult_pianists_a_preliminary_study:
     apa = 'Furuya, S., Tanibuchi, R., Nishioka, H., Kimoto, Y., Hirano, M., & Oku, T. (2023). Passive somatosensory training enhances piano skill in adolescent and adult pianists: A preliminary study. Annals of the New York Academy of Sciences, 1519(1), 167-172.'
-    bib = '''@article{furuya2023passive,
+    bib = r'''@article{furuya2023passive,
   title={Passive somatosensory training enhances piano skill in adolescent and adult pianists: A preliminary study},
   author={Furuya, Shinichi and Tanibuchi, Ryuya and Nishioka, Hayato and Kimoto, Yudai and Hirano, Masato and Oku, Takanori},
   journal={Annals of the New York Academy of Sciences},
@@ -1397,7 +1444,7 @@ class passive_somatosensory_training_enhances_piano_skill_in_adolescent_and_adul
 
 class augmented_visual_auditory_haptic_and_multimodal_feedback_in_motor_learning_a_review:
     apa = 'Sigrist, R., Rauter, G., Riener, R., & Wolf, P. (2013). Augmented visual, auditory, haptic, and multimodal feedback in motor learning: a review. Psychonomic bulletin & review, 20, 21-53.'
-    bib = '''@article{sigrist2013augmented,
+    bib = r'''@article{sigrist2013augmented,
   title={Augmented visual, auditory, haptic, and multimodal feedback in motor learning: a review},
   author={Sigrist, Roland and Rauter, Georg and Riener, Robert and Wolf, Peter},
   journal={Psychonomic bulletin \& review},
@@ -1415,7 +1462,7 @@ Good paper to go back to. (And when you do, take notes this time.)
 
 class instructional_design_and_intelligent_tutoring_theory_and_the_precision_of_design:
     apa = 'Capell, P., & Dannenberg, R. B. (1993). Instructional design and intelligent tutoring: Theory and the precision of design.'
-    bib = '''@article{capell1993instructional,
+    bib = r'''@article{capell1993instructional,
   title={Instructional design and intelligent tutoring: Theory and the precision of design},
   author={Capell, Peter and Dannenberg, Roger B},
   year={1993},
@@ -1429,7 +1476,7 @@ Skill & lesson graph. Formal analysis.
 
 class an_expert_system_for_teaching_piano_to_novices:
     apa = 'Dannenberg, R. B., Sanchez, M., Joseph, A., Capell, P., Joseph, R., & Saul, R. (1990). An expert system for teaching piano to novices. In ICMC.'
-    bib = '''@inproceedings{dannenberg1990expert,
+    bib = r'''@inproceedings{dannenberg1990expert,
   title={An expert system for teaching piano to novices},
   author={Dannenberg, Roger B and Sanchez, Marta and Joseph, Annabel and Capell, Peter and Joseph, Robert and Saul, Ronald},
   booktitle={ICMC},
@@ -1443,7 +1490,7 @@ Piano Tutor can hypothesize the cause behind a student error.
 
 class a_computer_based_multi_media_tutor_for_beginning_piano_students:
     apa = 'Dannenberg, R. B., Sanchez, M., Joseph, A., Capell, P., Joseph, R., & Saul, R. (1990). A computer‐based multi‐media tutor for beginning piano students. Journal of New Music Research, 19(2-3), 155-173.'
-    bib = '''@article{dannenberg1990computer,
+    bib = r'''@article{dannenberg1990computer,
   title={A computer-based multi-media tutor for beginning piano students},
   author={Dannenberg, Roger B and Sanchez, Marta and Joseph, Annabelle and Capell, Peter and Joseph, Robert and Saul, Ronald},
   journal={Journal of New Music Research},
@@ -1458,7 +1505,7 @@ class a_computer_based_multi_media_tutor_for_beginning_piano_students:
 
 class visual_chatgpt_talking_drawing_and_editing_with_visual_foundation_models:
     apa = 'Wu, C., Yin, S., Qi, W., Wang, X., Tang, Z., & Duan, N. (2023). Visual chatgpt: Talking, drawing and editing with visual foundation models. arXiv preprint arXiv:2303.04671.'
-    bib = '''@article{wu2023visual,
+    bib = r'''@article{wu2023visual,
   title={Visual chatgpt: Talking, drawing and editing with visual foundation models},
   author={Wu, Chenfei and Yin, Shengming and Qi, Weizhen and Wang, Xiaodong and Tang, Zecheng and Duan, Nan},
   journal={arXiv preprint arXiv:2303.04671},
@@ -1469,7 +1516,7 @@ class visual_chatgpt_talking_drawing_and_editing_with_visual_foundation_models:
 
 class the_learning_of_90_continuous_relative_phase_with_and_without_lissajous_feedback_external_and_internally_generated_bimanual_coordination:
     apa = 'Kovacs, A. J., & Shea, C. H. (2011). The learning of 90 continuous relative phase with and without Lissajous feedback: external and internally generated bimanual coordination. Acta psychologica, 136(3), 311-320.'
-    bib = '''@article{kovacs2011learning,
+    bib = r'''@article{kovacs2011learning,
   title={The learning of 90 continuous relative phase with and without Lissajous feedback: external and internally generated bimanual coordination},
   author={Kovacs, Attila J and Shea, Charles H},
   journal={Acta psychologica},
@@ -1491,7 +1538,7 @@ the schedule above."
 
 class performance_on_trials_without_knowledge_of_results_kr_in_reduced_relative_frequency_presentations_of_kr:
     apa = 'Sparrow, W. A., & Summers, J. J. (1992). Performance on trials without knowledge of results (KR) in reduced relative frequency presentations of KR. Journal of motor behavior, 24(2), 197-209.'
-    bib = '''@article{sparrow1992performance,
+    bib = r'''@article{sparrow1992performance,
   title={Performance on trials without knowledge of results (KR) in reduced relative frequency presentations of KR},
   author={Sparrow, Wl A and Summers, JJ},
   journal={Journal of motor behavior},
@@ -1506,7 +1553,7 @@ class performance_on_trials_without_knowledge_of_results_kr_in_reduced_relative_
 
 class bert_pre_training_of_deep_bidirectional_transformers_for_language_understanding:
     apa = 'Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805.'
-    bib = '''@article{devlin2018bert,
+    bib = r'''@article{devlin2018bert,
   title={Bert: Pre-training of deep bidirectional transformers for language understanding},
   author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
   journal={arXiv preprint arXiv:1810.04805},
@@ -1518,7 +1565,7 @@ BERT is conceptually simple and empirically powerful. It obtains new state-of-th
 
 class auto_encoding_variational_bayes:
     apa = 'Kingma, D. P., & Welling, M. (2013). Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114.'
-    bib = '''@article{kingma2013auto,
+    bib = r'''@article{kingma2013auto,
   title={Auto-encoding variational bayes},
   author={Kingma, Diederik P and Welling, Max},
   journal={arXiv preprint arXiv:1312.6114},
@@ -1529,7 +1576,7 @@ class auto_encoding_variational_bayes:
 
 class a_recurrent_latent_variable_model_for_sequential_data:
     apa = 'Chung, J., Kastner, K., Dinh, L., Goel, K., Courville, A. C., & Bengio, Y. (2015). A recurrent latent variable model for sequential data. Advances in neural information processing systems, 28.'
-    bib = '''@article{chung2015recurrent,
+    bib = r'''@article{chung2015recurrent,
   title={A recurrent latent variable model for sequential data},
   author={Chung, Junyoung and Kastner, Kyle and Dinh, Laurent and Goel, Kratarth and Courville, Aaron C and Bengio, Yoshua},
   journal={Advances in neural information processing systems},
@@ -1541,7 +1588,7 @@ class a_recurrent_latent_variable_model_for_sequential_data:
 
 class deep_symmetry_networks:
     apa = 'Gens, R., & Domingos, P. M. (2014). Deep symmetry networks. Advances in neural information processing systems, 27.'
-    bib = '''@article{gens2014deep,
+    bib = r'''@article{gens2014deep,
   title={Deep symmetry networks},
   author={Gens, Robert and Domingos, Pedro M},
   journal={Advances in neural information processing systems},
@@ -1553,7 +1600,7 @@ class deep_symmetry_networks:
 
 class group_equivariant_convolutional_networks:
     apa = 'Cohen, T., & Welling, M. (2016, June). Group equivariant convolutional networks. In International conference on machine learning (pp. 2990-2999). PMLR.'
-    bib = '''@inproceedings{cohen2016group,
+    bib = r'''@inproceedings{cohen2016group,
   title={Group equivariant convolutional networks},
   author={Cohen, Taco and Welling, Max},
   booktitle={International conference on machine learning},
@@ -1566,7 +1613,7 @@ class group_equivariant_convolutional_networks:
 
 class perceiver_general_perception_with_iterative_attention:
     apa = 'Jaegle, A., Gimeno, F., Brock, A., Vinyals, O., Zisserman, A., & Carreira, J. (2021, July). Perceiver: General perception with iterative attention. In International conference on machine learning (pp. 4651-4664). PMLR.'
-    bib = '''@inproceedings{jaegle2021perceiver,
+    bib = r'''@inproceedings{jaegle2021perceiver,
   title={Perceiver: General perception with iterative attention},
   author={Jaegle, Andrew and Gimeno, Felix and Brock, Andy and Vinyals, Oriol and Zisserman, Andrew and Carreira, Joao},
   booktitle={International conference on machine learning},
@@ -1581,7 +1628,7 @@ C, D, N, M is wrong???
 
 class emergent_world_representations_exploring_a_sequence_model_trained_on_a_synthetic_task:
     apa = 'Li, K., Hopkins, A. K., Bau, D., Viégas, F., Pfister, H., & Wattenberg, M. (2022). Emergent world representations: Exploring a sequence model trained on a synthetic task. arXiv preprint arXiv:2210.13382.'
-    bib = '''@article{li2022emergent,
+    bib = r'''@article{li2022emergent,
   title={Emergent world representations: Exploring a sequence model trained on a synthetic task},
   author={Li, Kenneth and Hopkins, Aspen K and Bau, David and Vi{\'e}gas, Fernanda and Pfister, Hanspeter and Wattenberg, Martin},
   journal={arXiv preprint arXiv:2210.13382},
@@ -1597,7 +1644,7 @@ The probe is so nice you can use its gradients to
     - intervene predictions.  
 My ideas:
     - Probe-ability says something about 
-(existence of repr \intersect quality of repr). I believe the existence of repr is always true. Probe-ability usually evaluates repr quality. 
+(existence of repr \\intersect quality of repr). I believe the existence of repr is always true. Probe-ability usually evaluates repr quality. 
     - Symm's number experiment cannot use this method because probe-ability is also determined by probing task complexity. Forming a bijective map of 15 elements is too trivial. Poor-quality repr can be probe-able.  
 Questions:
     - Why call transformer "GPT"?  
@@ -1605,7 +1652,7 @@ Questions:
 
 class deep_symbolic_learning_discovering_symbols_and_rules_from_perceptions:
     apa = 'Daniele, A., Campari, T., Malhotra, S., & Serafini, L. (2022). Deep symbolic learning: Discovering symbols and rules from perceptions. arXiv preprint arXiv:2208.11561.'
-    bib = '''@article{daniele2022deep,
+    bib = r'''@article{daniele2022deep,
   title={Deep symbolic learning: Discovering symbols and rules from perceptions},
   author={Daniele, Alessandro and Campari, Tommaso and Malhotra, Sagar and Serafini, Luciano},
   journal={arXiv preprint arXiv:2208.11561},
@@ -1628,7 +1675,7 @@ Three kinds of error: pause, rhythm error, pitch error.
 
 class gait_retraining_to_reduce_lower_extremity_loading_in_runners:
     apa = 'Crowell, H. P., & Davis, I. S. (2011). Gait retraining to reduce lower extremity loading in runners. Clinical biomechanics, 26(1), 78-83.'
-    bib = '''@article{crowell2011gait,
+    bib = r'''@article{crowell2011gait,
   title={Gait retraining to reduce lower extremity loading in runners},
   author={Crowell, Harrison Philip and Davis, Irene S},
   journal={Clinical biomechanics},
@@ -1655,7 +1702,7 @@ Subjects were able to run with reduced tibial acceleration and vertical force lo
 
 class gacela_a_generative_adversarial_context_encoder_for_long_audio_inpainting_of_music:
     apa = 'Marafioti, A., Majdak, P., Holighaus, N., & Perraudin, N. (2020). GACELA: A generative adversarial context encoder for long audio inpainting of music. IEEE Journal of Selected Topics in Signal Processing, 15(1), 120-131.'
-    bib = '''@article{marafioti2020gacela,
+    bib = r'''@article{marafioti2020gacela,
   title={GACELA: A generative adversarial context encoder for long audio inpainting of music},
   author={Marafioti, Andres and Majdak, Piotr and Holighaus, Nicki and Perraudin, Nathana{\"e}l},
   journal={IEEE Journal of Selected Topics in Signal Processing},
@@ -1670,7 +1717,7 @@ class gacela_a_generative_adversarial_context_encoder_for_long_audio_inpainting_
 
 class vision_infused_deep_audio_inpainting:
     apa = 'Zhou, H., Liu, Z., Xu, X., Luo, P., & Wang, X. (2019). Vision-infused deep audio inpainting. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 283-292).'
-    bib = '''@inproceedings{zhou2019vision,
+    bib = r'''@inproceedings{zhou2019vision,
   title={Vision-infused deep audio inpainting},
   author={Zhou, Hang and Liu, Ziwei and Xu, Xudong and Luo, Ping and Wang, Xiaogang},
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
@@ -1682,7 +1729,7 @@ class vision_infused_deep_audio_inpainting:
 
 class the_piano_inpainting_application:
     apa = 'Hadjeres, G., & Crestel, L. (2021). The piano inpainting application. arXiv preprint arXiv:2107.05944.'
-    bib = '''@article{hadjeres2021piano,
+    bib = r'''@article{hadjeres2021piano,
   title={The piano inpainting application},
   author={Hadjeres, Ga{\"e}tan and Crestel, L{\'e}opold},
   journal={arXiv preprint arXiv:2107.05944},
@@ -1697,7 +1744,7 @@ Cannot find inpainting demo.
 class music_sketchnet_controllable_music_generation_via_factorized_representations_of_pitch_and_rhythm:
     short = 'Music sketchnet'
     apa = 'Chen, K., Wang, C. I., Berg-Kirkpatrick, T., & Dubnov, S. (2020). Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm. In Ismir 2020 Conference.'
-    bib = '''@inproceedings{chen2020music,
+    bib = r'''@inproceedings{chen2020music,
   title={Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm},
   author={Chen, Ke and Wang, Cheng-i and Berg-Kirkpatrick, Taylor and Dubnov, Shlomo},
   booktitle={Ismir 2020 Conference},
@@ -1709,7 +1756,7 @@ class music_sketchnet_controllable_music_generation_via_factorized_representatio
 class vampnet_music_generation_via_masked_acoustic_token_modeling:
     short = 'Vampnet'
     apa = 'Garcia, H. F. F., Seetharaman, P., Kumar, R., & Pardo, B. (2023, November). VampNet: Music Generation via Masked Acoustic Token Modeling. In Ismir 2023 Hybrid Conference.'
-    bib = '''@inproceedings{garcia2023vampnet,
+    bib = r'''@inproceedings{garcia2023vampnet,
   title={VampNet: Music Generation via Masked Acoustic Token Modeling},
   author={Garcia, Hugo F Flores and Seetharaman, Prem and Kumar, Rithesh and Pardo, Bryan},
   booktitle={Ismir 2023 Hybrid Conference},
@@ -1724,7 +1771,7 @@ Direct MLM.
 
 class musiac_an_extensible_generative_framework_for_music_infilling_applications_with_multi_level_control:
     apa = 'Guo, R., Simpson, I., Kiefer, C., Magnusson, T., & Herremans, D. (2022, April). MusIAC: An extensible generative framework for Music Infilling Applications with multi-level Control. In International Conference on Computational Intelligence in Music, Sound, Art and Design (Part of EvoStar) (pp. 341-356). Cham: Springer International Publishing.'
-    bib = '''@inproceedings{guo2022musiac,
+    bib = r'''@inproceedings{guo2022musiac,
   title={MusIAC: An extensible generative framework for Music Infilling Applications with multi-level Control},
   author={Guo, Rui and Simpson, Ivor and Kiefer, Chris and Magnusson, Thor and Herremans, Dorien},
   booktitle={International Conference on Computational Intelligence in Music, Sound, Art and Design (Part of EvoStar)},
@@ -1742,7 +1789,7 @@ two-stage training: first short masks then long masks.
 
 class variable_length_music_score_infilling_via_xlnet_and_musically_specialized_positional_encoding:
     apa = 'Chang, C. J., Lee, C. Y., & Yang, Y. H. (2021). Variable-length music score infilling via XLNet and musically specialized positional encoding. In Ismir 2021 Conference.'
-    bib = '''@inproceedings{chang2021variable,
+    bib = r'''@inproceedings{chang2021variable,
   title={Variable-length music score infilling via XLNet and musically specialized positional encoding},
   author={Chang, Chin-Jui and Lee, Chun-Yi and Yang, Yi-Hsuan},
   booktitle={Ismir 2021 Conference},
@@ -1753,7 +1800,7 @@ class variable_length_music_score_infilling_via_xlnet_and_musically_specialized_
 
 class infilling_piano_performances:
     apa = 'Ippolito, D., Huang, A., Hawthorne, C., & Eck, D. (2018). Infilling piano performances. In NIPS Workshop on Machine Learning for Creativity and Design (Vol. 2, p. 5).'
-    bib = '''@inproceedings{ippolito2018infilling,
+    bib = r'''@inproceedings{ippolito2018infilling,
   title={Infilling piano performances},
   author={Ippolito, Daphne and Huang, Anna and Hawthorne, Curtis and Eck, Douglas},
   booktitle={NIPS Workshop on Machine Learning for Creativity and Design},
@@ -1770,7 +1817,7 @@ Inpainting via reordering. MLM via auto-regressive LM.
 
 class polyffusion_a_diffusion_model_for_polyphonic_score_generation_with_internal_and_external_controls:
     apa = 'Min, L., Jiang, J., Xia, G., & Zhao, J. (2023, November). Polyffusion: A Diffusion Model for Polyphonic Score Generation With Internal and External Controls. In Ismir 2023 Hybrid Conference.'
-    bib = '''@inproceedings{min2023polyffusion,
+    bib = r'''@inproceedings{min2023polyffusion,
   title={Polyffusion: A Diffusion Model for Polyphonic Score Generation With Internal and External Controls},
   author={Min, Lejun and Jiang, Junyan and Xia, Gus and Zhao, Jingwei},
   booktitle={Ismir 2023 Hybrid Conference},
@@ -1782,7 +1829,7 @@ class polyffusion_a_diffusion_model_for_polyphonic_score_generation_with_interna
 class counterpoint_by_convolution:
     short = 'Coconet'
     apa = 'Huang, C. Z. A., Cooijmans, T., Roberts, A., Courville, A., & Eck, D. (2019). Counterpoint by convolution. arXiv preprint arXiv:1903.07227.'
-    bib = '''@article{huang2019counterpoint,
+    bib = r'''@article{huang2019counterpoint,
   title={Counterpoint by convolution},
   author={Huang, Cheng-Zhi Anna and Cooijmans, Tim and Roberts, Adam and Courville, Aaron and Eck, Douglas},
   journal={arXiv preprint arXiv:1903.07227},
@@ -1794,7 +1841,7 @@ class counterpoint_by_convolution:
 
 class a_context_encoder_for_audio_inpainting:
     apa = 'Marafioti, A., Perraudin, N., Holighaus, N., & Majdak, P. (2019). A context encoder for audio inpainting. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 27(12), 2362-2372.'
-    bib = '''@article{marafioti2019context,
+    bib = r'''@article{marafioti2019context,
   title={A context encoder for audio inpainting},
   author={Marafioti, Andr{\'e}s and Perraudin, Nathana{\"e}l and Holighaus, Nicki and Majdak, Piotr},
   journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
@@ -1812,7 +1859,7 @@ tens of ms gaps.
 
 class inpainting_of_long_audio_segments_with_similarity_graphs:
     apa = 'Perraudin, N., Holighaus, N., Majdak, P., & Balazs, P. (2018). Inpainting of long audio segments with similarity graphs. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 26(6), 1083-1094.'
-    bib = '''@article{perraudin2018inpainting,
+    bib = r'''@article{perraudin2018inpainting,
   title={Inpainting of long audio segments with similarity graphs},
   author={Perraudin, Nathanael and Holighaus, Nicki and Majdak, Piotr and Balazs, Peter},
   journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
@@ -1830,7 +1877,7 @@ rule-based.
 
 class deepbach_a_steerable_model_for_bach_chorales_generation:
     apa = 'Hadjeres, G., Pachet, F., & Nielsen, F. (2017, July). Deepbach: a steerable model for bach chorales generation. In International conference on machine learning (pp. 1362-1371). PMLR.'
-    bib = '''@inproceedings{hadjeres2017deepbach,
+    bib = r'''@inproceedings{hadjeres2017deepbach,
   title={Deepbach: a steerable model for bach chorales generation},
   author={Hadjeres, Ga{\"e}tan and Pachet, Fran{\c{c}}ois and Nielsen, Frank},
   booktitle={International conference on machine learning},
@@ -1847,7 +1894,7 @@ pseudo-Gibbs sampling.
 
 class anticipation_rnn_enforcing_unary_constraints_in_sequence_generation_with_application_to_interactive_music_generation:
     apa = 'Hadjeres, G., & Nielsen, F. (2020). Anticipation-RNN: Enforcing unary constraints in sequence generation, with application to interactive music generation. Neural Computing and Applications, 32(4), 995-1005.'
-    bib = '''@article{hadjeres2020anticipation,
+    bib = r'''@article{hadjeres2020anticipation,
   title={Anticipation-RNN: Enforcing unary constraints in sequence generation, with application to interactive music generation},
   author={Hadjeres, Ga{\"e}tan and Nielsen, Frank},
   journal={Neural Computing and Applications},
@@ -1862,7 +1909,7 @@ class anticipation_rnn_enforcing_unary_constraints_in_sequence_generation_with_a
 
 class transformer_vae_a_hierarchical_model_for_structure_aware_and_interpretable_music_representation_learning:
     apa = 'Jiang, J., Xia, G. G., Carlton, D. B., Anderson, C. N., & Miyakawa, R. H. (2020, May). Transformer vae: A hierarchical model for structure-aware and interpretable music representation learning. In ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 516-520). IEEE.'
-    bib = '''@inproceedings{jiang2020transformer,
+    bib = r'''@inproceedings{jiang2020transformer,
   title={Transformer vae: A hierarchical model for structure-aware and interpretable music representation learning},
   author={Jiang, Junyan and Xia, Gus G and Carlton, Dave B and Anderson, Chris N and Miyakawa, Ryan H},
   booktitle={ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
