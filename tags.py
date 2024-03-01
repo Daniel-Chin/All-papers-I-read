@@ -53,3 +53,5 @@ def inpaint(): pass
 def symbolic_music(): pass
 def music_audio(): pass
 def rule_based(): pass
+def lit_review_for_hci_ijcai_2024(): pass
+def talks_at_mbzuai(): pass

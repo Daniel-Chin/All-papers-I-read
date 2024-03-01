@@ -2064,3 +2064,48 @@ z is the answer.
 the question lies in h_{0...i-1}, but is not directly seen by the decoder.  
 ''', 
 )
+
+toolllm_facilitating_large_language_models_to_master_16000_real_world_apis = Paper(
+    apa = r'''Qin, Y., Liang, S., Ye, Y., Zhu, K., Yan, L., Lu, Y., ... & Sun, M. (2023). Toolllm: Facilitating large language models to master 16000+ real-world apis. arXiv preprint arXiv:2307.16789.''', 
+    bib = r'''@article{qin2023toolllm,
+  title={Toolllm: Facilitating large language models to master 16000+ real-world apis},
+  author={Qin, Yujia and Liang, Shihao and Ye, Yining and Zhu, Kunlun and Yan, Lan and Lu, Yaxi and Lin, Yankai and Cong, Xin and Tang, Xiangru and Qian, Bill and others},
+  journal={arXiv preprint arXiv:2307.16789},
+  year={2023}
+}''', 
+    abstract = '''Despite the advancements of open-source large language models (LLMs), e.g., LLaMA, they remain significantly limited in tool-use capabilities, i.e., using external tools (APIs) to fulfill human instructions. The reason is that current instruction tuning largely focuses on basic language tasks but ignores the tool-use domain. This is in contrast to the excellent tool-use capabilities of state-of-the-art (SOTA) closed-source LLMs, e.g., ChatGPT. To bridge this gap, we introduce ToolLLM, a general tool-use framework encompassing data construction, model training, and evaluation. We first present ToolBench, an instruction-tuning dataset for tool use, which is constructed automatically using ChatGPT. Specifically, the construction can be divided into three stages: (i) API collection: we collect 16,464 real-world RESTful APIs spanning 49 categories from RapidAPI Hub; (ii) instruction generation: we prompt ChatGPT to generate diverse instructions involving these APIs, covering both single-tool and multi-tool scenarios; (iii) solution path annotation: we use ChatGPT to search for a valid solution path (chain of API calls) for each instruction. To enhance the reasoning capabilities of LLMs, we develop a novel depth-first search-based decision tree algorithm. It enables LLMs to evaluate multiple reasoning traces and expand the search space. Moreover, to evaluate the tool-use capabilities of LLMs, we develop an automatic evaluator: ToolEval. Based on ToolBench, we fine-tune LLaMA to obtain an LLM ToolLLaMA, and equip it with a neural API retriever to recommend appropriate APIs for each instruction. Experiments show that ToolLLaMA demonstrates a remarkable ability to execute complex instructions and generalize to unseen APIs, and exhibits comparable performance to ChatGPT. Our ToolLLaMA also demonstrates strong zero-shot generalization ability in an out-of-distribution tool-use dataset: APIBench.''', 
+    tags = [lit_review_for_hci_ijcai_2024],
+    my_notes = r'''
+The tool usage mindset.  
+'''
+)
+
+evaluating_explanations_how_much_do_explanations_from_the_teacher_aid_students = Paper(
+    apa = r'''Pruthi, D., Bansal, R., Dhingra, B., Soares, L. B., Collins, M., Lipton, Z. C., ... & Cohen, W. W. (2022). Evaluating Explanations: How much do explanations from the teacher aid students?. Transactions of the Association for Computational Linguistics, 10, 359-375.''', 
+    bib = r'''@article{pruthi2022evaluating,
+  title={Evaluating Explanations: How much do explanations from the teacher aid students?},
+  author={Pruthi, Danish and Bansal, Rachit and Dhingra, Bhuwan and Soares, Livio Baldini and Collins, Michael and Lipton, Zachary C and Neubig, Graham and Cohen, William W},
+  journal={Transactions of the Association for Computational Linguistics},
+  volume={10},
+  pages={359--375},
+  year={2022},
+  publisher={MIT Press One Broadway, 12th Floor, Cambridge, Massachusetts 02142, USA~…}
+}''', 
+    abstract = '''While many methods purport to explain predictions by highlighting salient features, what aims these explanations serve and how they ought to be evaluated often go unstated. In this work, we introduce a framework to quantify the value of explanations via the accuracy gains that they confer on a student model trained to simulate a teacher model. Crucially, the explanations are available to the student during training, but are not available at test time. Compared with prior proposals, our approach is less easily gamed, enabling principled, automatic, model-agnostic evaluation of attributions. Using our framework, we compare numerous attribution methods for text classification and question answering, and observe quantitative differences that are consistent (to a moderate to high degree) across different student model architectures and learning strategies.1''', 
+    tags = [talks_at_mbzuai], 
+    my_notes = r'''
+Can the student model learn better with explanations from the teacher model?  
+'''
+)
+
+large_multimodal_agents_a_survey = Paper(
+    apa = r'''Xie, J., Chen, Z., Zhang, R., Wan, X., & Li, G. (2024). Large Multimodal Agents: A Survey. arXiv preprint arXiv:2402.15116.''', 
+    bib = r'''@article{xie2024large,
+  title={Large Multimodal Agents: A Survey},
+  author={Xie, Junlin and Chen, Zhihong and Zhang, Ruifei and Wan, Xiang and Li, Guanbin},
+  journal={arXiv preprint arXiv:2402.15116},
+  year={2024}
+}''', 
+    abstract = '''Large language models (LLMs) have achieved superior performance in powering text-based AI agents, endowing them with decision-making and reasoning abilities akin to humans. Concurrently, there is an emerging research trend focused on extending these LLM-powered AI agents into the multimodal domain. This extension enables AI agents to interpret and respond to diverse multimodal user queries, thereby handling more intricate and nuanced tasks. In this paper, we conduct a systematic review of LLM-driven multimodal agents, which we refer to as large multimodal agents ( LMAs for short). First, we introduce the essential components involved in developing LMAs and categorize the current body of research into four distinct types. Subsequently, we review the collaborative frameworks integrating multiple LMAs , enhancing collective efficacy. One of the critical challenges in this field is the diverse evaluation methods used across existing studies, hindering effective comparison among different LMAs . Therefore, we compile these evaluation methodologies and establish a comprehensive framework to bridge the gaps. This framework aims to standardize evaluations, facilitating more meaningful comparisons. Concluding our review, we highlight the extensive applications of LMAs and propose possible future research directions. Our discussion aims to provide valuable insights and guidelines for future research in this rapidly evolving field. An up-to-date resource list is available at this https URL.''', 
+    tags = [lit_review_for_hci_ijcai_2024], 
+)
