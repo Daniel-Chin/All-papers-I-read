@@ -55,3 +55,6 @@ def music_audio(): pass
 def rule_based(): pass
 def lit_review_for_hci_ijcai_2024(): pass
 def talks_at_mbzuai(): pass
+def llm_over_GUI(): pass
+def llm_as_agent(): pass
+def multimodal_llm(): pass
