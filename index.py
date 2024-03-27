@@ -1614,6 +1614,7 @@ a_computer_based_multi_media_tutor_for_beginning_piano_students = Paper(
 )
 
 visual_chatgpt_talking_drawing_and_editing_with_visual_foundation_models = Paper(
+    shorts = ['Visual ChatGPT'],
     apa = r'''Wu, C., Yin, S., Qi, W., Wang, X., Tang, Z., & Duan, N. (2023). Visual chatgpt: Talking, drawing and editing with visual foundation models. arXiv preprint arXiv:2303.04671.''', 
     bib = r'''@article{wu2023visual,
   title={Visual chatgpt: Talking, drawing and editing with visual foundation models},
@@ -2313,4 +2314,30 @@ natural_language_user_interface_for_software_engineering_tasks = Paper(
 }''', 
     abstract = r'''In this paper, we present the idea to use natural language as the user interface for programming tasks. Programming languages assist with repetitive tasks that involve the use of conditionals, loops and statements. This is what is often challenging users. However, users can easily describe tasks in their natural language. We aim to develop a Natural Language User Interface that enables users to describe algorithms, including statements, loops, and conditionals. For this, we extend our current spreadsheet system to support control flows. An evaluation shows that users solved more than 60% of tasks. Although far from perfect, this research might lead to fundamental changes in computer use. With natural language, programming would become available to everyone. We believe that it is a reasonable approach for end user software engineering and will therefore overcome the present bottleneck of IT proficients.''',
     tags = [lit_review_for_hci_ijcai_2024],
+)
+
+tell_me_more_towards_implicit_user_intention_understanding_of_language_model_driven_agents = Paper(
+    apa = r'''Qian, C., He, B., Zhuang, Z., Deng, J., Qin, Y., Cong, X., ... & Sun, M. (2024). Tell Me More! Towards Implicit User Intention Understanding of Language Model Driven Agents. arXiv preprint arXiv:2402.09205.''',
+    bib = r'''@article{qian2024tell,
+  title={Tell Me More! Towards Implicit User Intention Understanding of Language Model Driven Agents},
+  author={Qian, Cheng and He, Bingxiang and Zhuang, Zhong and Deng, Jia and Qin, Yujia and Cong, Xin and Lin, Yankai and Zhang, Zhong and Liu, Zhiyuan and Sun, Maosong},
+  journal={arXiv preprint arXiv:2402.09205},
+  year={2024}
+}''',
+    abstract = r'''Current language model-driven agents often lack mechanisms for effective user participation, which is crucial given the vagueness commonly found in user instructions. Although adept at devising strategies and performing tasks, these agents struggle with seeking clarification and grasping precise user intentions. To bridge this gap, we introduce Intention-in-Interaction (IN3), a novel benchmark designed to inspect users' implicit intentions through explicit queries. Next, we propose the incorporation of model experts as the upstream in agent designs to enhance user-agent interaction. Employing IN3, we empirically train Mistral-Interact, a powerful model that proactively assesses task vagueness, inquires user intentions, and refines them into actionable goals before starting downstream agent task execution. Integrating it into the XAgent framework, we comprehensively evaluate the enhanced agent system regarding user instruction understanding and execution, revealing that our approach notably excels at identifying vague user tasks, recovering and summarizing critical missing information, setting precise and necessary agent execution goals, and minimizing redundant tool usage, thus boosting overall efficiency. All the data and codes are released.''',
+    tags = [lit_review_for_hci_ijcai_2024, hci, llm_as_agent],
+)
+
+simple_and_controllable_music_generation = Paper(
+    shorts = ['MusicGen'],
+    apa = r'''Copet, J., Kreuk, F., Gat, I., Remez, T., Kant, D., Synnaeve, G., ... & Défossez, A. (2024). Simple and controllable music generation. Advances in Neural Information Processing Systems, 36.''',
+    bib = r'''@article{copet2024simple,
+  title={Simple and controllable music generation},
+  author={Copet, Jade and Kreuk, Felix and Gat, Itai and Remez, Tal and Kant, David and Synnaeve, Gabriel and Adi, Yossi and D{\'e}fossez, Alexandre},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}''',
+    abstract = r'''We tackle the task of conditional music generation. We introduce MusicGen, a single Language Model (LM) that operates over several streams of compressed discrete music representation, i.e., tokens. Unlike prior work, MusicGen is comprised of a single-stage transformer LM together with efficient token interleaving patterns, which eliminates the need for cascading several models, e.g., hierarchically or upsampling. Following this approach, we demonstrate how MusicGen can generate high-quality samples, both mono and stereo, while being conditioned on textual description or melodic features, allowing better controls over the generated output. We conduct extensive empirical evaluation, considering both automatic and human studies, showing the proposed approach is superior to the evaluated baselines on a standard text-to-music benchmark. Through ablation studies, we shed light over the importance of each of the components comprising MusicGen. Music samples, code, and models are available at https://github.com/facebookresearch/audiocraft''',
+    tags = [llm, generation, transformer, control],
 )

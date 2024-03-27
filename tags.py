@@ -58,3 +58,4 @@ def talks_at_mbzuai(): pass
 def llm_over_GUI(): pass
 def llm_as_agent(): pass
 def multimodal_llm(): pass
+def hci(): pass
