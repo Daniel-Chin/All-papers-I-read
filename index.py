@@ -2341,3 +2341,56 @@ simple_and_controllable_music_generation = Paper(
     abstract = r'''We tackle the task of conditional music generation. We introduce MusicGen, a single Language Model (LM) that operates over several streams of compressed discrete music representation, i.e., tokens. Unlike prior work, MusicGen is comprised of a single-stage transformer LM together with efficient token interleaving patterns, which eliminates the need for cascading several models, e.g., hierarchically or upsampling. Following this approach, we demonstrate how MusicGen can generate high-quality samples, both mono and stereo, while being conditioned on textual description or melodic features, allowing better controls over the generated output. We conduct extensive empirical evaluation, considering both automatic and human studies, showing the proposed approach is superior to the evaluated baselines on a standard text-to-music benchmark. Through ablation studies, we shed light over the importance of each of the components comprising MusicGen. Music samples, code, and models are available at https://github.com/facebookresearch/audiocraft''',
     tags = [llm, generation, transformer, control],
 )
+
+minigpt_5_interleaved_vision_and_language_generation_via_generative_vokens = Paper(
+    shorts = ['MiniGPT-5'],
+    apa = r'''Zheng, K., He, X., & Wang, X. E. (2023). Minigpt-5: Interleaved vision-and-language generation via generative vokens. arXiv preprint arXiv:2310.02239.''',
+    bib = r'''@article{zheng2023minigpt,
+  title={Minigpt-5: Interleaved vision-and-language generation via generative vokens},
+  author={Zheng, Kaizhi and He, Xuehai and Wang, Xin Eric},
+  journal={arXiv preprint arXiv:2310.02239},
+  year={2023}
+}''',
+    abstract = r'''The effectiveness of Multimodal Large Language Models (MLLMs) demonstrates a profound capability in multimodal understanding. However, the simultaneous generation of images with coherent texts is still underdeveloped. Addressing this, we introduce a novel interleaved vision-and-language generation method, centered around the concept of ``generative vokens". These vokens serve as pivotal elements contributing to coherent image-text outputs. Our method is marked by a unique two-stage training strategy for description-free multimodal generation, which does not necessitate extensive descriptions of images. We integrate classifier-free guidance to enhance the alignment of generated images and texts, ensuring more seamless and contextually relevant multimodal interactions. Our model, MiniGPT-5, exhibits substantial improvement over the baseline models on multimodal generation datasets, including MMDialog and VIST. The human evaluation shows MiniGPT-5 is better than the baseline model on more than 56\% cases for multimodal generation, highlighting its efficacy across diverse benchmarks.''',
+    tags = [llm, multimodal_llm],
+)
+
+next_gpt_any_to_any_multimodal_llm = Paper(
+    shorts = ['NExT-GPT'],
+    apa = r'''Wu, S., Fei, H., Qu, L., Ji, W., & Chua, T. S. (2023). Next-gpt: Any-to-any multimodal llm. arXiv preprint arXiv:2309.05519.''', 
+    bib = r'''@article{wu2023next,
+  title={Next-gpt: Any-to-any multimodal llm},
+  author={Wu, Shengqiong and Fei, Hao and Qu, Leigang and Ji, Wei and Chua, Tat-Seng},
+  journal={arXiv preprint arXiv:2309.05519},
+  year={2023}
+}''', 
+    abstract = r'''While recently Multimodal Large Language Models (MM-LLMs) have made exciting strides, they mostly fall prey to the limitation of only input-side multimodal understanding, without the ability to produce content in multiple modalities. As we humans always perceive the world and communicate with people through various modalities, developing any-to-any MM-LLMs capable of accepting and delivering content in any modality becomes essential to human-level AI. To fill the gap, we present an end-to-end general-purpose any-to-any MM-LLM system, NExT-GPT. We connect an LLM with multimodal adaptors and different diffusion decoders, enabling NExT-GPT to perceive inputs and generate outputs in arbitrary combinations of text, images, videos, and audio. By leveraging the existing well-trained highly-performing encoders and decoders, NExT-GPT is tuned with only a small amount of parameter (1%) of certain projection layers, which not only benefits low-cost training and also facilitates convenient expansion to more potential modalities. Moreover, we introduce a modality-switching instruction tuning (MosIT) and manually curate a high-quality dataset for MosIT, based on which NExT-GPT is empowered with complex cross-modal semantic understanding and content generation. Overall, our research showcases the promising possibility of building an AI agent capable of modeling universal modalities, paving the way for more human-like AI research in the community. Project page: this https URL''', 
+    tags = [llm, multimodal_llm],
+)
+
+generating_images_with_multimodal_language_models = Paper(
+    shorts = ['GILL'], 
+    apa = r'''Koh, J. Y., Fried, D., & Salakhutdinov, R. R. (2024). Generating images with multimodal language models. Advances in Neural Information Processing Systems, 36.''',
+    bib = r'''@article{koh2024generating,
+  title={Generating images with multimodal language models},
+  author={Koh, Jing Yu and Fried, Daniel and Salakhutdinov, Russ R},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}''', 
+    abstract = r'''We propose a method to fuse frozen text-only large language models (LLMs) with pre-trained image encoder and decoder models, by mapping between their embedding spaces. Our model demonstrates a wide suite of multimodal capabilities: image retrieval, novel image generation, and multimodal dialogue. Ours is the first approach capable of conditioning on arbitrarily interleaved image and text inputs to generate coherent image (and text) outputs. To achieve strong performance on image generation, we propose an efficient mapping network to ground the LLM to an off-the-shelf text-to-image generation model. This mapping network translates hidden representations of text into the embedding space of the visual models, enabling us to leverage the strong text representations of the LLM for visual outputs. Our approach outperforms baseline generation models on tasks with longer and more complex language. In addition to novel image generation, our model is also capable of image retrieval from a prespecified dataset, and decides whether to retrieve or generate at inference time. This is done with a learnt decision module which conditions on the hidden representations of the LLM. Our model exhibits a wider range of capabilities compared to prior multimodal language models. It can process image-and-text inputs, and produce retrieved images, generated images, and generated text — outperforming non-LLM based generation models across several text-to-image tasks that measure context dependence.''',
+    tags = [llm, multimodal_llm],
+)
+
+audioldm_2_learning_holistic_audio_generation_with_self_supervised_pretraining = Paper(
+    shorts = ['AudioLDM 2'],
+    apa = r'''Liu, H., Tian, Q., Yuan, Y., Liu, X., Mei, X., Kong, Q., ... & Plumbley, M. D. (2023). AudioLDM 2: Learning holistic audio generation with self-supervised pretraining. arXiv preprint arXiv:2308.05734.''', 
+    bib = r'''@article{liu2023audioldm2,
+  title={{AudioLDM 2}: Learning Holistic Audio Generation with Self-supervised Pretraining},
+  author={Haohe Liu and Qiao Tian and Yi Yuan and Xubo Liu and Xinhao Mei and Qiuqiang Kong and Yuping Wang and Wenwu Wang and Yuxuan Wang and Mark D. Plumbley},
+  journal={arXiv preprint arXiv:2308.05734},
+  year={2023}
+}''', 
+    abstract = r'''Although audio generation shares commonalities across different types of audio, such as speech, music, and sound effects, designing models for each type requires careful consideration of specific objectives and biases that can significantly differ from those of other types. To bring us closer to a unified perspective of audio generation, this paper proposes a framework that utilizes the same learning method for speech, music, and sound effect generation. Our framework introduces a general representation of audio, called "language of audio" (LOA). Any audio can be translated into LOA based on AudioMAE, a self-supervised pre-trained representation learning model. In the generation process, we translate any modalities into LOA by using a GPT-2 model, and we perform self-supervised audio generation learning with a latent diffusion model conditioned on LOA. The proposed framework naturally brings advantages such as in-context learning abilities and reusable self-supervised pretrained AudioMAE and latent diffusion models. Experiments on the major benchmarks of text-to-audio, text-to-music, and text-to-speech demonstrate state-of-the-art or competitive performance against previous approaches. Our code, pretrained model, and demo are available at this https URL.''',
+    tags = [llm, multimodal_llm],
+)
