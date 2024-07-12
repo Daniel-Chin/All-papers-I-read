@@ -59,3 +59,5 @@ def llm_over_GUI(): pass
 def llm_as_agent(): pass
 def multimodal_llm(): pass
 def hci(): pass
+def optimization(): pass
+def cross_modal_align(): pass

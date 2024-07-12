@@ -2394,3 +2394,84 @@ audioldm_2_learning_holistic_audio_generation_with_self_supervised_pretraining =
     abstract = r'''Although audio generation shares commonalities across different types of audio, such as speech, music, and sound effects, designing models for each type requires careful consideration of specific objectives and biases that can significantly differ from those of other types. To bring us closer to a unified perspective of audio generation, this paper proposes a framework that utilizes the same learning method for speech, music, and sound effect generation. Our framework introduces a general representation of audio, called "language of audio" (LOA). Any audio can be translated into LOA based on AudioMAE, a self-supervised pre-trained representation learning model. In the generation process, we translate any modalities into LOA by using a GPT-2 model, and we perform self-supervised audio generation learning with a latent diffusion model conditioned on LOA. The proposed framework naturally brings advantages such as in-context learning abilities and reusable self-supervised pretrained AudioMAE and latent diffusion models. Experiments on the major benchmarks of text-to-audio, text-to-music, and text-to-speech demonstrate state-of-the-art or competitive performance against previous approaches. Our code, pretrained model, and demo are available at this https URL.''',
     tags = [llm, multimodal_llm],
 )
+
+improving_convergence_and_generalization_using_parameter_symmetries = Paper(
+    apa = r'''Zhao, B., Gower, R. M., Walters, R., & Yu, R. (2023). Improving Convergence and Generalization Using Parameter Symmetries. arXiv preprint arXiv:2305.13404.''', 
+    bib = r'''@article{zhao2023improving,
+  title={Improving Convergence and Generalization Using Parameter Symmetries},
+  author={Zhao, Bo and Gower, Robert M and Walters, Robin and Yu, Rose},
+  journal={arXiv preprint arXiv:2305.13404},
+  year={2023}
+}''', 
+    abstract = r'''In many neural networks, different values of the parameters may result in the same loss value. Parameter space symmetries are loss-invariant transformations that change the model parameters. Teleportation applies such transformations to accelerate optimization. However, the exact mechanism behind this algorithm's success is not well understood. In this paper, we show that teleportation not only speeds up optimization in the short-term, but gives overall faster time to convergence. Additionally, teleporting to minima with different curvatures improves generalization, which suggests a connection between the curvature of the minimum and generalization ability. Finally, we show that integrating teleportation into a wide range of optimization algorithms and optimization-based meta-learning improves convergence. Our results showcase the versatility of teleportation and demonstrate the potential of incorporating symmetry in optimization.''', 
+    tags = [symmetry], 
+)
+
+neural_teleportation = Paper(
+    apa = r'''Armenta, M., Judge, T., Painchaud, N., Skandarani, Y., Lemaire, C., Gibeau Sanchez, G., ... & Jodoin, P. M. (2023). Neural teleportation. Mathematics, 11(2), 480.''', 
+    bib = r'''@article{armenta2023neural,
+  title={Neural teleportation},
+  author={Armenta, Marco and Judge, Thierry and Painchaud, Nathan and Skandarani, Youssef and Lemaire, Carl and Gibeau Sanchez, Gabriel and Spino, Philippe and Jodoin, Pierre-Marc},
+  journal={Mathematics},
+  volume={11},
+  number={2},
+  pages={480},
+  year={2023},
+  publisher={MDPI}
+}''', 
+    abstract = r'''In this paper, we explore a process called neural teleportation, a mathematical consequence of applying quiver representation theory to neural networks. Neural teleportation teleports a network to a new position in the weight space and preserves its function. This phenomenon comes directly from the definitions of representation theory applied to neural networks and it turns out to be a very simple operation that has remarkable properties. We shed light on the surprising and counter-intuitive consequences neural teleportation has on the loss landscape. In particular, we show that teleportation can be used to explore loss level curves, that it changes the local loss landscape, sharpens global minima and boosts back-propagated gradients at any moment during the learning process.''', 
+    tags = [optimization], 
+)
+
+the_representation_theory_of_neural_networks = Paper(
+    apa = r'''Armenta, M., & Jodoin, P. M. (2021). The representation theory of neural networks. Mathematics, 9(24), 3216.''',
+    bib = r'''@article{armenta2021representation,
+  title={The representation theory of neural networks},
+  author={Armenta, Marco and Jodoin, Pierre-Marc},
+  journal={Mathematics},
+  volume={9},
+  number={24},
+  pages={3216},
+  year={2021},
+  publisher={MDPI}
+}''', 
+    abstract = r'''In this work, we show that neural networks can be represented via the mathematical theory of quiver representations. More specifically, we prove that a neural network is a quiver representation with activation functions, a mathematical object that we represent using a network quiver. Furthermore, we show that network quivers gently adapt to common neural network concepts such as fully connected layers, convolution operations, residual connections, batch normalization, pooling operations and even randomly wired neural networks. We show that this mathematical representation is by no means an approximation of what neural networks are as it exactly matches reality. This interpretation is algebraic and can be studied with algebraic methods. We also provide a quiver representation model to understand how a neural network creates representations from the data. We show that a neural network saves the data as quiver representations, and maps it to a geometrical space called the moduli space, which is given in terms of the underlying oriented graph of the network, i.e., its quiver. This results as a consequence of our defined objects and of understanding how the neural network computes a prediction in a combinatorial and algebraic way. Overall, representing neural networks through the quiver representation theory leads to 9 consequences and 4 inquiries for future research that we believe are of great interest to better understand what neural networks are and how they work.''', 
+)
+
+emergent_communication_with_conversational_repair = Paper(
+    apa = r'''Nikolaus, M. (2023, October). Emergent Communication with Conversational Repair. In The Twelfth International Conference on Learning Representations.''',
+    bib = r'''@inproceedings{nikolaus2023emergent,
+  title={Emergent Communication with Conversational Repair},
+  author={Nikolaus, Mitja},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2023}
+}''', 
+    abstract = r'''Research on conversation has put emphasis on the importance of a multi-level communication system, in which the interlocutors aim to establish and maintain common ground. In natural conversations, repair mechanisms such as clarification requests are frequently used to improve mutual understanding. Here we explore the effects of conversational repair on languages emerging in signaling games. We extend the basic Lewis signaling game setup with a feedback channel that allows for the transmission of messages backwards from the receiver to the sender. Further, we add noise to the communication channel so that repair mechanisms become necessary for optimal performance. We find that languages emerging in setups with feedback channel are less compositional. However, the models still achieve a substantially higher generalization performance in conditions with noise, putting to question the role of compositionality for generalization. These findings generalize also to a more realistic case involving a guessing game with naturalistic images. More broadly speaking, this study provides an important step towards the creation of signaling games that more closely resemble the conditions under which human languages emerged.''', 
+)
+
+signatures_of_cross_modal_alignment_in_children_s_early_concepts = Paper(
+    apa = r'''Aho, K., Roads, B. D., & Love, B. C. (2023). Signatures of cross-modal alignment in children’s early concepts. Proceedings of the National Academy of Sciences, 120(42), e2309688120.''',
+    bib = r'''@article{aho2023signatures,
+  title={Signatures of cross-modal alignment in children’s early concepts},
+  author={Aho, Kaarina and Roads, Brett D and Love, Bradley C},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={120},
+  number={42},
+  pages={e2309688120},
+  year={2023},
+  publisher={National Acad Sciences}
+}''',
+    abstract = r'''Whether supervised or unsupervised, human and machine learning is usually characterized as event-based. However, learning may also proceed by systems alignment in which mappings are inferred between entire systems, such as visual and linguistic systems. Systems alignment is possible because items that share similar visual contexts, such as a car and a truck, will also tend to share similar linguistic contexts. Because of the mirrored similarity relationships across systems, the visual and linguistic systems can be aligned at some later time absent either input. In a series of simulation studies, we considered whether children’s early concepts support systems alignment. We found that children’s early concepts are close to optimal for inferring novel concepts through systems alignment, enabling agents to correctly infer more than 85% of visual–word mappings absent supervision. One possible explanation for why children’s early concepts support systems alignment is that they are distinguished structurally by their dense semantic neighborhoods. Artificial agents using these structural features to select concepts proved highly effective, both in environments mirroring children’s conceptual world and those that exclude the concepts that children commonly acquire. For children, systems alignment and event-based learning likely complement one another. Likewise, artificial systems can benefit from incorporating these developmental principles.''',
+    tags = [cross_modal_align], 
+)
+
+categorical_reparameterization_with_gumbel_softmax = Paper(
+    apa = r'''Jang, E., Gu, S., & Poole, B. (2016). Categorical reparameterization with gumbel-softmax. arXiv preprint arXiv:1611.01144.''',
+    bib = r'''@article{jang2016categorical,
+  title={Categorical reparameterization with gumbel-softmax},
+  author={Jang, Eric and Gu, Shixiang and Poole, Ben},
+  journal={arXiv preprint arXiv:1611.01144},
+  year={2016}
+}''',
+    abstract = r'''     Categorical variables are a natural choice for representing discrete structure in the world. However, stochastic neural networks rarely use categorical latent variables due to the inability to backpropagate through samples. In this work, we present an efficient gradient estimator that replaces the non-differentiable sample from a categorical distribution with a differentiable sample from a novel Gumbel-Softmax distribution. This distribution has the essential property that it can be smoothly annealed into a categorical distribution. We show that our Gumbel-Softmax estimator outperforms state-of-the-art gradient estimators on structured output prediction and unsupervised generative modeling tasks with categorical latent variables, and enables large speedups on semi-supervised classification. ''',
+)
