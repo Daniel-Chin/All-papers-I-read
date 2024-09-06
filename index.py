@@ -2473,5 +2473,21 @@ categorical_reparameterization_with_gumbel_softmax = Paper(
   journal={arXiv preprint arXiv:1611.01144},
   year={2016}
 }''',
-    abstract = r'''     Categorical variables are a natural choice for representing discrete structure in the world. However, stochastic neural networks rarely use categorical latent variables due to the inability to backpropagate through samples. In this work, we present an efficient gradient estimator that replaces the non-differentiable sample from a categorical distribution with a differentiable sample from a novel Gumbel-Softmax distribution. This distribution has the essential property that it can be smoothly annealed into a categorical distribution. We show that our Gumbel-Softmax estimator outperforms state-of-the-art gradient estimators on structured output prediction and unsupervised generative modeling tasks with categorical latent variables, and enables large speedups on semi-supervised classification. ''',
+    abstract = r'''Categorical variables are a natural choice for representing discrete structure in the world. However, stochastic neural networks rarely use categorical latent variables due to the inability to backpropagate through samples. In this work, we present an efficient gradient estimator that replaces the non-differentiable sample from a categorical distribution with a differentiable sample from a novel Gumbel-Softmax distribution. This distribution has the essential property that it can be smoothly annealed into a categorical distribution. We show that our Gumbel-Softmax estimator outperforms state-of-the-art gradient estimators on structured output prediction and unsupervised generative modeling tasks with categorical latent variables, and enables large speedups on semi-supervised classification. ''',
+)
+
+codream_exchanging_dreams_instead_of_models_for_federated_aggregation_with_heterogeneous_models = Paper(
+    shorts = ['CoDream'],
+    apa = r'''Singh, A., Gupta, G., Kapila, R., Shi, Y., Dang, A., Shankar, S., ... & Raskar, R. (2024). CoDream: Exchanging dreams instead of models for federated aggregation with heterogeneous models. arXiv preprint arXiv:2402.15968.''',
+    bib = r'''@article{singh2024codream,
+  title={CoDream: Exchanging dreams instead of models for federated aggregation with heterogeneous models},
+  author={Singh, Abhishek and Gupta, Gauri and Kapila, Ritvik and Shi, Yichuan and Dang, Alex and Shankar, Sheshank and Ehab, Mohammed and Raskar, Ramesh},
+  journal={arXiv preprint arXiv:2402.15968},
+  year={2024}
+}''',
+    abstract = r'''Federated Learning (FL) enables collaborative optimization of machine learning models across decentralized data by aggregating model parameters. Our approach extends this concept by aggregating "knowledge" derived from models, instead of model parameters. We present a novel framework called CoDream, where clients collaboratively optimize randomly initialized data using federated optimization in the input data space, similar to how randomly initialized model parameters are optimized in FL. Our key insight is that jointly optimizing this data can effectively capture the properties of the global data distribution. Sharing knowledge in data space offers numerous benefits: (1) model-agnostic collaborative learning, i.e., different clients can have different model architectures; (2) communication that is independent of the model size, eliminating scalability concerns with model parameters; (3) compatibility with secure aggregation, thus preserving the privacy benefits of federated learning; (4) allowing of adaptive optimization of knowledge shared for personalized learning. We empirically validate CoDream on standard FL tasks, demonstrating competitive performance despite not sharing model parameters. Our code: https://mitmedialab.github.io/codream.github.io/ ''',
+    tags = [presented_in_mus_x_lab], 
+    my_notes = r'''
+https://docs.google.com/presentation/d/1jVWzJGWhl_eu6K8uTc4X0CRFoFusqg1kY-JxHgI9Mbc/edit
+''', 
 )
