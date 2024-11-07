@@ -2491,3 +2491,41 @@ codream_exchanging_dreams_instead_of_models_for_federated_aggregation_with_heter
 https://docs.google.com/presentation/d/1jVWzJGWhl_eu6K8uTc4X0CRFoFusqg1kY-JxHgI9Mbc/edit
 ''', 
 )
+
+the_reflective_make_ar_in_action_using_augmented_reality_for_reflection_based_learning_of_makerskills = Paper(
+    apa = r'''Turakhia, D. G., Jiang, P., & Mueller, S. (2023, April). The reflective make-ar in-action: Using augmented reality for reflection-based learning of makerskills. In Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (pp. 1-6).''',
+    bib = r'''@inproceedings{turakhia2023reflective,
+  title={The reflective make-ar in-action: Using augmented reality for reflection-based learning of makerskills},
+  author={Turakhia, Dishita G and Jiang, Peiling and Mueller, Stefanie},
+  booktitle={Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems},
+  pages={1--6},
+  year={2023}
+}''',
+    abstract = r'''Recent work on reflective learning supports self-paced learning of skills like breadboarding and using power tools in makerspaces through a reflection exercise toolkit. This toolkit monitors the learners’ performances in real-time and prompts them to reflect both in-action and on-action i.e., during and after their maker activities. In this paper, we build on this prior work and use an augmented reality system to monitor, prompt, and record in-action reflections, i.e., while the maker activity is in progress. In particular, we propose a framework to design multi-modal reflective prompts for self-learning exercises using augmented reality with three specific goals - (1) adding real-world contextualization, (2) overlaying personalized multimodal contextual information for supporting in-action reflections, and (3) maintaining an immersive experience during the reflection exercises. We conclude with a discussion of three application case studies for reflective AR maker exercises.''',
+    tags = [hci, education],
+)
+
+designing_adaptive_tools_for_motor_skill_training = Paper(
+    apa = r'''Turakhia, D. G., Wong, A., Qi, Y., Blumberg, L. G., & Kim, Y. (2021, October). Designing Adaptive Tools for Motor Skill Training. In Adjunct Proceedings of the 34th Annual ACM Symposium on User Interface Software and Technology (pp. 137-139).''',
+    bib = r'''@inproceedings{turakhia2021designing,
+  title={Designing Adaptive Tools for Motor Skill Training},
+  author={Turakhia, Dishita G and Wong, Andrew and Qi, Yini and Blumberg, Lotta-Gili and Kim, Yoonji},
+  booktitle={Adjunct Proceedings of the 34th Annual ACM Symposium on User Interface Software and Technology},
+  pages={137--139},
+  year={2021}
+}''',
+    abstract = r'''We demonstrate the design of adaptive tools for motor skill training that use shape change to automatically vary task difficulty based on a learner’s performance. Studies [1] have shown that automatically-adaptive tools lead to significantly higher learning gains when compared to non-adaptive and manually-adaptive tools. We demonstrate the use of Adapt2Learn [2] - a toolkit that supports designers in building adaptive training tools. Adapt2Learn auto-generates an algorithm that converts a learner’s performance data into adaptation states during motor skill training. This algorithm, that maintains the training difficulty at the ’optimal challenge point’, can be uploaded to the micro-controller to convert several shape-changing tools into adaptive tools for motor skill training. We demonstrate 7 prototypes of adaptive tools for motor-skill learning to show applications in sports, music, rehabilitation, and accessibility.''',
+    tags = [hci, education],
+)
+
+satori_towards_proactive_ar_assistant_with_belief_desire_intention_user_modeling = Paper(
+    apa = r'''Li, C., Wu, G., Chan, G. Y. Y., Turakhia, D. G., Quispe, S. C., Li, D., ... & Qian, J. (2024). Satori: Towards Proactive AR Assistant with Belief-Desire-Intention User Modeling. arXiv preprint arXiv:2410.16668.''',
+    bib = r'''@article{li2024satori,
+  title={Satori: Towards Proactive AR Assistant with Belief-Desire-Intention User Modeling},
+  author={Li, Chenyi and Wu, Guande and Chan, Gromit Yeuk-Yin and Turakhia, Dishita G and Quispe, Sonia Castelo and Li, Dong and Welch, Leslie and Silva, Claudio and Qian, Jing},
+  journal={arXiv preprint arXiv:2410.16668},
+  year={2024}
+}''',
+    abstract = r'''     Augmented Reality assistance are increasingly popular for supporting users with tasks like assembly and cooking. However, current practice typically provide reactive responses initialized from user requests, lacking consideration of rich contextual and user-specific information. To address this limitation, we propose a novel AR assistance system, Satori, that models both user states and environmental contexts to deliver proactive guidance. Our system combines the Belief-Desire-Intention (BDI) model with a state-of-the-art multi-modal large language model (LLM) to infer contextually appropriate guidance. The design is informed by two formative studies involving twelve experts. A sixteen within-subject study find that Satori achieves performance comparable to an designer-created Wizard-of-Oz (WoZ) system without relying on manual configurations or heuristics, thereby enhancing generalizability, reusability and opening up new possibilities for AR assistance. ''',
+    tags = [hci, llm_in_the_loop, vr_ar],
+)
