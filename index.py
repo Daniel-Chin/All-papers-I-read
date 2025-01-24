@@ -5,6 +5,7 @@ from dataclasses import dataclass
 
 import tags
 from tags import *
+from tags import Tag
 
 @dataclass
 class Paper:
@@ -14,10 +15,11 @@ class Paper:
     abstract: Optional[str]
     tags: Optional[List[Tag]]
     my_notes: Optional[str]
+    supplementary_materials: Optional[str]
 
     def __init__(
         self, shorts=None, apa=None, bib=None, abstract=None, 
-        tags=None, my_notes=None, 
+        tags=None, my_notes=None, supplementary_materials=None,
     ):
         self.shorts = shorts
         self.apa = apa
@@ -25,6 +27,7 @@ class Paper:
         self.abstract = abstract
         self.tags = tags
         self.my_notes = my_notes
+        self.supplementary_materials = supplementary_materials
 
 def allPapers():
     s = []
@@ -2530,3 +2533,68 @@ satori_towards_proactive_ar_assistant_with_belief_desire_intention_user_modeling
     tags = [hci, llm_in_the_loop, vr_ar],
 )
 
+the_neural_basis_of_implicit_learning_and_memory_a_review_of_neuropsychological_and_neuroimaging_research = Paper(
+    apa = r'''Reber, P. J. (2013). The neural basis of implicit learning and memory: A review of neuropsychological and neuroimaging research. Neuropsychologia, 51(10), 2026-2042.''', 
+    bib = r'''@article{reber2013neural,
+  title={The neural basis of implicit learning and memory: A review of neuropsychological and neuroimaging research},
+  author={Reber, Paul J},
+  journal={Neuropsychologia},
+  volume={51},
+  number={10},
+  pages={2026--2042},
+  year={2013},
+  publisher={Elsevier}
+}''',
+    abstract = r'''Memory systems research has typically described the different types of long-term memory in the brain as either declarative versus non-declarative or implicit versus explicit. These descriptions reflect the difference between declarative, conscious, and explicit memory that is dependent on the medial temporal lobe (MTL) memory system, and all other expressions of learning and memory. The other type of memory is generally defined by an absence: either the lack of dependence on the MTL memory system (nondeclarative) or the lack of conscious awareness of the information acquired (implicit). However, definition by absence is inherently underspecified and leaves open questions of how this type of memory operates, its neural basis, and how it differs from explicit, declarative memory. Drawing on a variety of studies of implicit learning that have attempted to identify the neural correlates of implicit learning using functional neuroimaging and neuropsychology, a theory of implicit memory is presented that describes it as a form of general plasticity within processing networks that adaptively improve function via experience. Under this model, implicit memory will not appear as a single, coherent, alternative memory system but will instead be manifested as a principle of improvement from experience based on widespread mechanisms of cortical plasticity. The implications of this characterization for understanding the role of implicit learning in complex cognitive processes and the effects of interactions between types of memory will be discussed for examples within and outside the psychology laboratory.''',
+    tags = [forwarded_by_elizabeth_churchill, psychology], 
+    my_notes = r'''
+TIL a new phrase "task strategy".  
+I read Sec. 1,2,3,4,5,11,12
+''',
+)
+
+learning_music_prospects_about_implicit_knowledge_in_music_new_technologies_and_music_education = Paper(
+    apa = r'''Bigand, E., Lalitte, P., & Tillmann, B. (2008). Learning music: prospects about implicit knowledge in music, new technologies and music education. Sound to Sense, Sense to Sound. A State of the Art in Sound and Music Computing, 47-81.''',
+    bib = r'''@article{bigand2008learning,
+  title={Learning music: prospects about implicit knowledge in music, new technologies and music education},
+  author={Bigand, Emmanuel and Lalitte, Philippe and Tillmann, Barbara},
+  journal={Sound to Sense, Sense to Sound. A State of the Art in Sound and Music Computing},
+  pages={47--81},
+  year={2008},
+  publisher={Logos Verlag Berlin}
+}''', 
+    abstract = r'''The chapter proposes an overview of musical learning by underlining the force of the cognitive system, which is able to learn and to treat complex information at an implicit level. The first part summarises recent research in cognitive sciences, that studies the processes of implicit learning in music perception. These studies show that the abilities of non-musicians in perceiving music are very often comparable to those of musicians. The second part illustrates by means of some examples the use of multimedia tools for learning tonal and atonal music; these tools take advantage of the interaction between visual and auditive modalities.''',
+    tags = [forwarded_by_elizabeth_churchill, psychology], 
+)
+
+surmounting_the_ceiling_effect_of_motor_expertise_by_novel_sensory_experience_with_a_hand_exoskeleton = Paper(
+    apa = r'''Furuya, S., Oku, T., Nishioka, H., & Hirano, M. (2025). Surmounting the ceiling effect of motor expertise by novel sensory experience with a hand exoskeleton. Science Robotics, 10(98), eadn3802.''',
+    bib = r'''@article{furuya2025surmounting,
+  title={Surmounting the ceiling effect of motor expertise by novel sensory experience with a hand exoskeleton},
+  author={Furuya, Shinichi and Oku, Takanori and Nishioka, Hayato and Hirano, Masato},
+  journal={Science Robotics},
+  volume={10},
+  number={98},
+  pages={eadn3802},
+  year={2025},
+  publisher={American Association for the Advancement of Science}
+}''',
+    abstract = r'''For trained individuals such as athletes and musicians, learning often plateaus after extensive training, known as the “ceiling effect.” One bottleneck to overcome it is having no prior physical experience with the skill to be learned. Here, we challenge this issue by exposing expert pianists to fast and complex finger movements that cannot be performed voluntarily, using a hand exoskeleton robot that can move individual fingers quickly and independently. Although the skill of moving the fingers quickly plateaued through weeks of piano practice, passive exposure to otherwise impossible complex finger movements generated by the exoskeleton robot at a speed faster than the pianists’ fastest one enabled them to play faster. Neither a training for fast but simple finger movements nor one for slow but complex movements with the exoskeleton enhanced the overtrained motor skill. The exoskeleton training with one hand also improved the motor skill of the untrained contralateral hand, demonstrating the intermanual transfer effect. The training altered patterns of coordinated activities across multiple finger muscles during piano playing but not in general motor and somatosensory functions or in anatomical characteristics of the hand (range of motion). Patterns of the multifinger movements evoked by transcranial magnetic stimulation over the left motor cortex were also changed through passive exposure to fast and complex finger movements, which accompanied increased involvement of constituent movement elements characterizing the individuated finger movements. The results demonstrate evidence that somatosensory exposure to an unexperienced motor skill allows surmounting of the ceiling effect in a task-specific but effector-independent manner.''',
+    tags = [haptic],
+    supplementary_materials = 'surmounting_the_ceiling_effect_of_motor_expertise_by_novel_sensory_experience_with_a_hand_exoskeleton_sm.pdf', 
+)
+
+interpret_your_decision_logical_reasoning_regularization_for_generalization_in_visual_classification = Paper(
+    apa = r'''Tan, Z., Yang, X., Wang, Q., Nguyen, A., & Huang, K. (2024). Interpret Your Decision: Logical Reasoning Regularization for Generalization in Visual Classification. arXiv preprint arXiv:2410.04492.''',
+    bib = r'''@article{tan2024interpret,
+  title={Interpret Your Decision: Logical Reasoning Regularization for Generalization in Visual Classification},
+  author={Tan, Zhaorui and Yang, Xi and Wang, Qiufeng and Nguyen, Anh and Huang, Kaizhu},
+  journal={arXiv preprint arXiv:2410.04492},
+  year={2024}
+}''',
+    abstract = r'''Vision models excel in image classification but struggle to generalize to unseen data, such as classifying images from unseen domains or discovering novel categories. In this paper, we explore the relationship between logical reasoning and deep learning generalization in visual classification. A logical regularization termed L-Reg is derived which bridges a logical analysis framework to image classification. Our work reveals that L-Reg reduces the complexity of the model in terms of the feature distribution and classifier weights. Specifically, we unveil the interpretability brought by L-Reg, as it enables the model to extract the salient features, such as faces to persons, for classification. Theoretical analysis and experiments demonstrate that L-Reg enhances generalization across various scenarios, including multi-domain generalization and generalized category discovery. In complex real-world scenarios where images span unknown classes and unseen domains, L-Reg consistently improves generalization, highlighting its practical efficacy. ''',
+    tags = [presented_in_mus_x_lab], 
+    my_notes = r'''
+https://docs.google.com/presentation/d/1c-J_0QYm2VBdMoohFcv1gNEHtEDeqBH0D7JFjQOfJnc/edit?usp=sharing
+''',
+)
