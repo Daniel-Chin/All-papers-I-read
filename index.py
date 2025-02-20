@@ -2598,3 +2598,38 @@ interpret_your_decision_logical_reasoning_regularization_for_generalization_in_v
 https://docs.google.com/presentation/d/1c-J_0QYm2VBdMoohFcv1gNEHtEDeqBH0D7JFjQOfJnc/edit?usp=sharing
 ''',
 )
+
+decision_making_in_sports_influence_of_complexity_on_implicit_and_explicit_learning = Paper(
+    apa = r'''Raab, M. (2003). Decision making in sports: Influence of complexity on implicit and explicit learning. International Journal of Sport and Exercise Psychology, 1(4), 406-433.''',
+    bib = r'''@article{raab2003decision,
+  title={Decision making in sports: Influence of complexity on implicit and explicit learning},
+  author={Raab, Markus},
+  journal={International Journal of Sport and Exercise Psychology},
+  volume={1},
+  number={4},
+  pages={406--433},
+  year={2003},
+  publisher={Taylor \& Francis}
+}''',
+    abstract = r'''This paper analyzes the implicit and explicit learning distinction of tactical decision making in ball games. It is argued that implicitly learned decisions are advantageous in low‐complexity situations and explicitly learned decisions are advantageous in high‐complexity situations. Four experiments were carried out in low‐complexity and high‐complexity situations in handball, basketball, and volleyball. The results suggest that in low‐complexity situations implicit learners are superior to explicit learners, and in high‐complexity situations the opposite is true. These results, in sports‐specific situations, are consistent with recent research that shows the ecological rationality of human behavior. Practical applications are drawn from the results for training in ball games.''',
+    tags = [forwarded_by_elizabeth_churchill, psychology],
+    my_notes = r'''
+- Questions:
+  - MUST figuree out its relation with
+    - Ecological Rationality
+    - Bounded rationality
+'''
+)
+
+return_of_unconditional_generation_a_self_supervised_representation_generation_method = Paper(
+    apa = r'''Li, T., Katabi, D., & He, K. (2025). Return of unconditional generation: A self-supervised representation generation method. Advances in Neural Information Processing Systems, 37, 125441-125468.''',
+    bib = r'''@article{li2025return,
+  title={Return of unconditional generation: A self-supervised representation generation method},
+  author={Li, Tianhong and Katabi, Dina and He, Kaiming},
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  pages={125441--125468},
+  year={2025}
+}''',
+    abstract = r'''     Unconditional generation -- the problem of modeling data distribution without relying on human-annotated labels -- is a long-standing and fundamental challenge in generative models, creating a potential of learning from large-scale unlabeled data. In the literature, the generation quality of an unconditional method has been much worse than that of its conditional counterpart. This gap can be attributed to the lack of semantic information provided by labels. In this work, we show that one can close this gap by generating semantic representations in the representation space produced by a self-supervised encoder. These representations can be used to condition the image generator. This framework, called Representation-Conditioned Generation (RCG), provides an effective solution to the unconditional generation problem without using labels. Through comprehensive experiments, we observe that RCG significantly improves unconditional generation quality: e.g., it achieves a new state-of-the-art FID of 2.15 on ImageNet 256x256, largely reducing the previous best of 5.91 by a relative 64%. Our unconditional results are situated in the same tier as the leading class-conditional ones. We hope these encouraging observations will attract the community's attention to the fundamental problem of unconditional generation. Code is available at https://github.com/LTH14/rcg''',
+)
