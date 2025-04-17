@@ -2342,7 +2342,7 @@ simple_and_controllable_music_generation = Paper(
   year={2024}
 }''',
     abstract = r'''We tackle the task of conditional music generation. We introduce MusicGen, a single Language Model (LM) that operates over several streams of compressed discrete music representation, i.e., tokens. Unlike prior work, MusicGen is comprised of a single-stage transformer LM together with efficient token interleaving patterns, which eliminates the need for cascading several models, e.g., hierarchically or upsampling. Following this approach, we demonstrate how MusicGen can generate high-quality samples, both mono and stereo, while being conditioned on textual description or melodic features, allowing better controls over the generated output. We conduct extensive empirical evaluation, considering both automatic and human studies, showing the proposed approach is superior to the evaluated baselines on a standard text-to-music benchmark. Through ablation studies, we shed light over the importance of each of the components comprising MusicGen. Music samples, code, and models are available at https://github.com/facebookresearch/audiocraft''',
-    tags = [llm, generation, transformer, control],
+    tags = [llm, generation, transformer, control, music_generation],
 )
 
 minigpt_5_interleaved_vision_and_language_generation_via_generative_vokens = Paper(
@@ -2632,4 +2632,49 @@ return_of_unconditional_generation_a_self_supervised_representation_generation_m
   year={2025}
 }''',
     abstract = r'''     Unconditional generation -- the problem of modeling data distribution without relying on human-annotated labels -- is a long-standing and fundamental challenge in generative models, creating a potential of learning from large-scale unlabeled data. In the literature, the generation quality of an unconditional method has been much worse than that of its conditional counterpart. This gap can be attributed to the lack of semantic information provided by labels. In this work, we show that one can close this gap by generating semantic representations in the representation space produced by a self-supervised encoder. These representations can be used to condition the image generator. This framework, called Representation-Conditioned Generation (RCG), provides an effective solution to the unconditional generation problem without using labels. Through comprehensive experiments, we observe that RCG significantly improves unconditional generation quality: e.g., it achieves a new state-of-the-art FID of 2.15 on ImageNet 256x256, largely reducing the previous best of 5.91 by a relative 64%. Our unconditional results are situated in the same tier as the leading class-conditional ones. We hope these encouraging observations will attract the community's attention to the fundamental problem of unconditional generation. Code is available at https://github.com/LTH14/rcg''',
+    tags = [presented_in_mus_x_lab],
+    my_notes = r'''
+https://docs.google.com/presentation/d/1Q-60_kjveln6ROLcmvRAl9-t6xXdgMJetShbxD0AahY/edit?usp=sharing
+''',
+)
+
+scalable_diffusion_models_with_transformers = Paper(
+    apa = r'''Peebles, W., & Xie, S. (2023). Scalable diffusion models with transformers. In Proceedings of the IEEE/CVF international conference on computer vision (pp. 4195-4205).''',
+    bib = r'''@inproceedings{peebles2023scalable,
+  title={Scalable diffusion models with transformers},
+  author={Peebles, William and Xie, Saining},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={4195--4205},
+  year={2023}
+}''',
+    abstract = r'''     We explore a new class of diffusion models based on the transformer architecture. We train latent diffusion models of images, replacing the commonly-used U-Net backbone with a transformer that operates on latent patches. We analyze the scalability of our Diffusion Transformers (DiTs) through the lens of forward pass complexity as measured by Gflops. We find that DiTs with higher Gflops -- through increased transformer depth/width or increased number of input tokens -- consistently have lower FID. In addition to possessing good scalability properties, our largest DiT-XL/2 models outperform all prior diffusion models on the class-conditional ImageNet 512x512 and 256x256 benchmarks, achieving a state-of-the-art FID of 2.27 on the latter. ''',
+    tags = [diffusion, presented_in_mus_x_lab],
+)
+
+meteor_melody_aware_texture_controllable_symbolic_orchestral_music_generation = Paper(
+    shorts = ['METEOR'],
+    apa = r'''Le, D. V. T., & Yang, Y. H. (2024). METEOR: Melody-aware Texture-controllable Symbolic Orchestral Music Generation. arXiv preprint arXiv:2409.11753.''',
+    bib = r'''@article{le2024meteor,
+  title={METEOR: Melody-aware Texture-controllable Symbolic Orchestral Music Generation},
+  author={Le, Dinh-Viet-Toan and Yang, Yi-Hsuan},
+  journal={arXiv preprint arXiv:2409.11753},
+  year={2024}
+}''',
+    abstract = r'''     Western music is often characterized by a homophonic texture, in which the musical content can be organized into a melody and an accompaniment. In orchestral music, in particular, the composer can select specific characteristics for each instrument's part within the accompaniment, while also needing to adapt the melody to suit the capabilities of the instruments performing it. In this work, we propose METEOR, a model for Melody-aware Texture-controllable Orchestral music generation. This model performs symbolic multi-track music style transfer with a focus on melodic fidelity. We allow bar- and track-level controllability of the accompaniment with various textural attributes while keeping a homophonic texture. We show that the model can achieve controllability performances similar to strong baselines while greatly improve melodic fidelity. ''',
+    tags = [generation, music_generation, in_fact_did_not_read],
+)
+
+a_survey_on_mixture_of_experts_in_large_language_models = Paper(
+    apa = r'''Cai, W., Jiang, J., Wang, F., Tang, J., Kim, S., & Huang, J. (2024). A survey on mixture of experts. arXiv preprint arXiv:2407.06204.''',
+    bib = r'''@article{cai2024survey,
+  title={A survey on mixture of experts},
+  author={Cai, Weilin and Jiang, Juyong and Wang, Fan and Tang, Jing and Kim, Sunghun and Huang, Jiayi},
+  journal={arXiv preprint arXiv:2407.06204},
+  year={2024}
+}''',
+    abstract = r'''     Large language models (LLMs) have garnered unprecedented advancements across diverse fields, ranging from natural language processing to computer vision and beyond. The prowess of LLMs is underpinned by their substantial model size, extensive and diverse datasets, and the vast computational power harnessed during training, all of which contribute to the emergent abilities of LLMs (e.g., in-context learning) that are not present in small models. Within this context, the mixture of experts (MoE) has emerged as an effective method for substantially scaling up model capacity with minimal computation overhead, gaining significant attention from academia and industry. Despite its growing prevalence, there lacks a systematic and comprehensive review of the literature on MoE. This survey seeks to bridge that gap, serving as an essential resource for researchers delving into the intricacies of MoE. We first briefly introduce the structure of the MoE layer, followed by proposing a new taxonomy of MoE. Next, we overview the core designs for various MoE models including both algorithmic and systemic aspects, alongside collections of available open-source implementations, hyperparameter configurations and empirical evaluations. Furthermore, we delineate the multifaceted applications of MoE in practice, and outline some potential directions for future research. To facilitate ongoing updates and the sharing of cutting-edge advances in MoE research, we have established a resource repository at this https URL. ''',
+    tags = [mixture_of_experts, presented_in_mus_x_lab],
+    my_notes = r'''
+https://docs.google.com/presentation/d/155w2FXKd3oIqgmoFd8UxtjOs2RmpWVKf8wsNmRoG5HE/edit?usp=sharing
+'''
 )
