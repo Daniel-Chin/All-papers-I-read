@@ -2688,5 +2688,26 @@ hapticus_exploring_the_effects_of_haptic_feedback_and_its_customization_on_motor
   year={2025}
 }''',
     abstract = r'''Numerous haptic devices have been proposed to support motor learning, such as a hand exoskeleton with mechanical linkages, a vibrotactile glove, and an Electrical Muscle Stimulation (EMS) device. Understanding the impact of each type of feedback on users’ learning performance and experience, as well as the effects of customizing the haptic feedback each user receives, is vital to achieving both efficient and highly motivating learning. To this end, we compared learning performance and experience while using these haptic devices for piano learning. It revealed the distinct characteristics of each device, notably, the exoskeleton was the most preferred despite certain drawbacks. We then conducted a user study to evaluate the effectiveness of haptic customization, allowing participants to customize the order of haptic feedback, demonstrating its advantages such as improved agency and performance. These findings would benefit haptic designers by providing more efficient and optimized haptic feedback for motor learning scenarios.''',
-    tags = [T.haptic, T.music_edu, T.chi2025],
+    tags = [T.chi2025, T.haptic, T.music_edu],
+)
+
+towards_dialogic_and_on_demand_metaphors_for_interdisciplinary_reading = Paper(
+    apa = r'''Yarmand, M., Reed, C. N., Tandon, U., Hekler, E. B., Weibel, N., & Wang, A. Y. (2025, April). Towards Dialogic and On-Demand Metaphors for Interdisciplinary Reading. In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (pp. 1-19).''',
+    bib = r'''@inproceedings{yarmand2025towards,
+  title={Towards Dialogic and On-Demand Metaphors for Interdisciplinary Reading},
+  author={Yarmand, Matin and Reed, Courtney N and Tandon, Udayan and Hekler, Eric B and Weibel, Nadir and Wang, April Yi},
+  booktitle={Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+  pages={1--19},
+  year={2025}
+}''',
+    abstract = r'''The interdisciplinary field of Human-Computer Interaction (HCI) thrives on productive engagement with different domains, yet this engagement often breaks due to idiosyncratic writing styles and unfamiliar concepts. Inspired by the dialogic model of abstract metaphors, as well as the potential of Large Language Models (LLMs) to produce on-demand support, we investigate the use of metaphors to facilitate engagement between Science and Technology Studies (STS) and System HCI. Our reflective-style survey with early-career HCI researchers (N= 48) reported that limited prior exposure to STS research can hinder perceived openness of the work, and ultimately interest in reading. The survey also revealed that metaphors enhance likelihood to continue reading STS papers, and alternative perspectives can build critical thinking skills to mitigate potential risks of LLM-generated metaphors. We lastly offer a specified model of metaphor exchange (within this generative context) that incorporates alternative perspectives to construct shared understanding in interdisciplinary engagement.''',
+    tags = [T.chi2025, T.llm, T.education],
+    my_notes = r'''
+用 LLM 生成读者领域内 metaphor 解释正在读的跨领域 paper. 
+In our case, 如果 Gus 教我音乐一定会常用 CS 概念比喻，因为我们都熟知 CS. 
+Now since an LLM is an "expert" in all fields, 
+we should let the LLM teaching assistant know 
+the background of the student and extensively use metaphors 
+of the student's field.
+'''
 )
