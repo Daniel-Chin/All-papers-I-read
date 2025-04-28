@@ -1,72 +1,69 @@
-from __future__ import annotations
+from enum import Enum, auto
 
-import typing as tp
-
-Tag: tp.TypeAlias = tp.Callable
-
-def transformer(): pass
-def music_knowledge(): pass
-def contrastive(): pass
-def hierarchical(): pass
-def generation(): pass
-def structure(): pass
-def relation(): pass
-def psychology(): pass
-def education(): pass
-def vq_vae(): pass
-def self_supervise(): pass
-def f0(): pass
-def pitch_shift_invariance(): pass
-def haptic(): pass
-def vibration(): pass
-def passive_learning(): pass
-def multimodal(): pass
-def adaptive_curriculum_scaffolding(): pass
-def visual(): pass
-def audio(): pass
-def audio_visual_haptic(): pass
-def music_edu(): pass
-def network(): pass
-def transfer_learning(): pass
-def time_hierarchy(): pass
-def lit_review_for_junyan_ismir_2022(): pass
-def dataset(): pass
-def computer_vision(): pass
-def realtime(): pass
-def diffusion(): pass
-def causality(): pass
-def symmetry(): pass
-def control(): pass
-def nlp(): pass
-def ismir2022(): pass
-def gan(): pass
-def repr_learning(): pass
-def jepa_or_jem(): pass
-def multi_source_seperation(): pass
-def zero_shot(): pass
-def llm(): pass
-def lm(): pass
-def hyper_network(): pass
-def llm_add_system_2(): pass
-def llm_in_the_loop(): pass
-def emergent_symbols(): pass
-def lit_review_for_liwei_ijcai_2024(): pass
-def inpaint(): pass
-def symbolic_music(): pass
-def music_audio(): pass
-def rule_based(): pass
-def lit_review_for_hci_ijcai_2024(): pass
-def talks_at_mbzuai(): pass
-def llm_over_GUI(): pass
-def llm_as_agent(): pass
-def multimodal_llm(): pass
-def hci(): pass
-def optimization(): pass
-def cross_modal_align(): pass
-def presented_in_mus_x_lab(): pass
-def vr_ar(): pass
-def forwarded_by_elizabeth_churchill(): pass
-def music_generation(): pass
-def in_fact_did_not_read(): pass
-def mixture_of_experts(): pass
-def chi2025(): pass
+class Tag(Enum):
+    transformer = auto()
+    music_knowledge = auto()
+    contrastive = auto()
+    hierarchical = auto()
+    generation = auto()
+    structure = auto()
+    relation = auto()
+    psychology = auto()
+    education = auto()
+    vq_vae = auto()
+    self_supervise = auto()
+    f0 = auto()
+    pitch_shift_invariance = auto()
+    haptic = auto()
+    vibration = auto()
+    passive_learning = auto()
+    multimodal = auto()
+    adaptive_curriculum_scaffolding = auto()
+    visual = auto()
+    audio = auto()
+    audio_visual_haptic = auto()
+    music_edu = auto()
+    network = auto()
+    transfer_learning = auto()
+    time_hierarchy = auto()
+    lit_review_for_junyan_ismir_2022 = auto()
+    dataset = auto()
+    computer_vision = auto()
+    realtime = auto()
+    diffusion = auto()
+    causality = auto()
+    symmetry = auto()
+    control = auto()
+    nlp = auto()
+    ismir2022 = auto()
+    gan = auto()
+    repr_learning = auto()
+    jepa_or_jem = auto()
+    multi_source_seperation = auto()
+    zero_shot = auto()
+    llm = auto()
+    lm = auto()
+    hyper_network = auto()
+    llm_add_system_2 = auto()
+    llm_in_the_loop = auto()
+    emergent_symbols = auto()
+    lit_review_for_liwei_ijcai_2024 = auto()
+    inpaint = auto()
+    symbolic_music = auto()
+    music_audio = auto()
+    rule_based = auto()
+    lit_review_for_hci_ijcai_2024 = auto()
+    talks_at_mbzuai = auto()
+    llm_over_GUI = auto()
+    llm_as_agent = auto()
+    multimodal_llm = auto()
+    hci = auto()
+    optimization = auto()
+    cross_modal_align = auto()
+    presented_in_mus_x_lab = auto()
+    vr_ar = auto()
+    forwarded_by_elizabeth_churchill = auto()
+    music_generation = auto()
+    in_fact_did_not_read = auto()
+    mixture_of_experts = auto()
+    chi2025 = auto()
