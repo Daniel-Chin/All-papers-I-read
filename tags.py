@@ -1,6 +1,8 @@
-from typing import Callable
+from __future__ import annotations
 
-Tag = Callable
+import typing as tp
+
+Tag: tp.TypeAlias = tp.Callable
 
 def transformer(): pass
 def music_knowledge(): pass

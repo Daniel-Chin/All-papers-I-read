@@ -3,7 +3,6 @@ from __future__ import annotations
 from typing import List, Optional
 from dataclasses import dataclass
 
-import tags
 import tags as T
 from tags import Tag
 
@@ -31,7 +30,7 @@ class Paper:
 
 def allPapers():
     s = []
-    tags_and_more = set(tags.__dict__.keys())
+    tags_and_more = set(T.__dict__.keys())
     for key, value in globals().items():
         if key.startswith('__'):
             continue
