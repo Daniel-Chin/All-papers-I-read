@@ -2711,3 +2711,20 @@ the background of the student and extensively use metaphors
 of the student's field.
 '''
 )
+
+learning_by_teaching_designing_teachable_agents_to_support_children_s_pronunciation_skill_learning = Paper(
+    apa = r'''Dillenbourg, P. (2025). Learning by Teaching: Designing Teachable Agents to Support Children's Pronunciation Skill Learning. In Proceedings of the 2025 ACM CHI Conference on Human Factors in Computing Systems [Forthcoming publication].''',
+    bib = r'''@inproceedings{dillenbourg2025learning,
+  title={Learning by Teaching: Designing Teachable Agents to Support Children's Pronunciation Skill Learning},
+  author={Dillenbourg, Pierre},
+  booktitle={Proceedings of the 2025 ACM CHI Conference on Human Factors in Computing Systems [Forthcoming publication]},
+  year={2025}
+}''',
+    abstract = r'''Pronunciation is a critical yet challenging aspect of language acquisition, especially for children. In this work, we propose a new teachable agent system designed to support children's pronunciation learning through a Learning-by-Teaching paradigm to address this, featuring the Phoneme-level Mispronunciation Projection (PMP) method. This method enhances learning by having the agent reproduce or exaggerate children's mispronunciations, encouraging their correction and practice. We implemented a prototype system featuring both virtual and physical embodiments of teachable agents, allowing us to explore their effectiveness in motivating children. In a pilot study with 27 children aged 7-9, we evaluated the PMP method's perceived performance, children's motivation to teach, and the influence of agent embodiment (virtual vs. physical robots). Results demonstrate the effectiveness of PMP in supporting pronunciation learning and highlight the physical robot's advantages in fostering engagement. This work also offers initial design implications for future teachable agents to support children's pronunciation skill learning.''',
+    tags = [T.chi2025, T.education],
+    my_notes = r'''
+挺强的。agent 识别学生错误，在别的例子上放大、请求学生指正。可以直接应用于音乐。  
+小心：带坏头。  
+Doubt: this is implementable by human teachers. why isn't it a mainstream way of teaching?  
+''',
+)
