@@ -2728,3 +2728,92 @@ learning_by_teaching_designing_teachable_agents_to_support_children_s_pronunciat
 Doubt: this is implementable by human teachers. why isn't it a mainstream way of teaching?  
 ''',
 )
+
+from_exploration_to_mastery_enabling_llms_to_master_tools_via_self_driven_interactions = Paper(
+    apa = r'''Qu, C., Dai, S., Wei, X., Cai, H., Wang, S., Yin, D., ... & Wen, J. R. From Exploration to Mastery: Enabling LLMs to Master Tools via Self-Driven Interactions. In The Thirteenth International Conference on Learning Representations.''',
+    bib = r'''@inproceedings{quexploration,
+  title={From Exploration to Mastery: Enabling LLMs to Master Tools via Self-Driven Interactions},
+  author={Qu, Changle and Dai, Sunhao and Wei, Xiaochi and Cai, Hengyi and Wang, Shuaiqiang and Yin, Dawei and Xu, Jun and Wen, Ji-Rong},
+  booktitle={The Thirteenth International Conference on Learning Representations}
+}''',
+    abstract = r'''     Tool learning enables Large Language Models (LLMs) to interact with external environments by invoking tools, serving as an effective strategy to mitigate the limitations inherent in their pre-training data. In this process, tool documentation plays a crucial role by providing usage instructions for LLMs, thereby facilitating effective tool utilization. This paper concentrates on the critical challenge of bridging the comprehension gap between LLMs and external tools due to the inadequacies and inaccuracies inherent in existing human-centric tool documentation. We propose a novel framework, DRAFT, aimed at Dynamically Refining tool documentation through the Analysis of Feedback and Trials emanating from LLMs' interactions with external tools. This methodology pivots on an innovative trial-and-error approach, consisting of three distinct learning phases: experience gathering, learning from experience, and documentation rewriting, to iteratively enhance the tool documentation. This process is further optimized by implementing a diversity-promoting exploration strategy to ensure explorative diversity and a tool-adaptive termination mechanism to prevent overfitting while enhancing efficiency. Extensive experiments on multiple datasets demonstrate that DRAFT's iterative, feedback-based refinement significantly ameliorates documentation quality, fostering a deeper comprehension and more effective utilization of tools by LLMs. Notably, our analysis reveals that the tool documentation refined via our approach demonstrates robust cross-model generalization capabilities. ''',
+    tags = [T.presented_in_mus_x_lab, T.presented_at_nanjing_yishu],
+)
+
+regenesis_llms_can_grow_into_reasoning_generalists_via_self_improvement = Paper(
+    apa = r'''Peng, X., Xia, C., Yang, X., Xiong, C., Wu, C. S., & Xing, C. (2024). ReGenesis: LLMs can Grow into Reasoning Generalists via Self-Improvement. arXiv preprint arXiv:2410.02108.''',
+    bib = r'''@article{peng2024regenesis,
+  title={ReGenesis: LLMs can Grow into Reasoning Generalists via Self-Improvement},
+  author={Peng, Xiangyu and Xia, Congying and Yang, Xinyi and Xiong, Caiming and Wu, Chien-Sheng and Xing, Chen},
+  journal={arXiv preprint arXiv:2410.02108},
+  year={2024}
+}''',
+    abstract = r'''     Post-training Large Language Models (LLMs) with explicit reasoning trajectories can enhance their reasoning abilities. However, acquiring such high-quality trajectory data typically demands meticulous supervision from humans or superior models, which can be either expensive or license-constrained. In this paper, we explore how far an LLM can improve its reasoning by self-synthesizing reasoning paths as training data without any additional supervision. Existing self-synthesizing methods, such as STaR, suffer from poor generalization to out-of-domain (OOD) reasoning tasks. We hypothesize it is due to that their self-synthesized reasoning paths are too task-specific, lacking general task-agnostic reasoning guidance. To address this, we propose Reasoning Generalist via Self-Improvement (ReGenesis), a method to self-synthesize reasoning paths as post-training data by progressing from abstract to concrete. More specifically, ReGenesis self-synthesizes reasoning paths by converting general reasoning guidelines into task-specific ones, generating reasoning structures, and subsequently transforming these structures into reasoning paths, without the need for human-designed task-specific examples used in existing methods. We show that ReGenesis achieves superior performance on all in-domain and OOD settings tested compared to existing methods. For six OOD tasks specifically, while previous methods exhibited an average performance decrease of approximately 4.6% after post training, ReGenesis delivers around 6.1% performance improvement. We also conduct in-depth analysis of our framework and show ReGenesis is effective across various LLMs and design choices. ''',
+    tags = [T.presented_in_mus_x_lab, T.presented_at_nanjing_yishu],
+)
+
+can_video_llms_refuse_to_answer_alignment_for_answerability_in_video_large_language_models = Paper(
+    apa = r'''Yoon, E., Yoon, H. S., Hasegawa-Johnson, M. A., & Yoo, C. D. Can Video LLMs Refuse to Answer? Alignment for Answerability in Video Large Language Models. In The Thirteenth International Conference on Learning Representations.''',
+    bib = r'''@inproceedings{yooncan,
+  title={Can Video LLMs Refuse to Answer? Alignment for Answerability in Video Large Language Models},
+  author={Yoon, Eunseop and Yoon, Hee Suk and Hasegawa-Johnson, Mark A and Yoo, Chang D},
+  booktitle={The Thirteenth International Conference on Learning Representations}
+}''',
+    abstract = r'''In the broader context of deep learning, Multimodal Large Language Models have achieved significant breakthroughs by leveraging powerful Large Language Models as a backbone to align different modalities into the language space. A prime exemplification is the development of Video Large Language Models (Video-LLMs). While numerous advancements have been proposed to enhance the video understanding capabilities of these models, they are predominantly trained on questions generated directly from video content. However, in real-world scenarios, users often pose questions that extend beyond the informational scope of the video, highlighting the need for Video-LLMs to assess the relevance of the question. We demonstrate that even the best-performing Video-LLMs fail to reject unfit questions-not necessarily due to a lack of video understanding, but because they have not been trained to identify and refuse such questions. To address this limitation, we propose alignment for answerability, a framework that equips Video-LLMs with the ability to evaluate the relevance of a question based on the input video and appropriately decline to answer when the question exceeds the scope of the video, as well as an evaluation framework with a comprehensive set of metrics designed to measure model behavior before and after alignment. Furthermore, we present a pipeline for creating a dataset specifically tailored for alignment for answerability, leveraging existing video-description paired datasets.''',
+    tags = [T.presented_in_mus_x_lab, T.presented_at_nanjing_yishu],
+)
+
+ferret_ui_2_mastering_universal_user_interface_understanding_across_platforms = Paper(
+    apa = r'''Zhang, Y., Wang, Y., Zhang, H., & Liu, J. (2024). Ferret UI 2: Mastering Universal User Interface Understanding across Platforms. In The Thirteenth International Conference on Learning Representations.''',
+    bib = r'''@inproceedings{zhangferret,
+title={Ferret UI 2: Mastering Universal User Interface Understanding across Platforms},
+author={Zhang, Yifan and Wang, Yuxin and Zhang, Haoyang and Liu, Jian},
+booktitle={The Thirteenth International Conference on Learning Representations}
+year={2024}
+}''',
+    abstract = r'''Building a generalist model for user interface (UI) understanding is challenging due to various foundational issues, such as platform diversity, resolution variation, and data limitation. In this paper, we introduce Ferret-UI 2, a multimodal large language model (MLLM) designed for universal UI understanding across a wide range of platforms, including iPhone, Android, iPad, Webpage, and AppleTV. Building on the foundation of Ferret-UI, Ferret-UI 2 introduces three key innovations: support for multiple platform types, high-resolution perception through adaptive scaling, and advanced task training data generation powered by GPT-4o with set-of-mark visual prompting. These advancements enable Ferret-UI 2 to perform complex, user-centered interactions, making it highly versatile and adaptable for the expanding diversity of platform ecosystems. Extensive empirical experiments on referring, grounding, user-centric advanced tasks (comprising 9 subtasks 5 platforms), GUIDE next-action prediction dataset, and GUI-World multi-platform benchmark demonstrate that Ferret-UI 2 significantly outperforms Ferret-UI, and also shows strong cross-platform transfer capabilities.''',
+    tags = [T.presented_in_mus_x_lab, T.presented_at_nanjing_yishu],
+)
+
+reviseval_improving_llm_as_a_judge_via_response_adapted_references = Paper(
+    shorts = ['RevisEval'],
+    apa = r'''Zhang, Q., Wang, Y., Yu, T., Jiang, Y., Wu, C., Li, L., ... & Ma, C. (2024). Reviseval: Improving llm-as-a-judge via response-adapted references. arXiv preprint arXiv:2410.05193.''',
+    bib = r'''@article{zhang2024reviseval,
+  title={Reviseval: Improving llm-as-a-judge via response-adapted references},
+  author={Zhang, Qiyuan and Wang, Yufei and Yu, Tiezheng and Jiang, Yuxin and Wu, Chuhan and Li, Liangyou and Wang, Yasheng and Jiang, Xin and Shang, Lifeng and Tang, Ruiming and others},
+  journal={arXiv preprint arXiv:2410.05193},
+  year={2024}
+}''',
+    abstract = r'''     With significant efforts in recent studies, LLM-as-a-Judge has become a cost-effective alternative to human evaluation for assessing text generation quality in a wide range of tasks. However, there still remains a reliability gap between LLM-as-a-Judge and human evaluation. One important reason is the lack of guided oracles in the evaluation process. Motivated by the role of reference pervasively used in classic text evaluation, we introduce RevisEval, a novel text generation evaluation paradigm via the response-adapted references. RevisEval is driven by the key observation that an ideal reference should maintain the necessary relevance to the response to be evaluated. Specifically, RevisEval leverages the text revision capabilities of large language models (LLMs) to adaptively revise the response, then treat the revised text as the reference (response-adapted reference) for the subsequent evaluation. Extensive experiments demonstrate that RevisEval outperforms traditional reference-free and reference-based evaluation paradigms that use LLM-as-a-Judge across NLG tasks and open-ended instruction-following tasks. More importantly, our response-adapted references can further boost the classical text metrics, e.g., BLEU and BERTScore, compared to traditional references and even rival the LLM-as-a-Judge. A detailed analysis is also conducted to confirm RevisEval's effectiveness in bias reduction, the impact of inference cost, and reference relevance. ''',
+    tags = [T.presented_in_mus_x_lab, T.presented_at_nanjing_yishu, T.llm_as_agent],
+    my_notes = r'''
+Slides: https://docs.google.com/presentation/d/1NQA6gzesVTVRO9d7u-EGfjadhQIzeXtSu0dsUs1_Vc0/edit?usp=sharing
+''',
+)
+
+style_outweighs_substance_failure_modes_of_llm_judges_in_alignment_benchmarking = Paper(
+    apa = r'''Feuer, B., Goldblum, M., Datta, T., Nambiar, S., Besaleli, R., Dooley, S., ... & Dickerson, J. P. (2024). Style Outweighs Substance: Failure Modes of LLM Judges in Alignment Benchmarking. arXiv preprint arXiv:2409.15268.''',
+    bib = r'''@article{feuer2024style,
+  title={Style Outweighs Substance: Failure Modes of LLM Judges in Alignment Benchmarking},
+  author={Feuer, Benjamin and Goldblum, Micah and Datta, Teresa and Nambiar, Sanjana and Besaleli, Raz and Dooley, Samuel and Cembalest, Max and Dickerson, John P},
+  journal={arXiv preprint arXiv:2409.15268},
+  year={2024}
+}''',
+    abstract = r'''     The release of ChatGPT in November 2022 sparked an explosion of interest in post-training and an avalanche of new preference optimization (PO) methods. These methods claim superior alignment by virtue of better correspondence with human pairwise preferences, often measured by LLM-judges. In this work, we attempt to answer the following question -- do LLM-judge preferences translate to progress on other, more concrete metrics for alignment, and if not, why not? We define a concrete metric for alignment, and introduce SOS-Bench (Substance Outweighs Style Benchmark), which is to the best of our knowledge the largest standardized, reproducible LLM meta-benchmark to date. We find that (1) LLM-judge preferences do not correlate with concrete measures of safety, world knowledge, and instruction following; (2) LLM-judges have powerful implicit biases, prioritizing style over factuality and safety; and (3) the supervised fine-tuning (SFT) stage of post-training, and not the PO stage, has the greatest impact on alignment, with data scaling and prompt diversity as the driving factors. Our codebase and complete results can be found at this https URL. ''',
+    tags = [T.presented_in_mus_x_lab, T.presented_at_nanjing_yishu],
+)
+
+web_agents_with_world_models_learning_and_leveraging_environment_dynamics_in_web_navigation = Paper(
+    apa = r'''Chae, H., Kim, N., Ong, K. T. I., Gwak, M., Song, G., Kim, J., ... & Yeo, J. (2024). Web agents with world models: Learning and leveraging environment dynamics in web navigation. arXiv preprint arXiv:2410.13232.''',
+    bib = r'''@article{chae2024web,
+  title={Web agents with world models: Learning and leveraging environment dynamics in web navigation},
+  author={Chae, Hyungjoo and Kim, Namyoung and Ong, Kai Tzu-iunn and Gwak, Minju and Song, Gwanwoo and Kim, Jihoon and Kim, Sunghwan and Lee, Dongha and Yeo, Jinyoung},
+  journal={arXiv preprint arXiv:2410.13232},
+  year={2024}
+}''',
+    abstract = r'''     Large language models (LLMs) have recently gained much attention in building autonomous agents. However, the performance of current LLM-based web agents in long-horizon tasks is far from optimal, often yielding errors such as repeatedly buying a non-refundable flight ticket. By contrast, humans can avoid such an irreversible mistake, as we have an awareness of the potential outcomes (e.g., losing money) of our actions, also known as the "world model". Motivated by this, our study first starts with preliminary analyses, confirming the absence of world models in current LLMs (e.g., GPT-4o, Claude-3.5-Sonnet, etc.). Then, we present a World-model-augmented (WMA) web agent, which simulates the outcomes of its actions for better decision-making. To overcome the challenges in training LLMs as world models predicting next observations, such as repeated elements across observations and long HTML inputs, we propose a transition-focused observation abstraction, where the prediction objectives are free-form natural language descriptions exclusively highlighting important state differences between time steps. Experiments on WebArena and Mind2Web show that our world models improve agents' policy selection without training and demonstrate our agents' cost- and time-efficiency compared to recent tree-search-based agents. ''',
+    tags = [T.presented_in_mus_x_lab, T.presented_at_nanjing_yishu, T.llm_as_agent, T.llm_over_GUI],
+    my_notes = r'''
+Slides: https://docs.google.com/presentation/d/1NQA6gzesVTVRO9d7u-EGfjadhQIzeXtSu0dsUs1_Vc0/edit?usp=sharing
+''',
+)

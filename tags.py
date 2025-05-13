@@ -67,3 +67,4 @@ class Tag(Enum):
     in_fact_did_not_read = auto()
     mixture_of_experts = auto()
     chi2025 = auto()
+    presented_at_nanjing_yishu = auto()
