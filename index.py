@@ -2817,3 +2817,59 @@ web_agents_with_world_models_learning_and_leveraging_environment_dynamics_in_web
 Slides: https://docs.google.com/presentation/d/1NQA6gzesVTVRO9d7u-EGfjadhQIzeXtSu0dsUs1_Vc0/edit?usp=sharing
 ''',
 )
+
+urlost_unsupervised_representation_learning_without_stationarity_or_topology = Paper(
+    apa = r'''Yun, Z., Zhang, J., Olshausen, B., LeCun, Y., & Chen, Y. (2023). Urlost: Unsupervised representation learning without stationarity or topology. arXiv preprint arXiv:2310.04496.''',
+    bib = r'''@article{yun2023urlost,
+  title={Urlost: Unsupervised representation learning without stationarity or topology},
+  author={Yun, Zeyu and Zhang, Juexiao and Olshausen, Bruno and LeCun, Yann and Chen, Yubei},
+  journal={arXiv preprint arXiv:2310.04496},
+  year={2023}
+}''',
+    abstract = r'''     Unsupervised representation learning has seen tremendous progress. However, it is constrained by its reliance on domain specific stationarity and topology, a limitation not found in biological intelligence systems. For instance, unlike computer vision, human vision can process visual signals sampled from highly irregular and non-stationary sensors. We introduce a novel framework that learns from high-dimensional data without prior knowledge of stationarity and topology. Our model, abbreviated as URLOST, combines a learnable self-organizing layer, spectral clustering, and a masked autoencoder (MAE). We evaluate its effectiveness on three diverse data modalities including simulated biological vision data, neural recordings from the primary visual cortex, and gene expressions. Compared to state-of-the-art unsupervised learning methods like SimCLR and MAE, our model excels at learning meaningful representations across diverse modalities without knowing their stationarity or topology. It also outperforms other methods that are not dependent on these factors, setting a new benchmark in the field. We position this work as a step toward unsupervised learning methods capable of generalizing across diverse high-dimensional data modalities. ''',
+    tags = [T.presented_in_mus_x_lab, T.self_supervise],
+)
+
+expected_return_symmetries = Paper(
+    apa = r'''Muglich, D., Forkel, J., van der Pol, E., & Foerster, J. (2025). Expected Return Symmetries. arXiv preprint arXiv:2502.01711.''',
+    bib = r'''@article{muglich2025expected,
+  title={Expected Return Symmetries},
+  author={Muglich, Darius and Forkel, Johannes and van der Pol, Elise and Foerster, Jakob},
+  journal={arXiv preprint arXiv:2502.01711},
+  year={2025}
+}''',
+    abstract = r'''     Symmetry is an important inductive bias that can improve model robustness and generalization across many deep learning domains. In multi-agent settings, a priori known symmetries have been shown to address a fundamental coordination failure mode known as mutually incompatible symmetry breaking; e.g. in a game where two independent agents can choose to move "left'' or "right'', and where a reward of +1 or -1 is received when the agents choose the same action or different actions, respectively. However, the efficient and automatic discovery of environment symmetries, in particular for decentralized partially observable Markov decision processes, remains an open problem. Furthermore, environmental symmetry breaking constitutes only one type of coordination failure, which motivates the search for a more accessible and broader symmetry class. In this paper, we introduce such a broader group of previously unexplored symmetries, which we call expected return symmetries, which contains environment symmetries as a subgroup. We show that agents trained to be compatible under the group of expected return symmetries achieve better zero-shot coordination results than those using environment symmetries. As an additional benefit, our method makes minimal a priori assumptions about the structure of their environment and does not require access to ground truth symmetries. ''',
+    tags = [T.presented_in_mus_x_lab],
+)
+
+playability_prediction_in_digital_guitar_learning_using_interpretable_student_and_song_representations = Paper(
+    apa = r'''Müllerschön, M., Klapuri, A., Rodriguez, M., & Cardin, C. (2025, September). PLAYABILITY PREDICTION IN DIGITAL GUITAR LEARNING USING INTERPRETABLE STUDENT AND SONG REPRESENTATIONS. In Ismir 2025 Hybrid Conference.''',
+    bib = r'''@inproceedings{mullerschon2025playability,
+  title={PLAYABILITY PREDICTION IN DIGITAL GUITAR LEARNING USING INTERPRETABLE STUDENT AND SONG REPRESENTATIONS},
+  author={M{\"u}llersch{\"o}n, Manuel and Klapuri, Anssi and Rodriguez, Marcelo and Cardin, Christian},
+  booktitle={Ismir 2025 Hybrid Conference},
+  year={2025}
+}''',
+    abstract = r'''Digital music learning applications have become a popular option for self-guided learning of musical instruments. Personalization of the learning curriculum in such applications hinges on two essential components: The learning unit (song arrangement) and the learner (student). While previous research has focused extensively on quantifying and characterizing the musical content, learner representation remains largely unexplored. In this paper, we introduce interpretable representations for these components, in the context of digital guitar learning.
+
+We propose a methodology to embed song arrangements and individual guitar students into a shared, interpretable skill vector space. To achieve that, we employ an automated profiling technique for guitar tablatures, generating granular vocabulary and difficulty descriptors. We validate the effectiveness of these representations by predicting the proportion of onsets played correctly by students, using a large-scale dataset from an online guitar learning platform.
+
+Our results demonstrate that models leveraging the combined representation of students and song arrangements outperform informed baselines and show better predictive accuracy when compared to models using either representation individually. These findings underscore the value of joint learner-song arrangement representations for digital music learning.''',
+    tags = [T.ismir2025, T.music_edu],
+)
+
+what_song_now_personalized_rhythm_guitar_learning_in_western_popular_music = Paper(
+    apa = r'''Hassein-Bey, Z., Abbou, Y., D'Hooge, A., Giraud, M., Guillemain, G., & Jeanneau, A. (2025). What song now? Personalized Rhythm Guitar Learning in Western Popular Music. In International Society for Music Information Retrieval Conference (ISMIR 2025).''',
+    bib = r'''@inproceedings{hassein2025song,
+  title={What song now? Personalized Rhythm Guitar Learning in Western Popular Music},
+  author={Hassein-Bey, Zakaria and Abbou, Yohann and D'Hooge, Alexandre and Giraud, Mathieu and Guillemain, Gilles and Jeanneau, Aur{\'e}lien},
+  booktitle={International Society for Music Information Retrieval Conference (ISMIR 2025)},
+  year={2025}
+}''',
+    abstract = r'''The guitar is one of the most popular musical instruments, and numerous pedagogical tools have been developed to support learners. They rely on vast collections of songs, sheet music, and tablatures, making it challenging for guitarists to navigate and identify pieces that are both pedagogically relevant and aligned with their musical interests.
+
+We introduce a simple multi-criteria rule-based model to assess both the difficulty of learning a piece and the skill level of a guitarist, taking into account musical and technical criteria. The models provides personalized recommendations that help learners progress efficiently, considering parts within songs, but also multiple versions of the same part, accounting for simplified adaptations or different playing styles, and finally exercises used to progressively learn each part version.
+
+We implement and evaluate this approach in the context of rhythm guitar in popular music, using a dataset designed for the proprietary application Guitar Social Club. Expert evaluation of 77 recommendations for 8 user profiles of varying levels indicate that in 82% of cases, the model provides relevant recommendations. While the full dataset remains proprietary, we release under open licenses the code along with a sub-corpus containing annotated difficulties for 319 versions of 110 parts from 40 songs.''',
+    tags = [T.ismir2025, T.music_edu],
+)
