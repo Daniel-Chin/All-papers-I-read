@@ -69,3 +69,4 @@ class Tag(Enum):
     chi2025 = auto()
     presented_at_nanjing_yishu = auto()
     ismir2025 = auto()
+    music_performance_psychology = auto()

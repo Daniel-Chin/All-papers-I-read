@@ -2873,3 +2873,27 @@ We introduce a simple multi-criteria rule-based model to assess both the difficu
 We implement and evaluate this approach in the context of rhythm guitar in popular music, using a dataset designed for the proprietary application Guitar Social Club. Expert evaluation of 77 recommendations for 8 user profiles of varying levels indicate that in 82% of cases, the model provides relevant recommendations. While the full dataset remains proprietary, we release under open licenses the code along with a sub-corpus containing annotated difficulties for 319 versions of 110 parts from 40 songs.''',
     tags = [T.ismir2025, T.music_edu],
 )
+
+modeling_the_difficulty_of_saxophone_music = Paper(
+    apa = r'''Libřický, Š., & Hajič, J. (2025, September). Modeling the Difficulty of Saxophone Music. In Ismir 2025 Hybrid Conference.''',
+    bib = r'''@inproceedings{libvricky2025modeling,
+  title={Modeling the Difficulty of Saxophone Music},
+  author={Lib{\v{r}}ick{\`y}, {\v{S}}imon and Haji{\v{c}}, Jan and others},
+  booktitle={Ismir 2025 Hybrid Conference},
+  year={2025}
+}''',
+    abstract = r'''In learning music, difficulty is an important factor both in choice of repertoire, choice of tempo, and structure of practice. These choices are typically done with the guidance of a teacher; however, not all learners have access to one. While piano and strings have had some attention devoted to automated difficulty estimation, wind instruments have so far been under-served. In this paper, we propose a method for estimating the difficulty of pieces for winds and implement it for the tenor saxophone. We take the cost-of-traversal approach, modelling the part as a sequence of transitions -- note pairs. We estimate transition costs from newly collected recordings of trill speeds, comparing representations of saxophone fingerings at various levels of expert input. We then compute and visualise the cost of the optimal path through the part, at a given tempo. While we present this model for the tenor saxophone, the same pipeline can be applied to any wind instrument, and our experiments show that with appropriate feature design, only a small proportion of possible trills is needed to estimate the costs well. Thus, we present a practical way of diversifying the capabilities of MIR in music education to the wind family of instruments.''',
+    tags = [T.ismir2025, T.music_performance_psychology],
+)
+
+modeling_the_difficulty_of_saxophone_music = Paper(
+    apa = r'''Libřický, Š., & Hajič, J. (2025, September). Modeling the Difficulty of Saxophone Music. In Ismir 2025 Hybrid Conference.''',
+    bib = r'''@inproceedings{libvricky2025modeling,
+  title={Modeling the Difficulty of Saxophone Music},
+  author={Lib{\v{r}}ick{\`y}, {\v{S}}imon and Haji{\v{c}}, Jan and others},
+  booktitle={Ismir 2025 Hybrid Conference},
+  year={2025}
+}''',
+    abstract = r'''     In learning music, difficulty is an important factor in choice of repertoire, choice of tempo, and structure of practice. These choices are typically done with the guidance of a teacher; however, not all learners have access to one. While piano and strings have had some attention devoted to automated difficulty estimation, wind instruments have so far been under-served. In this paper, we propose a method for estimating the difficulty of pieces for winds and implement it for the tenor saxophone. We take the cost-of-traversal approach, modelling the part as a sequence of transitions -- note pairs. We estimate transition costs from newly collected recordings of trill speeds, comparing representations of saxophone fingerings at various levels of expert input. We then compute and visualise the cost of the optimal path through the part, at a given tempo. While we present this model for the tenor saxophone, the same pipeline can be applied to other woodwinds, and our experiments show that with appropriate feature design, only a small proportion of possible trills is needed to estimate the costs well. Thus, we present a practical way of diversifying the capabilities of MIR in music education to the wind family of instruments. ''',
+    tags = [T.ismir2025, T.music_performance_psychology],
+)
